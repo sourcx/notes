@@ -1,0 +1,1199 @@
+Delivered-To: te.my.vis@gmail.com
+Received: by 2002:a5d:9ec4:0:0:0:0:0 with SMTP id a4csp5088970ioe;
+        Tue, 30 Apr 2019 08:23:01 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwsk2DnlG213GsnS94awx/f9FooMYAturYztAI1RKgbDwfsyP/FmxYaewXD9OEWc35L6JGc
+X-Received: by 2002:a7b:c0d4:: with SMTP id s20mr3639859wmh.52.1556637781025;
+        Tue, 30 Apr 2019 08:23:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1556637781; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YRECjfFyCFpws9Lrsaq5+KDHlwlEtFbah5PZyHtt81KCDDxIHK6J8ishJ1bb5Se5+S
+         IFxSY2KX/fd721jaGs1fmR+e7nVFipRfPlOrinFy6vbZuPNQnWCPV+riKKW9p5/3CZ8j
+         fxsq0kEcX8mo49jPgFSjt+5uKsrNJqLbhRso4zTycgTHSDg5T2oXhyJCOEtC+61H7ovq
+         eDeZbx/I4z5XEC2gVoPG5iPD9XuZ/JxmR56g9OGVbi6TB9lj2HNpPj8r0mHeTzWHH+zd
+         KcsmiZvfcT3OhNvZgAVR5QbSteAWwgl2RfPA4f+HzqjZAuoqKMgeCZVgfY4ZDsI3Q7CX
+         I9ng==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:list-unsubscribe:feedback-id:mime-version
+         :content-transfer-encoding:to:precedence:subject:reply-to:from
+         :dkim-signature;
+        bh=gRB6R/yQhDezr9woPB0SLdMzv9NwouQrKllWAZcIHVE=;
+        b=teRDRZq+v+OKTgnhZLJe+UjFZ8yXNHtL7F2CQ56AK7Dqhz3fnzPUGbmxxkWt4PO7z5
+         l9E2Y2YHcGPUb7ClzCGCSNcVbHleJdg1Jgryl7fkw1oLnBgJurv40riod4WVEZ4rU73K
+         ydNGzBn3oF/NJuWgI6jPZnis/2B1IGGrqw1Qqc4xEkqQSk8ifcR5PRQMie0upz3EOHhH
+         uWgjibPz/QoHRNn9iLIk2KUhO4hQrnKXEAfp5BMDTBTFDboSh21zUlg1iy/z0qYfKnnc
+         y3An+NgHFgc6OvwUmG/qziyJ6IxfibhV1NLrJrQEuoJujvRUDPsS0mZ6YUdABbwhhQzu
+         yl7Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@msdp1.com header.s=jan2017 header.b=EfHueVCa;
+       spf=pass (google.com: domain of bounce-4tbjvaasn1ngfwualmjm1hrtbufjv-drx5guxjbqlx5c@msdp1.com designates 52.58.147.248 as permitted sender) smtp.mailfrom=bounce-4tbJvAAsn1NGFWuAlMJM1HRtbUFJV-DRx5guxJBQLx5c@msdp1.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=eneco.com
+Return-Path: <bounce-4tbJvAAsn1NGFWuAlMJM1HRtbUFJV-DRx5guxJBQLx5c@msdp1.com>
+Received: from mta-034.msdp1.com (mta-034.msdp1.com. [52.58.147.248])
+        by mx.google.com with ESMTPS id j128si1831610wmj.157.2019.04.30.08.23.00
+        for <te.my.vis@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 30 Apr 2019 08:23:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-4tbjvaasn1ngfwualmjm1hrtbufjv-drx5guxjbqlx5c@msdp1.com designates 52.58.147.248 as permitted sender) client-ip=52.58.147.248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@msdp1.com header.s=jan2017 header.b=EfHueVCa;
+       spf=pass (google.com: domain of bounce-4tbjvaasn1ngfwualmjm1hrtbufjv-drx5guxjbqlx5c@msdp1.com designates 52.58.147.248 as permitted sender) smtp.mailfrom=bounce-4tbJvAAsn1NGFWuAlMJM1HRtbUFJV-DRx5guxJBQLx5c@msdp1.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=eneco.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jan2017; d=msdp1.com;
+ h=From:Reply-To:Subject:To:Content-Transfer-Encoding:MIME-Version:
+ Content-Type:List-Unsubscribe:Message-Id:Date;
+ bh=gRB6R/yQhDezr9woPB0SLdMzv9NwouQrKllWAZcIHVE=;
+ b=EfHueVCaTRTGRFMOJRKQiFWGstzPbWLNwe4oJY8kqxyoNu4DG145hj4bxM87YlrA6gYGUyBgc/Yo
+   o6mBXgmD7rb06KtB/Wba76XQYQ/ILtHiIFriITAM8LP7uTyJd40BnZMVdZRAjVbMsvKbqK/GxTtX
+   1KrhJfHz/CtdMTJ66PHMev/sZ7eLstwHTJ37lrBf5Yj3kcQZNiOxJVvHSXmW5HHw1ZDqFk5mwlfG
+   uFJJYLQogTXoZOSXpAGxeudyEiwa/eFFMGMdQpcaLedWAEXzzDpL7i4m/lAxt8rlQLBT/puDE3Ue
+   quy2tz2gcRHgBNXkLnQMQ/fwX4ht4bgfGInCKA==
+From: "Eneco Nieuwsbrief" <nieuwsbrief@eneco.com>
+Reply-To: "Eneco Nieuwsbrief" <nieuwsbrief@eneco.com>
+Subject: Omschakelen als je in een huurhuis woont. Kan dat en hoe doe je dat
+ =?UTF-8?B?ZGFuPw==?=
+Precedence: bulk
+To: te.my.vis@gmail.com
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--C9ADAC3BDFB19364"
+X-Mailer: Clang 2.7.0
+X-Clang-PortalId: 86
+X-Clang-BrandId: 86/1
+x-virtual-mta: bpool
+Feedback-ID: 86-1-81749592:86-1:evillage
+List-Unsubscribe: <https://mail.eneco.nl/2/4/86/1/P0r0xjZwX_w3fy4qsY2UGTVDaMQCBINtCHd_bFSDw6Jg5Qq9zUwtRs9rnXf7QpGY4oD3_z_Z3grG1QCdsPJLwg>,<mailto:unsubscribe-4tbJvAAsn1NGFWuAlMJM1HRtbUFJV-DRx5guxJBQLx5c@msdp1.com>
+X-Report-Abuse: Please report abuse here: https://mail.eneco.nl/pub/report-abuse/?e=abuse-4tbJvAAsn1NGFWuAlMJM1HRtbUFJV-DRx5guxJBQLx5c@msdp1.com
+Message-Id: <20190430152300.9768F6605B@dcg-app-mailmaster04>
+Date: Tue, 30 Apr 2019 17:23:00 +0200 (CEST)
+
+This is a MIME Encoded Message
+
+
+
+----C9ADAC3BDFB19364
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Omschakelen met...=0A=0ABeste mevrouw Visser,=0A=0AEr is een nieuwe uitgave=
+ van de servicenieuwsbrief van Eneco verschenen. In deze editie lees je ove=
+r:=0A=0A=0A- Omschakelen als je in een huurhuis woont. Kan dat?=0A- Toon en=
+ jij: een duurzaam duo.=0A- Heb je een vraag? Stel 'm online.=0A- Het is we=
+er lente. Dit zijn onze tips voor dit seizoen.=0A=0A=0ALees de servicenieuw=
+sbrief van Eneco=0Ahttps://mail.eneco.nl/2/4/86/1/ie_4P_MkLzIbnwoUIXsDTv5L2=
+TvLRSG03KcK9mvjkMjDEcvFqnShQ3x4_iPElZ4Ig6dmdZ8H3JpC_-i-0Oj-dQ=0A=0AVeel lee=
+splezier!=0A=0AEneco=0A=0A-------------------------------------------------=
+--------------------=0A=0ACONTACT=0Ahttps://mail.eneco.nl/1/4/86/1/ViL1hW1K=
+ejs9s_5MHhpzzZcvtEeCdSH6ZDHVqFIaK8fRjfrBATzrMII5fhH-BEbDVVmyl-k3dXMmGSw0z9e=
+fDy9RhCA4bBQ1c2yDq4PUeq4=0A=0APRIVACY=0Ahttps://mail.eneco.nl/1/4/86/1/hJkn=
+oR1TvSkuvk2cQAYvTHC4GxMoEqmYcIxjg3gRM5imGgsKhHubNLhI89tNeJJAz9ZljDrfEODEeNi=
+SCY-qBy35iApdepKeBAiHL2LoWJI=0A=0ADISCLAIMER=0Ahttps://mail.eneco.nl/1/4/86=
+/1/zPOnCvJB38AJO7IPz0WhcFdgT4k6Ijv5-Z4yTtbCZbJByelPuUaTe6aIZBzlDc4wK97HxRQT=
+m5yDAhJdxGH-5RYjz500M9sG8V3FGWkMj0M=0A=0AAFMELDEN=0Ahttps://mail.eneco.nl/2=
+/4/86/1/arEo62lyieH1vzov0qq57Pnx35Hu6kG-41BaLm3EF6nCIuJBH30qIHI5y0_7y9ZYk_M=
+3GgVFb0H75XICu4IXvQ=0A=0AKlantnummer: 40879993=0A=0A=0ADeze e-mail is verzo=
+nden in opdracht van Eneco Consumenten B.V., Postbus 1014, 3000 BA Rotterda=
+m, KvK nr. 24324527.=0ABezoek voor vragen onze contactpagina:=0Ahttps://mai=
+l.eneco.nl/1/4/86/1/mD5N1keMNR1O3O0hZ3SFUUcuxbxQSCYxL2H-sA7su4dzN-rv3zsD5am=
+e_RqQHc_fgpwjTjP31z43qBIL4zxyUSNuXrOtchVZdMYwA-Oz8-8=0AOf bel met onze Klan=
+tenservice, bereikbaar op 088-8 955 955 (je betaalt de gebruikelijke belkos=
+ten).=0A=0AJe ontvangt deze nieuwsbrief omdat je bij Eneco hebt aangegeven =
+informatie per e-mail te willen ontvangen.=0A
+----C9ADAC3BDFB19364
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html xmlns:v=3D"urn:schem=
+as-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">=
+=0A<head>=0A<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8" />=0A<!--[if !mso]><!-->=0A<meta http-equiv=3D"X-UA-Compatible" c=
+ontent=3D"IE=3Dedge" />=0A<!--<![endif]-->=0A<meta name=3D"viewport" conten=
+t=3D"width=3Ddevice-width, initial-scale=3D1.0" />=0A<meta name=3D"format-d=
+etection" content=3D"telephone=3Dno" />=0A<link rel=3D"shortcut icon" href=
+=3D"https://www.eneco.nl/static/images/icons/favicon.png" type=3D"image/x-i=
+con" />=0A<title>Eneco</title>=0A<!-- Vul hieronder de juiste UTM-gegevens =
+in door waarde van "default" aan te passen -->=0A=0A<!---->=0A=0A<!-- Maatw=
+erk exports=0A-->=0A=0A<!-- Nieuwsbrief rapportage -->=0A<!---->=0A=0A<styl=
+e type=3D"text/css">=0Abody {=0Awidth: 100% !important;=0Amargin: 0;=0Apadd=
+ing: 0;=0Abackground-color: #ffffff;=0A-webkit-font-smoothing: antialiased;=
+=0A-webkit-text-size-adjust: none;=0A-ms-text-size-adjust: none;=0A}=0A.Rea=
+dMsgBody {=0Awidth: 100%;=0A}=0A.ExternalClass {=0Awidth: 100%;=0A}=0A.Exte=
+rnalClass * {=0Aline-height: 100%;=0A}=0Atable td {=0Aborder-collapse: coll=
+apse;=0A}=0A.wrapper, .wrapperPadding {=0Amargin: 0;=0Apadding: 0;=0Awidth:=
+ 100% !important;=0Atable-layout: fixed;=0A-webkit-font-smoothing: antialia=
+sed;=0A-webkit-text-size-adjust: 100%;=0A-ms-text-size-adjust: 100%;=0A}=0A=
+a, a:link, a:visited, a:hover {=0Acolor: #d21242;=0Atext-decoration: none;=
+=0A}=0A#outlook a {=0Apadding: 0;=0A}=0A.webkit {=0Amax-width: 600px;=0Amar=
+gin: 0 auto;=0A}=0Ap {=0Amargin: 1em 0;=0A}=0Aa[x-apple-data-detectors] {=
+=0Acolor: inherit !important;=0Atext-decoration: none !important;=0Afont-si=
+ze: inherit !important;=0Afont-family: inherit !important;=0Afont-weight: i=
+nherit !important;=0Aline-height: inherit !important;=0A}=0Aimg {=0Adisplay=
+: block;=0Amargin: 0;=0Apadding: 0;=0Aborder: 0;=0Aheight: auto;=0Aline-hei=
+ght: 100%;=0Aoutline: none;=0Atext-decoration: none;=0A-ms-interpolation-mo=
+de: bicubic;=0A}=0Adiv[style*=3D"margin: 16px 0"] {=0Amargin: 0 !important;=
+=0A}=0A</style>=0A<style type=3D"text/css">=0A@media only screen and (max-w=
+idth: 599px) {=0Aa[x-apple-data-detectors] {=0Acolor: inherit !important;=
+=0Atext-decoration: none !important;=0Afont-size: inherit !important;=0Afon=
+t-family: inherit !important;=0Afont-weight: inherit !important;=0Aline-hei=
+ght: inherit !important;=0A}=0A.fullWidth {=0Awidth: 100% !important;=0Amax=
+-width: 100% !important;=0Atext-align: center !important;=0A}=0A.wrapperPad=
+ding {=0Awidth: auto;=0Apadding: 0 15px;=0A}=0A.width_100pc {=0Awidth: 100%=
+ !important;=0Amax-width: 100% !important;=0A}=0A.height_auto {=0Aheight: a=
+uto !important;=0A}=0A.hide_on_mobile {=0Adisplay: none !important;=0A}=0A.=
+show_on_mobile {=0Adisplay: block !important;=0Awidth: auto !important;=0Am=
+ax-height: inherit !important;=0Aoverflow: visible !important;=0Afloat: non=
+e !important;=0A}=0A.hideImg {=0Abackground:none;=0Awidth:100%;=0Amax-width=
+:100%;=0Atext-align:center;=0Aheight:auto;=0A}=0A.padding {=0Awidth: auto;=
+=0Apadding: 0 15px;=0A}=0A.center {=0Amargin: 0px auto;=0A}=0A.textCenter {=
+=0Atext-align: center !important;=0A}=0A.width_300 {=0Amax-width: 300px !im=
+portant;=0Awidth: 300px !important;=0A}=0A.width_290 {=0Amax-width: 290px !=
+important;=0Awidth: 290px !important;=0A}=0A}=0A</style>=0A<!--[if gte mso =
+15]>=0A<style type=3D"text/css">=0Atable {=0Afont-size: 1px;=0Amso-line-hei=
+ght-alt: 0;=0Aline-height: 0;=0Amso-margin-top-alt: 1px;=0A}=0A</style>=0A=
+=0A<![endif]-->=0A<!--[if gte mso 9]><xml>=0A<o:OfficeDocumentSettings>=0A<=
+o:AllowPNG/>=0A<o:PixelsPerInch>96</o:PixelsPerInch>=0A</o:OfficeDocumentSe=
+ttings>=0A</xml><![endif]-->=0A<!--[if gte mso 16]>=0A<style type=3D"text/c=
+ss" media=3D"all">=0Atr {=0Afont-size:1px;=0Amso-line-height-alt: 0;=0Amso-=
+margin-top-alt: 1px;=0A}=0A</style>=0A<![endif]-->=0A</head>=0A<body>=0A<ta=
+ble class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" bgcolor=3D"#ededed">=0A<tr>=0A<td valign=3D"top" align=
+=3D"center">=0A<div style=3D"max-width: 600px; margin: 0 auto;" class=3D"we=
+bkit"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<=
+tr>=0A<td>=0A<![endif]-->=0A<table width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" align=3D"center">=0A<tr>=0A<td style=3D"padding-top=
+:30px; padding-bottom:15px;" valign=3D"top">=0A<table style=3D"max-width: 6=
+00px;" class=3D"container" width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" align=3D"center">=0A<tr>=0A<td style=3D"text-align: center;=
+ vertical-align: top; font-size: 0;"><!--[if (gte mso 9)|(IE)]><table width=
+=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+><tr><td width=3D"300" style=3D"width: 300px;"><![endif]-->=0A<div style=3D=
+"width: 300px; display: inline-block; vertical-align: top;">=0A<table style=
+=3D"width: 300px;" width=3D"300" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"padding-bottom:15px; font-fami=
+ly: Verdana, Geneva, sans-serif; font-size: 11px; line-height: 14px; color:=
+ #414141;" class=3D"textCenter" valign=3D"top" align=3D"left">Omschakelen m=
+et...</td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]></td><td=
+ width=3D"300" style=3D"width: 300px;"><![endif]-->=0A<div style=3D"width: =
+300px; display: inline-block; vertical-align: top;">=0A<table style=3D"widt=
+h: 300px;" width=3D"300" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" a=
+lign=3D"left">=0A<tr>=0A<td style=3D"padding-bottom:15px; font-family: Verd=
+ana, Geneva, sans-serif; font-size: 11px; line-height: 14px; color: #414141=
+;" class=3D"textCenter" valign=3D"top" align=3D"right"><a href=3D"https://m=
+ail.eneco.nl/2/4/86/1/O2x6N-GwWqKnd_yGJCCu3lLilT5xWwa4lqz4mSTc35C0g4XAuYkW2=
+yJFrDNGnT4Yw_1TEz-Xpbi1pBYvfc_vYg" alt=3D"Header - Bekijk in je browser" ta=
+rget=3D"_blank" style=3D"color: #00afdb; text-decoration: none;">Bekijk in =
+je browser</a></td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]=
+></td></tr></table><![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<=
+/table>=0A<!--[if (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]=
+--></div>=0A</td>=0A</tr>=0A</table>=0A<table class=3D"wrapperPadding" widt=
+h=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#fff=
+fff">=0A<tr>=0A<td valign=3D"top" align=3D"center">=0A<div style=3D"max-wid=
+th: 600px; margin: 0 auto;" class=3D"webkit"><!--[if (gte mso 9)|(IE)]>=0A<=
+table width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td>=0A<![endif]-->=0A<table c=
+lass=3D"fullWidth" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" align=3D"center">=0A<tr>=0A<td class=3D"fullWidth textCenter" style=
+=3D"font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height:=
+ 24px; padding-bottom:20px; padding-top:30px;" align=3D"right">=0A<table cl=
+ass=3D"fullWidth" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D=
+"left">=0A<tr>=0A<td class=3D"fullWidth" style=3D"padding-bottom:10px; widt=
+h: 168px;" width=3D"168" align=3D"left"><a href=3D"https://mail.eneco.nl/1/=
+4/86/1/ZwWlg5dEsBXnkvZ5Vl5uNzuItxDhiyfJ-PrU-S860qfEAXUsnomZzqC3_VS-WpA1p1bQ=
+BF-ghnrMOsf_rynl9VLX1KJ93lUG5T-M4a8O_Ds" target=3D"_blank" alt=3D"Header - =
+Logo" style=3D"text-decoration: none;"><img style=3D"display: block; font-f=
+amily:Arial, Helvetica, sans-serif; color: #d21242; font-size: 38px; line-h=
+eight: 61px; font-weight:bold;" alt=3D"Eneco" src=3D"https://mail.eneco.nl/=
+public/files/86/0/2014_template/images/2x/eneco_logo_klein@2x.png" class=3D=
+"center" width=3D"139" height=3D"61" border=3D"0" /></a></td>=0A</tr>=0A</t=
+able>=0A<span style=3D"font-size: 22px; line-height: 30px; color: #d21242;"=
+>Service<span style=3D"color: #ec740f;">nieuwsbrief</span></span><br />=0AK=
+lantnummer: 40879993&nbsp;|&nbsp;april 2019</td>=0A</tr>=0A</table>=0A<!--[=
+if (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</t=
+d>=0A</tr>=0A</table>=0A<a id=3D"pb" name=3D"pb"></a>=0A<table class=3D"wra=
+pperPadding" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" bgcolor=3D"#ededed">=0A<tr>=0A<td align=3D"center" valign=3D"top">=0A<tab=
+le bgcolor=3D"#414141" class=3D"fullWidth" width=3D"600" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">=0A<tr>=0A<td class=3D"hideImg height_auto" =
+width=3D"600" height=3D"366" valign=3D"top" background=3D"https://mail.enec=
+o.nl/public/files/86/0/20190430_ECR-Retail_NB_april/NB/Push_Omschakeltopper=
+s.jpg" align=3D"center" style=3D"background-repeat: no-repeat; width:600px;=
+ height: 366px; background-position: top center;">=0A<!--[if gte mso 9]>=0A=
+<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"f=
+alse" style=3D"width:600px;height:366px;">=0A<v:fill type=3D"frame" src=3D"=
+https://mail.eneco.nl/public/files/86/0/20190430_ECR-Retail_NB_april/NB/Pus=
+h_Omschakeltoppers.jpg" color=3D"#ededed" />=0A<v:textbox inset=3D"0,0,0,0"=
+>=0A<![endif]-->=0A<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"left" class=3D"fullWidth" width=3D"315">=0A<tr>=0A<td width=3D"30"=
+>=0A</td>=0A<td align=3D"left" class=3D"fullWidth" style=3D"padding-top: 28=
+px; padding-bottom:28px;"><table width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0">=0A<tr>=0A<td class=3D"fullWidth" align=3D"left" styl=
+e=3D"padding-bottom: 28px; font-family: Verdana, Geneva, sans-serif; color:=
+ #ffffff; font-size: 22px; font-weight: bold; line-height: 28px;"><a href=
+=3D"https://mail.eneco.nl/1/4/86/1/df_hcbT5TiykkcJzn9FouyGkKoDbX4rwvQRO88I9=
+VeFDTvjKztggCRTRouTiVU489O88ihtaYc8VpAuFn_8wIOheGg-RgDhMeUFNiXJ67Qs" alt=3D=
+"Je huurhuis duurzamer maken. Kan dat en hoe doe je dat dan? - IMG" target=
+=3D"_blank" rel=3D"report_PB_Omschakeltoppers" style=3D"text-decoration: no=
+ne; color: #ffffff;">Je huurhuis duurzamer maken. Kan dat en hoe doe je dat=
+ dan?</a></td>=0A</tr>=0A<tr>=0A<td class=3D"fullWidth" align=3D"left" styl=
+e=3D"padding-bottom: 28px; font-family: Verdana, Geneva, sans-serif; color:=
+ #ffffff; font-size: 14px; line-height: 20px;">Manon en Sjors willen hun hu=
+urwoning duurzamer maken. Maar kunnen ze dat zelf? Of hebben ze daar de ver=
+huurder voor nodig? De familie Eekma is al omgeschakeld en weet gelukkig ra=
+ad.</td>=0A</tr>=0A<tr>=0A<td style=3D"font-family: Verdana, Geneva, sans-s=
+erif; color: #414141; font-size: 14px; line-height: 20px;">=0A<table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"center" width=3D"105" s=
+tyle=3D"width: 105px;">=0A<tr>=0A<td align=3D"center" style=3D"padding-top:=
+ 9px; padding-bottom: 9px; background: #00afdb; -moz-border-radius: 5px; -w=
+ebkit-border-radius: 5px; border-radius: 5px; border-bottom: 2px solid #008=
+6a9 !important; line-height: 14px;" valign=3D"top">=0A<a href=3D"https://ma=
+il.eneco.nl/1/4/86/1/s-uv493GvQsa3NwL9u9kXwztaFGYcjDgx2hSlDjTizw0AZJtujD7Uz=
+vJ0f7AFHPVVNQUTUb6cQEyYtlMmYR9QwgfvqtMsdVvGW6bya1-ClE" alt=3D"Je huurhuis d=
+uurzamer maken. Kan dat en hoe doe je dat dan? - BTN" target=3D"_blank" rel=
+=3D"report_PB_Omschakeltoppers" style=3D"color: #FFFFFF; display: block; fo=
+nt-size: 14px; text-align: center; text-decoration: none; text-transform: u=
+ppercase; font-family: Verdana, Geneva, sans-serif; line-height: 20px;">Kij=
+k mee!</a>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table></td>=0A</t=
+r>=0A</table>=0A<!--[if gte mso 9]>=0A</v:textbox>=0A</v:rect>=0A<![endif]-=
+-></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<table class=3D"wra=
+pperPadding" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" bgcolor=3D"#ffffff">=0A<tr>=0A<td valign=3D"top" align=3D"center">=0A<div=
+ style=3D"max-width: 600px; margin: 0 auto;" class=3D"webkit"><!--[if (gte =
+mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td>=0A<![end=
+if]-->=0A<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0">=0A<tr>=0A<td style=3D"padding-top:28px;" width=3D"100%">=0A<table c=
+lass=3D"width_300 center" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0">=0A<tr>=0A<td style=3D"padding-bottom:28px; font-family: Ver=
+dana, Geneva, sans-serif; font-size: 22px; line-height: 28px; color:#d21242=
+; font-weight:bold;" align=3D"center">Beste  mevrouw Visser,</td>=0A</tr>=
+=0A<tr>=0A<td style=3D"padding-bottom: 28px; font-family: Verdana, Geneva, =
+sans-serif; color: #414141; font-size: 12px; line-height: 16px;" class=3D"p=
+adding" align=3D"center">  Alsjeblieft, speciaal voor jou de servicenieuwsb=
+rief van Eneco. Met hierin:<br />=0AOmschakelen als je in een huurhuis woon=
+t. <a href=3D"#pb" style=3D"color:#00afdb; text-decoration:none;">Kan dat</=
+a>?<br />=0A    Toon en jij: <a href=3D"#art04" style=3D"color:#00afdb; tex=
+t-decoration:none;">een duurzaam duo</a>.<br />=0A Heb je een vraag? <a hre=
+f=3D"#art05" style=3D"color:#00afdb; text-decoration:none;">Stel &rsquo;m o=
+nline</a>.<br />=0A Het is weer lente. <a href=3D"#art07" style=3D"color:#0=
+0afdb; text-decoration:none;">Dit zijn onze tips</a> voor dit seizoen.<br /=
+>=0A<br />=0A<br />=0AVeel leesplezier!</td>=0A</tr>=0A</table>=0A</td>=0A<=
+/tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<=
+![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A=0A=0A=0A<table class=3D"wra=
+pper" style=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; mso-=
+margin-top-alt: 1px; mso-line-height-rule:exactly;" cellspacing=3D"0" cellp=
+adding=3D"0" bgcolor=3D"#f6f6f6" border=3D"0" width=3D"100%">=0A<tr>=0A<td =
+valign=3D"top" align=3D"center">=0A<div class=3D"webkit" style=3D"max-width=
+: 600px; margin: 0 auto;"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600"=
+ align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D=
+"width: 600px;">=0A<tr>=0A<td>=0A<![endif]-->=0A<table style=3D"font-size:1=
+px; line-height:1px; mso-line-height-alt: 0; mso-margin-top-alt: 1px; mso-l=
+ine-height-rule:exactly;" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" border=3D"0" width=3D"100%">=0A<tr>=0A<td style=3D"max-width: 205px;" h=
+eight=3D"2">&nbsp;</td>=0A<td style=3D"width:190px;" bgcolor=3D"#ffffff" he=
+ight=3D"2" width=3D"190">&nbsp;</td>=0A<td style=3D"max-width: 205px;" heig=
+ht=3D"2">&nbsp;</td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A</td=
+>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A<tab=
+le class=3D"wrapper" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff=
+" border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=3D"center"=
+>=0A<div class=3D"webkit" style=3D"max-width: 600px; margin: 0 auto;"><!--[=
+if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td=
+>=0A<![endif]-->=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=3D"cente=
+r"><img src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesig=
+n_nieuwsbrief/Pijl.png" alt=3D"" style=3D"display: block; color: #D21242; f=
+ont-family: Verdana, Geneva, sans-serif; font-size: 14px; text-align: cente=
+r; line-height: 20px;" height=3D"29" border=3D"0" width=3D"210" /></td>=0A<=
+/tr>=0A<tr>=0A<td height=3D"30"></td>=0A</tr>=0A</table>=0A<!--[if (gte mso=
+ 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=
+=0A</table>=0A<a id=3D"art04" name=3D"art04"></a>=0A<table class=3D"wrapper=
+Padding" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff" border=3D"=
+0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=3D"center">=0A<div cla=
+ss=3D"webkit" style=3D"max-width: 600px; margin: 0 auto;"><!--[if (gte mso =
+9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td valign=3D"top=
+">=0A<![endif]-->=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"cen=
+ter" border=3D"0" width=3D"100%">=0A<tr>=0A<td style=3D"padding-bottom: 14p=
+x;" valign=3D"top">=0A<table class=3D"container" style=3D"max-width: 600px;=
+" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" border=3D"0" width=
+=3D"100%">=0A<tr>=0A<td style=3D"text-align: center; vertical-align: top; f=
+ont-size: 0;"><!--[if (gte mso 9)|(IE)]><table width=3D"100%" align=3D"cent=
+er" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td width=3D"300" =
+style=3D"width: 300px;" valign=3D"top"><![endif]-->=0A<div style=3D"width: =
+300px; display: inline-block; vertical-align: top;">=0A<table cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left" border=3D"0" width=3D"100%">=0A<tr>=
+=0A<td style=3D"width: 5px; min-width: 5px; padding-bottom: 14px;" width=3D=
+"5"></td>=0A<td style=3D"padding-bottom: 14px;" valign=3D"top" align=3D"lef=
+t"><a href=3D"https://mail.eneco.nl/2/4/86/1/HeYiMxTBFMyUbVFN3idwpvF86XIycb=
+vawaPgKlp0CXXNfZAWQvPRSyq9Q6smjqXJk2LpdUWKEEnupijEFqhcBw?art=3D04" alt=3D"T=
+oon heeft overal een neus voor - IMG" target=3D"_blank" rel=3D"report_Art04=
+_ToonHelpt" style=3D"text-decoration: none; color: #414141;"><img src=3D"ht=
+tps://mail.eneco.nl/public/files/86/0/20190430_ECR-Retail_NB_april/NB/Art04=
+_ToonHelpt.jpg" alt=3D"Toon heeft overal een neus voor" style=3D"display: b=
+lock; color: #D21242; font-family: Verdana, Geneva, sans-serif; font-size: =
+14px; text-align: center; line-height: 20px;" border=3D"0" width=3D"290" />=
+</a></td>=0A<td style=3D"width: 5px; min-width: 5px; padding-bottom: 14px;"=
+ width=3D"5"></td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]>=
+</td><td width=3D"300" style=3D"width: 300px;" valign=3D"top"><![endif]-->=
+=0A<div style=3D"width: 300px; display: inline-block; vertical-align: top;"=
+>=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"left" border=3D"0" =
+width=3D"100%">=0A<tr>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D=
+"5"></td>=0A<td valign=3D"top" align=3D"left">=0A<table cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"left" border=3D"0" width=3D"100%">=0A<tr>=0A<td c=
+lass=3D"padding" style=3D"font-family: Verdana, Geneva, sans-serif; font-si=
+ze: 22px; line-height: 28px; color:#d21242; font-weight:bold;" align=3D"lef=
+t"><a href=3D"https://mail.eneco.nl/2/4/86/1/ovVlkqEKeE1aQ7ePQQpooT-7XoPqfp=
+PmuRkjqdANf0flD3iUml67AVggybveGbhrevTVSlNhbKj8PDxBDuSwMw?art=3D04" target=
+=3D"_blank" style=3D"color:#d21242; text-decoration:none;" alt=3D"Toon heef=
+t overal een neus voor - TTL" rel=3D"report_Art04_ToonHelpt">Toon heeft ove=
+ral een neus voor</a></td>=0A</tr>=0A<tr>=0A<td class=3D"padding" style=3D"=
+padding-top: 16px; font-family: Verdana, Geneva, sans-serif; font-size: 12p=
+x; line-height: 16px; color:#414141;" align=3D"left">Je kent Toon misschien=
+ al als slimme thermostaat die alles weet over je energieverbruik. Die je l=
+aat zien waar je kunt besparen. Maar wist je dat Toon ook waakt in je huis =
+en meekijkt op je dak? Toon is dus veel meer dan een slimme thermostaat. On=
+tdek het hier.</td>=0A</tr>=0A<tr>=0A<td class=3D"padding" style=3D"padding=
+-top: 14px; padding-bottom: 7px;" valign=3D"top" align=3D"right">=0A<table =
+class=3D"container" style=3D"max-width: 290px;" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"100%">=0A<tr>=0A<td style=3D"text-align: cen=
+ter; vertical-align: top; font-size: 0;">=0A<table cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=
+=3D"right">=0A<table style=3D"width: 155px;" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"155">=0A<tr>=0A<td style=3D"padding-top: 9px; =
+padding-bottom: 9px; background: #84b818; -moz-border-radius: 5px; -webkit-=
+border-radius: 5px; border-radius: 5px; border-bottom: 2px solid #6da100 !i=
+mportant; line-height: 14px;" valign=3D"top" align=3D"center"><a href=3D"ht=
+tps://mail.eneco.nl/2/4/86/1/wuk7RSlwm7dvEoZwCrm-9CChihSGuAYy-s9F9GYY87LyJa=
+ZW2ryxvDHn_lhBX-nRyhp06Y711cFghhKh5_sXdg?art=3D04" alt=3D"Toon heeft overal=
+ een neus voor - BTN" rel=3D"report_Art04_ToonHelpt" target=3D"_blank" styl=
+e=3D"color: #FFFFFF; display: block; font-size: 14px; text-align: center; t=
+ext-decoration: none; text-transform: uppercase; font-family: Verdana, Gene=
+va, sans-serif; line-height: 20px;">Wat kan Toon?</a></td>=0A</tr>=0A</tabl=
+e>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A=
+<tr>=0A<td style=3D"height:14px; min-height: 14px; max-height:14px; font-si=
+ze:1px; mso-line-height-rule:exactly; line-height:1px;">&nbsp;</td>=0A</tr>=
+=0A</table>=0A</td>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D"5"=
+></td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]></td></tr></=
+table><![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<!-=
+-[if (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A<=
+/td>=0A</tr>=0A</table>=0A<table class=3D"wrapper" style=3D"font-size:1px; =
+line-height:1px; mso-line-height-alt: 0; mso-margin-top-alt: 1px; mso-line-=
+height-rule:exactly;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0" bgcolor=3D"#f6f6f6">=0A    <tbody>=0A        <tr>=0A            =
+<td valign=3D"top" align=3D"center">=0A            <div class=3D"webkit" st=
+yle=3D"max-width: 600px; margin: 0 auto;"><!--[if (gte mso 9)|(IE)]>=0A<tab=
+le width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td>=0A<![endif]-->=0A           =
+ <table style=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; ms=
+o-margin-top-alt: 1px; mso-line-height-rule:exactly;" width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">=0A            =
+    <tbody>=0A                    <tr>=0A                        <td style=
+=3D"max-width: 205px;" height=3D"2">&nbsp;</td>=0A                        <=
+td style=3D"width:190px;" width=3D"190" height=3D"2" bgcolor=3D"#ffffff">&n=
+bsp;</td>=0A                        <td style=3D"max-width: 205px;" height=
+=3D"2">&nbsp;</td>=0A                    </tr>=0A                </tbody>=
+=0A            </table>=0A            <!--[if (gte mso 9)|(IE)]>=0A</td>=0A=
+</tr>=0A</table>=0A<![endif]--></div>=0A            </td>=0A        </tr>=
+=0A    </tbody>=0A</table>=0A<table class=3D"wrapper" width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A    <tbod=
+y>=0A        <tr>=0A            <td valign=3D"top" align=3D"center">=0A    =
+        <div class=3D"webkit" style=3D"max-width: 600px; margin: 0 auto;"><=
+!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<=
+td>=0A<![endif]-->=0A            <table width=3D"100%" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" align=3D"center">=0A                <tbody>=0A=
+                    <tr>=0A                        <td valign=3D"top" align=
+=3D"center"><img src=3D"https://mail.eneco.nl/public/files/86/0/20160331_EC=
+R-Redesign_nieuwsbrief/Pijl.png" alt=3D"" style=3D"display: block; color: #=
+D21242; font-family: Verdana, Geneva, sans-serif; font-size: 14px; text-ali=
+gn: center; line-height: 20px;" width=3D"210" height=3D"29" border=3D"0" />=
+</td>=0A                    </tr>=0A                    <tr>=0A            =
+            <td height=3D"30"></td>=0A                    </tr>=0A         =
+       </tbody>=0A            </table>=0A            <!--[if (gte mso 9)|(I=
+E)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A            </td>=0A=
+        </tr>=0A    </tbody>=0A</table>=0A<a id=3D"art05" name=3D"art05"></=
+a>=0A<table class=3D"wrapperPadding" style=3D"font-size:1px;mso-line-height=
+-alt: 0;mso-margin-top-alt: 0;" width=3D"100%" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A    <tbody>=0A        <tr style=
+=3D"font-size:1px;mso-line-height-alt: 0;mso-margin-top-alt: 0;">=0A       =
+     <td valign=3D"top" align=3D"center">=0A            <div class=3D"webki=
+t" style=3D"max-width: 600px; margin: 0 auto;"><!--[if (gte mso 9)|(IE)]>=
+=0A<table width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td>=0A<![endif]-->=0A    =
+        <table style=3D"font-size:1px;mso-line-height-alt: 0;mso-margin-top=
+-alt: 0;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" a=
+lign=3D"center">=0A                <tbody>=0A                    <tr style=
+=3D"font-size:1px;mso-line-height-alt: 0;mso-margin-top-alt: 0;">=0A       =
+                 <td style=3D"padding-bottom: 28px;" valign=3D"top">=0A    =
+                    <table style=3D"max-width: 600px; font-size:1px; line-h=
+eight:1px; mso-line-height-alt: 0; mso-margin-top-alt: 0; mso-line-height-r=
+ule:exactly;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0">=0A                            <tbody>=0A                               =
+ <tr style=3D"font-size:1px;mso-line-height-alt: 0;mso-margin-top-alt: 0px;=
+">=0A                                    <td style=3D"text-align: center; v=
+ertical-align: top; font-size: 0;" valign=3D"top" bgcolor=3D"#F6931E"><!--[=
+if (gte mso 9)|(IE)]><table width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0"><tr style=3D"font-size:1px;mso-line-heigh=
+t-alt: 0;mso-margin-top-alt: 0;"><td valign=3D"top" width=3D"128" style=3D"=
+width: 128px;"><![endif]-->=0A                                    <div styl=
+e=3D"width: 128px; display: inline-block; vertical-align: top;">=0A        =
+                            <table style=3D"width: 128px; font-size:1px;mso=
+-line-height-alt: 0;mso-margin-top-alt: 0;" width=3D"128" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" align=3D"left">=0A                         =
+               <tbody>=0A                                            <tr st=
+yle=3D"font-size:1px;mso-line-height-alt: 0;mso-margin-top-alt: 0;">=0A    =
+                                            <td valign=3D"top"><a href=3D"h=
+ttps://mail.eneco.nl/1/4/86/1/KokZPE3v4P_RLmH6r8Lieo9bTP3V-J639LNQaOJ6e5xAr=
+0jzwMCTcBnFBw_WlI2kpf8Ik4pFXzkWZAI--WK2CXw3Z1X7wsWNQf5Ww5U9iyY" alt=3D"Stel=
+ nu al je vragen online! - IMG" target=3D"_blank" rel=3D"report_Art05_Servi=
+cepaginas" style=3D"text-decoration: none; color: #414141;"><img src=3D"htt=
+ps://mail.eneco.nl/public/files/86/0/20190430_ECR-Retail_NB_april/NB/Art05_=
+Servicepaginas.jpg" alt=3D"Stel nu al je vragen online!" style=3D"display: =
+block; color: #FFFFFF; font-family: Verdana, Geneva, sans-serif; font-size:=
+ 14px; text-align: center; line-height: 20px;" width=3D"128" border=3D"0" /=
+></a></td>=0A                                            </tr>=0A          =
+                              </tbody>=0A                                  =
+  </table>=0A                                    </div>=0A                 =
+                   <!--[if (gte mso 9)|(IE)]></td><td width=3D"468" style=
+=3D"width: 468px;"><![endif]-->=0A                                    <div =
+style=3D"max-width: 468px; display: inline-block; vertical-align: top;">=0A=
+                                    <table style=3D"font-size:1px;mso-line-=
+height-alt: 0;mso-margin-top-alt: 0;" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" align=3D"left">=0A                                        <tbod=
+y>=0A                                            <tr style=3D"font-size:1px=
+;mso-line-height-alt: 0;mso-margin-top-alt: 0;">=0A                        =
+                        <td rowspan=3D"4" class=3D"hide_on_mobile" style=3D=
+"width: 25px;" width=3D"25"></td>=0A                                       =
+         <td class=3D"padding" style=3D"padding-top: 12px; font-family: Ver=
+dana, Geneva, sans-serif; font-size: 22px; line-height: 28px; color:#FFFFFF=
+; font-weight:bold;" align=3D"left"><a href=3D"https://mail.eneco.nl/1/4/86=
+/1/ptTSqCgamgIHCukxshxLuEIJoRBzHcQemyiYPzfbHxbEoVd3M5DWDX9cSXTUPMSpTmUUoual=
+pbW19udXdFkcz4L99q6OqxAMAgkodyRYqTM" target=3D"_blank" style=3D"color:#FFFF=
+FF; text-decoration:none;" alt=3D"Stel nu al je vragen online! - TTL" rel=
+=3D"report_Art05_Servicepaginas">Stel nu al je vragen online!</a></td>=0A  =
+                                              <td rowspan=3D"4" class=3D"hi=
+de_on_mobile" style=3D"width: 25px;" width=3D"25"></td>=0A                 =
+                           </tr>=0A                                        =
+    <tr style=3D"font-size:1px;mso-line-height-alt: 0;mso-margin-top-alt: 0=
+;">=0A                                                <td class=3D"padding"=
+ style=3D"padding-top: 12px; font-family: Verdana, Geneva, sans-serif; font=
+-size: 14px; line-height: 20px; color:#FFFFFF;" align=3D"left">Een vraag ov=
+er nota&rsquo;s, meterstanden doorgeven of andere energiezaken? Kijk voor h=
+et antwoord op onze nieuwe online klantenservice. En maak gelijk kennis met=
+ de digitale assistent van Eneco. Stel je vraag online en deze supersnelle =
+hulp zet dag en nacht alle antwoorden voor je op een rijtje. Handig!</td>=
+=0A                                            </tr>=0A                    =
+                        <tr style=3D"font-size:1px;mso-line-height-alt: 0;m=
+so-margin-top-alt: 0;">=0A                                                <=
+td class=3D"padding" style=3D"padding-top: 12px;" valign=3D"top" align=3D"r=
+ight">=0A                                                <table style=3D"wi=
+dth: 155px;" width=3D"155" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+>=0A                                                    <tbody>=0A         =
+                                               <tr>=0A                     =
+                                       <td style=3D"padding-top: 9px; paddi=
+ng-bottom: 9px; background: #00afdb; -moz-border-radius: 5px; -webkit-borde=
+r-radius: 5px; border-radius: 5px; border-bottom: 2px solid #0086a9 !import=
+ant; line-height: 14px;" valign=3D"top" align=3D"center"><a href=3D"https:/=
+/mail.eneco.nl/1/4/86/1/hmJ1hbKPba6LhjvxxOh2fRUmC4KAfrD1ZstTbhSKG9ASukZcA6l=
+KZbqCNYyXybDpwWkIhroQ7eewRMs7crgwJSWbE2IQGCjVTxqWouPem1A" alt=3D"Stel nu al=
+ je vragen online! - BTN" rel=3D"report_Art05_Servicepaginas" target=3D"_bl=
+ank" style=3D"color: #FFFFFF; display: block; font-size: 14px; text-align: =
+center; text-decoration: none; text-transform: uppercase; font-family: Verd=
+ana, Geneva, sans-serif; line-height: 20px;">Stel je vraag</a></td>=0A     =
+                                                   </tr>=0A                =
+                                    </tbody>=0A                            =
+                    </table>=0A                                            =
+    </td>=0A                                            </tr>=0A           =
+                                 <tr style=3D"font-size:1px;mso-line-height=
+-alt: 0;mso-margin-top-alt: 0;">=0A                                        =
+        <td style=3D"height:5px; min-height: 5px; max-height:5px; font-size=
+:1px; mso-line-height-rule:exactly; line-height:1px;">&nbsp;</td>=0A       =
+                                     </tr>=0A                              =
+          </tbody>=0A                                    </table>=0A       =
+                             </div>=0A                                    <=
+!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td>=0A            =
+                        <td style=3D"width: 4px;" width=3D"4" bgcolor=3D"#F=
+6931E"></td>=0A                                </tr>=0A                    =
+            <tr>=0A                                    <td height=3D"2" bgc=
+olor=3D"#D9821A">&nbsp;</td>=0A                                    <td styl=
+e=3D"width: 4px;" width=3D"4" valign=3D"top" height=3D"2" align=3D"left"><i=
+mg src=3D"https://mail.eneco.nl/public/files/86/0/20160825_ECR-Nieuwsbrief_=
+Augustus/NB_Redesign/Actueel_RO.png" alt=3D"" style=3D"display: block;" wid=
+th=3D"4" height=3D"2" border=3D"0" /></td>=0A                              =
+  </tr>=0A                            </tbody>=0A                        </=
+table>=0A                        </td>=0A                    </tr>=0A      =
+          </tbody>=0A            </table>=0A            <!--[if (gte mso 9)=
+|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A            </td>=
+=0A        </tr>=0A    </tbody>=0A</table>=0A=0A<table class=3D"wrapper" st=
+yle=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; mso-margin-t=
+op-alt: 1px; mso-line-height-rule:exactly;" cellspacing=3D"0" cellpadding=
+=3D"0" bgcolor=3D"#f6f6f6" border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=
+=3D"top" align=3D"center">=0A<div class=3D"webkit" style=3D"max-width: 600p=
+x; margin: 0 auto;"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width=
+: 600px;">=0A<tr>=0A<td>=0A<![endif]-->=0A<table style=3D"font-size:1px; li=
+ne-height:1px; mso-line-height-alt: 0; mso-margin-top-alt: 1px; mso-line-he=
+ight-rule:exactly;" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" bo=
+rder=3D"0" width=3D"100%">=0A<tr>=0A<td style=3D"max-width: 205px;" height=
+=3D"2">&nbsp;</td>=0A<td style=3D"width:190px;" bgcolor=3D"#ffffff" height=
+=3D"2" width=3D"190">&nbsp;</td>=0A<td style=3D"max-width: 205px;" height=
+=3D"2">&nbsp;</td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A</td>=
+=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A<tabl=
+e class=3D"wrapper" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"=
+ border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=3D"center">=
+=0A<div class=3D"webkit" style=3D"max-width: 600px; margin: 0 auto;"><!--[i=
+f (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td>=
+=0A<![endif]-->=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"cente=
+r" border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=3D"center=
+"><img src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign=
+_nieuwsbrief/Pijl.png" alt=3D"" style=3D"display: block; color: #D21242; fo=
+nt-family: Verdana, Geneva, sans-serif; font-size: 14px; text-align: center=
+; line-height: 20px;" height=3D"29" border=3D"0" width=3D"210" /></td>=0A</=
+tr>=0A<tr>=0A<td height=3D"30"></td>=0A</tr>=0A</table>=0A<!--[if (gte mso =
+9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=
+=0A</table>=0A<a id=3D"art07" name=3D"art07"></a>=0A<table class=3D"wrapper=
+Padding" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff" border=3D"=
+0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" align=3D"center">=0A<div cla=
+ss=3D"webkit" style=3D"max-width: 600px; margin: 0 auto;"><!--[if (gte mso =
+9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td valign=3D"top=
+">=0A<![endif]-->=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"cen=
+ter" border=3D"0" width=3D"100%">=0A<tr>=0A<td style=3D"padding-bottom: 14p=
+x;" valign=3D"top">=0A<table class=3D"container" style=3D"max-width: 600px;=
+" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" border=3D"0" width=
+=3D"100%">=0A<tr>=0A<td style=3D"text-align: center; vertical-align: top; f=
+ont-size: 0;"><!--[if (gte mso 9)|(IE)]><table width=3D"100%" align=3D"cent=
+er" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td width=3D"300" =
+style=3D"width: 300px;" valign=3D"top"><![endif]-->=0A<div style=3D"width: =
+300px; display: inline-block; vertical-align: top;">=0A<table cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left" border=3D"0" width=3D"100%">=0A<tr>=
+=0A<td style=3D"width: 5px; min-width: 5px; padding-bottom: 14px;" width=3D=
+"5"></td>=0A<td style=3D"padding-bottom: 14px;" valign=3D"top" align=3D"lef=
+t"><a href=3D"https://mail.eneco.nl/2/4/86/1/_pq7JV-AU7iGo3y0W14Blce9Wv30uw=
+gMMa-5qip8UjbEttIL4tnAbPIiM6uCT2Hw8Ph9eDk5zDaXBEHIiTqCKA?art=3D07" alt=3D"T=
+ips voor lekkere lentekriebels - IMG" target=3D"_blank" rel=3D"report_Art07=
+_Lentetips" style=3D"text-decoration: none; color: #414141;"><img src=3D"ht=
+tps://mail.eneco.nl/public/files/86/0/20190430_ECR-Retail_NB_april/NB/Art07=
+_Lentetips.jpg" alt=3D"Tips voor lekkere lentekriebels" style=3D"display: b=
+lock; color: #D21242; font-family: Verdana, Geneva, sans-serif; font-size: =
+14px; text-align: center; line-height: 20px;" border=3D"0" width=3D"290" />=
+</a></td>=0A<td style=3D"width: 5px; min-width: 5px; padding-bottom: 14px;"=
+ width=3D"5"></td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]>=
+</td><td width=3D"300" style=3D"width: 300px;" valign=3D"top"><![endif]-->=
+=0A<div style=3D"width: 300px; display: inline-block; vertical-align: top;"=
+>=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"left" border=3D"0" =
+width=3D"100%">=0A<tr>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D=
+"5"></td>=0A<td valign=3D"top" align=3D"left">=0A<table cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"left" border=3D"0" width=3D"100%">=0A<tr>=0A<td c=
+lass=3D"padding" style=3D"font-family: Verdana, Geneva, sans-serif; font-si=
+ze: 22px; line-height: 28px; color:#d21242; font-weight:bold;" align=3D"lef=
+t"><a href=3D"https://mail.eneco.nl/2/4/86/1/eAZLa45CEFWLpFLv_60GewhbAR70Ot=
+aCaIIv3-1MD2ZWDhdWwQh5tkS9i-bR_bHByI9gfeAMwMecemV9EPVhTQ?art=3D07" target=
+=3D"_blank" style=3D"color:#d21242; text-decoration:none;" alt=3D"Tips voor=
+ lekkere lentekriebels - TTL" rel=3D"report_Art07_Lentetips">Tips voor lekk=
+ere lentekriebels</a></td>=0A</tr>=0A<tr>=0A<td class=3D"padding" style=3D"=
+padding-top: 16px; font-family: Verdana, Geneva, sans-serif; font-size: 12p=
+x; line-height: 16px; color:#414141;" align=3D"left">Staan je wandelschoene=
+n te popelen om er op uit te trekken? Is je fiets al toe aan een mooie toch=
+t? Het is lente; het seizoen van doen! We geven je een paar tips voor het v=
+oorjaar. En doe je mee met onze actie op Instagram? Post jouw lentefoto met=
+ #StukjeZon en wij bewerken de leukste foto&rsquo;s met zonnige illustratie=
+s van Fatti Burke.</td>=0A</tr>=0A<tr>=0A<td class=3D"padding" style=3D"pad=
+ding-top: 14px; padding-bottom: 7px;" valign=3D"top" align=3D"right">=0A<ta=
+ble class=3D"container" style=3D"max-width: 290px;" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" width=3D"100%">=0A<tr>=0A<td style=3D"text-align:=
+ center; vertical-align: top; font-size: 0;">=0A<table cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" width=3D"100%">=0A<tr>=0A<td valign=3D"top" al=
+ign=3D"right">=0A<table style=3D"width: 140px;" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"140">=0A<tr>=0A<td style=3D"padding-top: 9px=
+; padding-bottom: 9px; background: #84b818; -moz-border-radius: 5px; -webki=
+t-border-radius: 5px; border-radius: 5px; border-bottom: 2px solid #6da100 =
+!important; line-height: 14px;" valign=3D"top" align=3D"center"><a href=3D"=
+https://mail.eneco.nl/2/4/86/1/mJWCSb6DJgZDdpkAi4J_TiqKeEcLd5iwxnKVkfeKKKVD=
+R2ihUcB4NsIGunXah8vXIZZ0rcgAUmrFYf9GiPUUuQ?art=3D07" alt=3D"Tips voor lekke=
+re lentekriebels - BTN" rel=3D"report_Art07_Lentetips" target=3D"_blank" st=
+yle=3D"color: #FFFFFF; display: block; font-size: 14px; text-align: center;=
+ text-decoration: none; text-transform: uppercase; font-family: Verdana, Ge=
+neva, sans-serif; line-height: 20px;">Het is lente</a></td>=0A</tr>=0A</tab=
+le>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=
+=0A<tr>=0A<td style=3D"height:14px; min-height: 14px; max-height:14px; font=
+-size:1px; mso-line-height-rule:exactly; line-height:1px;">&nbsp;</td>=0A</=
+tr>=0A</table>=0A</td>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D=
+"5"></td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]></td></tr=
+></table><![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A=
+<!--[if (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=
+=0A</td>=0A</tr>=0A</table>=0A<table style=3D"font-size:1px; line-height:1p=
+x; mso-line-height-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:ex=
+actly;" class=3D"wrapper" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" bgcolor=3D"#f6f6f6">=0A<tr>=0A<td valign=3D"top" align=3D"ce=
+nter">=0A<div style=3D"max-width: 600px; margin: 0&#xA;auto;" class=3D"webk=
+it"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr=
+>=0A<td>=0A<![endif]-->=0A<table style=3D"font-size:1px; line-height:1px; m=
+so-line-height-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:exactl=
+y;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"center">=0A<tr>=0A<td style=3D"max-width: 195px;" height=3D"2">&nbsp;</=
+td>=0A<td style=3D"width:208px;" width=3D"208" height=3D"2" bgcolor=3D"#fff=
+fff">&nbsp;</td>=0A<td style=3D"max-width: 195px;" height=3D"2">&nbsp;</td>=
+=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=
+=0A<![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A<table class=3D"wrapper"=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D=
+"#F6F6F6">=0A<tr>=0A<td valign=3D"top" align=3D"center">=0A<div style=3D"ma=
+x-width: 600px; margin: 0 auto;" class=3D"webkit"><!--[if (gte mso 9)|(IE)]=
+>=0A<table width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td>=0A<![endif]-->=0A<ta=
+ble width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"center">=0A<tr>=0A<td valign=3D"top" align=3D"center"><img style=3D"dis=
+play: block; color: #D21242; font-family: Verdana, Geneva, sans-serif; font=
+-size: 14px; text-align: center; line-height: 20px;" alt=3D"" src=3D"https:=
+//mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Pijl_Gr=
+ijs.png" width=3D"210" height=3D"29" border=3D"0" /></td>=0A</tr>=0A<tr>=0A=
+<td height=3D"30"></td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A<=
+/td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A<=
+table class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" bgcolor=3D"#F6F6F6">=0A<tr>=0A<td valign=3D"top" align=
+=3D"center">=0A<div style=3D"max-width: 600px; margin: 0 auto;" class=3D"we=
+bkit"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<=
+tr>=0A<td>=0A<![endif]-->=0A<table width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" align=3D"center">=0A<tr>=0A<td style=3D"padding-bot=
+tom: 14px;" valign=3D"top">=0A<table style=3D"max-width: 600px;" class=3D"c=
+ontainer" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" a=
+lign=3D"center">=0A<tr>=0A<td style=3D"text-align: center; vertical-align: =
+top; font-size: 0;"><!--[if (gte mso 9)|(IE)]><table width=3D"100%" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td width=
+=3D"300" style=3D"width: 300px;" valign=3D"top"><![endif]-->=0A<div style=
+=3D"width: 300px; display: inline-block; vertical-align: top;">=0A<table wi=
+dth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left=
+">=0A<tr>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D"5"></td>=0A<=
+td valign=3D"top">=0A<table style=3D"font-size:1px; line-height:1px; mso-li=
+ne-height-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:exactly;" w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<t=
+d style=3D"width: 4px;" width=3D"4" valign=3D"bottom" align=3D"right"><img =
+style=3D"display: block;" alt=3D"" src=3D"https://mail.eneco.nl/public/file=
+s/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoek_Rood_LB.png" width=3D"4" heig=
+ht=3D"4" border=3D"0" /></td>=0A<td style=3D"width: 282px;" width=3D"282" h=
+eight=3D"4" bgcolor=3D"#D21242">&nbsp;</td>=0A<td style=3D"width: 4px;" wid=
+th=3D"4" valign=3D"bottom" align=3D"left"><img style=3D"display: block;" al=
+t=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign=
+_nieuwsbrief/Hoek_Rood_RB.png" width=3D"4" height=3D"4" border=3D"0" /></td=
+>=0A</tr>=0A<tr>=0A<td colspan=3D"3" valign=3D"top" bgcolor=3D"#D21242">=0A=
+<table style=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; mso=
+-margin-top-alt: 1px; mso-line-height-rule:exactly;" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"width: 10p=
+x;" width=3D"10">&nbsp;</td>=0A<td style=3D"padding-top: 10px; padding-bott=
+om: 10px; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-h=
+eight: 20px; color:#FFFFFF; text-transform: uppercase;" align=3D"left">Poll=
+</td>=0A<td style=3D"width: 10px;" width=3D"10">&nbsp;</td>=0A</tr>=0A</tab=
+le>=0A</td>=0A</tr>=0A<tr>=0A<td class=3D"height_auto" style=3D"height:332p=
+x;" colspan=3D"3" valign=3D"top" height=3D"332" bgcolor=3D"#FFFFFF">=0A<tab=
+le style=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; mso-mar=
+gin-top-alt: 1px; mso-line-height-rule:exactly; width: 290px;" width=3D"290=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"w=
+idth: 10px;" width=3D"10">&nbsp;</td>=0A<td valign=3D"top">=0A<table cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td sty=
+le=3D"padding-top: 16px; font-family: Verdana, Geneva, sans-serif; font-siz=
+e: 12px; line-height: 16px; color:#414141;" align=3D"left">Begin jij deze l=
+ente ook met energie besparen?</td>=0A</tr>=0A<tr>=0A<td valign=3D"top">=0A=
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A<=
+tr>=0A<td style=3D"padding-top: 28px; width: 19px; line-height: 26px;" widt=
+h=3D"19" valign=3D"top"><a style=3D"text-decoration: none; color: #414141;"=
+ rel=3D"report_Poll_LenteStartEnergiebesparen" target=3D"_blank" alt=3D"Pol=
+l - IMG1" href=3D"https://mail.eneco.nl/2/4/86/1/sBNJDpMYh3AJHu8MB14vEAigwH=
+E1IRRVj9LUpeuG1-YL0gGBMSPMcvygdCSEtBKZJfAWds_8uqQGNJOal2nmew"><img style=3D=
+"display: block; color: #D21242; font-family: Verdana, Geneva, sans-serif; =
+font-size: 14px; text-align: center; line-height: 20px;" alt=3D"&bull;" src=
+=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbri=
+ef/Poll.png" width=3D"19" height=3D"19" border=3D"0" /></a></td>=0A<td styl=
+e=3D"padding-top: 28px; width: 10px;" width=3D"10"></td>=0A<td style=3D"pad=
+ding-top: 28px; font-family: Verdana, Geneva, sans-serif; font-size: 12px; =
+line-height: 20px; color:#00afdb;" align=3D"left"><a rel=3D"report_Poll_Ond=
+erwerp" style=3D"color:#00afdb; text-decoration:none;" alt=3D"Poll - TXT1" =
+target=3D"_blank" href=3D"https://mail.eneco.nl/2/4/86/1/0pT1ZXQQF8o2NtKTFT=
+yYseoAQ1bUymyf2jSPpyHBkSR-LIgyh0de5GVehUDa-DBU-ukv1sAFHUctHyl8Ipa2fw">Jazek=
+er, ik haal onder andere de energie van de zon binnen!</a></td>=0A</tr>=0A<=
+tr>=0A<td style=3D"padding-top: 28px; width: 19px; line-height: 26px;" widt=
+h=3D"19" valign=3D"top"><a style=3D"text-decoration: none; color: #414141;"=
+ rel=3D"report_Poll_Onderwerp" target=3D"_blank" alt=3D"Poll - IMG2" href=
+=3D"https://mail.eneco.nl/2/4/86/1/Onup3GnnwGTJyQ1DgNz8xzYQuGsBfFqopukUQHf6=
+wGpq4BezyhcNxhPxHdkvoHHTxeuMYF1-RR_AsUMqgDsXjw"><img style=3D"display: bloc=
+k; color: #D21242; font-family: Verdana, Geneva, sans-serif; font-size: 14p=
+x;&#xA;text-align: center; line-height: 20px;" alt=3D"&bull;" src=3D"https:=
+//mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Poll.pn=
+g" width=3D"19" height=3D"19" border=3D"0" /></a></td>=0A<td style=3D"paddi=
+ng-top: 28px; width: 10px;" width=3D"10"></td>=0A<td style=3D"padding-top: =
+28px; font-family: Verdana, Geneva, sans-serif; font-size: 12px; line-heigh=
+t: 20px; color:#00afdb;" align=3D"left"><a rel=3D"report_Poll_Onderwerp" st=
+yle=3D"color:#00afdb; text-decoration:none;" alt=3D"Poll - TXT2" target=3D"=
+_blank" href=3D"https://mail.eneco.nl/2/4/86/1/3Gf4bkf3iCvXHxCeVt_EmCfxmmiI=
+8_aF8rlAlnqaqG830YvODKm-Jmwljt-FssCs6yabHfecJPR4pZjtRhGKeQ">Nee, ik bespaar=
+ het hele jaar door.</a></td>=0A</tr>=0A<tr>=0A<td style=3D"padding-top: 28=
+px; width: 19px; line-height: 26px;" width=3D"19" valign=3D"top"><a style=
+=3D"text-decoration: none; color: #414141;" rel=3D"report_Poll_Onderwerp" t=
+arget=3D"_blank" alt=3D"Poll - IMG3" href=3D"https://mail.eneco.nl/2/4/86/1=
+/Qwu-obAflHWUTQCa4ssAuCRI28w4OoeBEqE64Mo015wPoaEKLNor_E59V8r3aYAcvpbSKMvTwk=
+fZnD5fUkJ43w"><img style=3D"display: block; color: #D21242; font-family: Ve=
+rdana, Geneva, sans-serif; font-size: 14px; text-align: center; line-height=
+: 20px;" alt=3D"&bull;" src=3D"https://mail.eneco.nl/public/files/86/0/2016=
+0331_ECR-Redesign_nieuwsbrief/Poll.png" width=3D"19" height=3D"19" border=
+=3D"0" /></a></td>=0A<td style=3D"padding-top: 28px; width: 10px;" width=3D=
+"10"></td>=0A<td style=3D"padding-top: 28px; font-family: Verdana, Geneva, =
+sans-serif; font-size: 12px; line-height: 20px; color:#00afdb;" align=3D"le=
+ft"><a rel=3D"report_Poll_Onderwerp" alt=3D"Poll - TXT3" style=3D"color:#00=
+afdb; text-decoration:none;" target=3D"_blank" href=3D"https://mail.eneco.n=
+l/2/4/86/1/aH7wXscpbyK-tIGclR5O6CryL1xssyLmo96YXOKzycTPeCkEfl508A4buU1005Ns=
+0W9Uhkl8iiMoF5MUCzzbSg">Ik wil wel energie besparen, maar weet niet waar ik=
+ moet beginnen.</a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td st=
+yle=3D"height:10px; min-height:10px; max-height:10px; font-size:1px; mso-li=
+ne-height-rule:exactly; line-height:1px;">&nbsp;</td>=0A</tr>=0A</table>=0A=
+</td>=0A<td style=3D"width: 10px;" width=3D"10">&nbsp;</td>=0A</tr>=0A</tab=
+le>=0A</td>=0A</tr>=0A<tr>=0A<td style=3D"width: 4px;" rowspan=3D"2" width=
+=3D"4" valign=3D"top" align=3D"right"><img style=3D"display: block;" alt=3D=
+"" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nie=
+uwsbrief/Hoek_Rood_LO.png" width=3D"4" height=3D"6" border=3D"0" /></td>=0A=
+<td height=3D"4" bgcolor=3D"#FFFFFF">&nbsp;</td>=0A<td style=3D"width: 4px;=
+" rowspan=3D"2" width=3D"4" valign=3D"top" align=3D"left"><img style=3D"dis=
+play: block;" alt=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/20160=
+331_ECR-Redesign_nieuwsbrief/Hoek_Rood_RO.png" width=3D"4" height=3D"6" bor=
+der=3D"0" /></td>=0A</tr>=0A<tr>=0A<td height=3D"2" bgcolor=3D"#D8D8D8">&nb=
+sp;</td>=0A</tr>=0A</table>=0A</td>=0A<td style=3D"width: 5px; min-width: 5=
+px;" width=3D"5"></td>=0A</tr>=0A<tr>=0A<td style=3D"height:14px; min-heigh=
+t:14px; max-height:14px; font-size:1px; mso-line-height-rule:exactly; line-=
+height:1px;" colspan=3D"3" height=3D"14">&nbsp;</td>=0A</tr>=0A</table>=0A<=
+/div>=0A<!--[if (gte mso 9)|(IE)]></td><td width=3D"300" style=3D"width: 30=
+0px;"=0Avalign=3D"top"><![endif]-->=0A<div style=3D"width: 300px; display: =
+inline-block; vertical-align: top;">=0A<table width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"wi=
+dth: 5px; min-width: 5px;" width=3D"5"></td>=0A<td style=3D"width: 290px;" =
+valign=3D"top">=0A<table style=3D"font-size:1px; line-height:1px; mso-line-=
+height-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:exactly;" widt=
+h=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td s=
+tyle=3D"width:290px;" colspan=3D"3" width=3D"290" valign=3D"top"><a style=
+=3D"text-decoration: none; color: #414141;" rel=3D"report_Social_facebook" =
+target=3D"_blank" alt=3D"Eneco op Facebook - IMG" href=3D"https://mail.enec=
+o.nl/1/4/86/1/-GJTC_gMdb-MuHrz0e-2AYWGkQUJsMoM-Hm3pXxBoYa5GvXBxSfYmydkqJUkP=
+4WCoIe1ic-SZ0iqHbSPdIwoMQ"><img style=3D"display: inline; color: #D21242; f=
+ont-family: Verdana, Geneva, sans-serif; font-size: 14px; text-align: cente=
+r; line-height: 20px; width: 289px;" alt=3D"Eneco op Facebook" src=3D"https=
+://mail.eneco.nl/public/files/86/0/20190430_ECR-Retail_NB_april/NB/Facebook=
+.jpg" border=3D"0" /></a></td>=0A</tr>=0A<tr>=0A<td class=3D"height_auto" s=
+tyle=3D"height:143px;" colspan=3D"3" valign=3D"top" height=3D"143" bgcolor=
+=3D"#FFFFFF">=0A<table style=3D"width: 290px; font-size:1px; line-height:1p=
+x; mso-line-height-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:ex=
+actly;" width=3D"290" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<=
+tr>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A<td valign=3D"top">=
+=0A<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=
+=0A<tr>=0A<td style=3D"padding-top: 15px; font-family: Verdana, Geneva, san=
+s-serif; font-size: 12px; line-height: 16px; color:#414141; font-weight: bo=
+ld;" align=3D"left">Eneco op Facebook</td>=0A</tr>=0A<tr>=0A<td style=3D"pa=
+dding-top: 16px; font-family: Verdana, Geneva, sans-serif; font-size: 12px;=
+ line-height: 20px; color:#414141;" align=3D"left">Steeds meer mensen koken=
+ op inductie om het gasverbruik te verminderen. Maar we hebben nog een pran=
+gende vraag, kamperend Nederland...</td>=0A</tr>=0A<tr>=0A<td style=3D"padd=
+ing-top: 17px; padding-bottom: 3px; font-family: Verdana, Geneva, sans-seri=
+f; font-size: 12px; line-height: 20px; color:#00afdb;" align=3D"left"><a al=
+t=3D"Eneco op facebook - TXT" rel=3D"report_Social_facebook" style=3D"color=
+:#00afdb; text-decoration:none;" target=3D"_blank" href=3D"https://mail.ene=
+co.nl/1/4/86/1/XCARjpv3edvGQG7_mtOv9DeHSobufkWCKlDvthfBzOOFOPnM2Ne5-Qn_GRXb=
+HIsRN0twAJXii0l_zNO5vYzG9g">Bekijk het bericht</a></td>=0A</tr>=0A</table>=
+=0A</td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A</tr>=0A<tr>=0A<=
+td colspan=3D"3" style=3D"height: 10px;" height=3D"10">&nbsp;</td>=0A</tr>=
+=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td style=3D"width: 4px;" rowspan=3D"2=
+" width=3D"4" valign=3D"top" align=3D"left"><img style=3D"display: block;" =
+alt=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesi=
+gn_nieuwsbrief/Hoek_Rood_LO.png" width=3D"4" height=3D"6" border=3D"0" /></=
+td>=0A<td style=3D"width: 282px;" width=3D"282" height=3D"4" bgcolor=3D"#FF=
+FFFF">&nbsp;</td>=0A<td style=3D"width: 4px;" rowspan=3D"2" width=3D"4" val=
+ign=3D"top" align=3D"right"><img style=3D"display: block;" alt=3D"" src=3D"=
+https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/H=
+oek_Rood_RO.png" width=3D"4" height=3D"6" border=3D"0" /></td>=0A</tr>=0A<t=
+r>=0A<td style=3D"width: 282px;" width=3D"282" height=3D"2" bgcolor=3D"#D8D=
+8D8">&nbsp;</td>=0A</tr>=0A</table>=0A</td>=0A<td style=3D"width: 5px; min-=
+width: 5px;" width=3D"5"></td>=0A</tr>=0A<tr>=0A<td style=3D"height:14px; m=
+in-height:14px; max-height:14px; font-size:1px; mso-line-height-rule:exactl=
+y; line-height:1px;" colspan=3D"3" height=3D"14">&nbsp;</td>=0A</tr>=0A</ta=
+ble>=0A</div>=0A<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></t=
+d>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)=
+]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</tabl=
+e>=0A<table class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" bgcolor=3D"#F6F6F6">=0A<tr>=0A<td valign=3D"top" =
+align=3D"center">=0A<div style=3D"max-width: 600px; margin: 0 auto;" class=
+=3D"webkit"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"cent=
+er" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;=
+">=0A<tr>=0A<td>=0A<![endif]-->=0A<table width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" align=3D"center">=0A<tr>=0A<td valign=3D"top"=
+>=0A<table style=3D"max-width: 600px;" class=3D"container" width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">=0A<tr>=0A=
+<td style=3D"text-align: center; vertical-align: top; font-size: 0;"><!--[i=
+f (gte mso 9)|(IE)]><table width=3D"100%" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0"><tr><td width=3D"300" style=3D"width: 300p=
+x;" valign=3D"top"><![endif]-->=0A<div style=3D"width: 300px; display: inli=
+ne-block; vertical-align: top;">=0A<table width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"width:=
+ 5px; min-width: 5px;" width=3D"5"></td>=0A<td valign=3D"top">=0A<table sty=
+le=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; mso-margin-to=
+p-alt: 1px; mso-line-height-rule:exactly;" width=3D"100%" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"width: 4px;" width=
+=3D"4" valign=3D"bottom" align=3D"right"><img style=3D"display: block;" alt=
+=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_=
+nieuwsbrief/Hoek_Rood_LB.png" width=3D"4" height=3D"4" border=3D"0" /></td>=
+=0A<td style=3D"width: 282px;" width=3D"282" height=3D"4" bgcolor=3D"#D2124=
+2">&nbsp;</td>=0A<td style=3D"width: 4px;" width=3D"4" valign=3D"bottom" al=
+ign=3D"left"><img style=3D"display: block;" alt=3D"" src=3D"https://mail.en=
+eco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoek_Rood_RB.png=
+" width=3D"4" height=3D"4" border=3D"0" /></td>=0A</tr>=0A<tr>=0A<td colspa=
+n=3D"3" valign=3D"top" bgcolor=3D"#D21242">=0A<table cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"width: 10p=
+x;" width=3D"10"></td>=0A<td style=3D"padding-top: 10px; padding-bottom: 10=
+px; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height:=
+ 20px; color:#FFFFFF; text-transform: uppercase;" align=3D"left">Mijn Eneco=
+</td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A</tr>=0A</table>=0A=
+</td>=0A</tr>=0A<tr>=0A<td class=3D"height_auto" style=3D"height:235px;" co=
+lspan=3D"3" valign=3D"top" height=3D"235" bgcolor=3D"#FFFFFF">=0A<table sty=
+le=3D"width: 290px; font-size:1px; line-height:1px; mso-line-height-alt: ma=
+rgin-top-alt: 1px; mso-line-height-rule:exactly;" width=3D"290" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"width: 10px;" =
+width=3D"10"></td>=0A<td valign=3D"top">=0A<table style=3D"width: 270px;" w=
+idth=3D"270" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td=
+ style=3D"padding-top: 21px; font-family: Verdana, Geneva, sans-serif; font=
+-size: 12px; line-height: 20px; color:#414141;" align=3D"left">Met Mijn&nbs=
+p;Eneco regel je snel en makkelijk je eigen energiezaken. Log nu in of meld=
+ je aan!</td>=0A</tr>=0A<tr>=0A<td style=3D"padding-top: 16px;" valign=3D"t=
+op" align=3D"left">=0A<table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0">=0A<tr>=0A<td style=3D"width: 9px;" width=3D"9" valign=3D"top">=0A<table=
+ style=3D"width: 9px;" width=3D"9" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0">=0A<tr>=0A<td style=3D"height:6px; min-height:6px; max-height:6px;=
+ font-size:1px; mso-line-height-rule:exactly; line-height:1px;">&nbsp;</td>=
+=0A</tr>=0A<tr>=0A<td style=3D"width: 9px;" width=3D"9"><img style=3D"displ=
+ay: block; font-family: Verdana, Geneva, sans-serif; font-weight: bold; fon=
+t-size: 12px; color: #84b819;" alt=3D"&radic;" src=3D"https://mail.eneco.nl=
+/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Vink.png" width=3D"9" =
+height=3D"10" border=3D"0" /></td>=0A</tr>=0A</table>=0A</td>=0A<td style=
+=3D"width: 10px;" width=3D"10"></td>=0A<td style=3D"font-family: Verdana, G=
+eneva, sans-serif; font-size: 12px; line-height: 20px; color:#414141;" alig=
+n=3D"left">Je termijnbedrag aanpassen</td>=0A</tr>=0A<tr>=0A<td style=3D"wi=
+dth: 9px;" width=3D"9" valign=3D"top">=0A<table style=3D"width: 9px;" width=
+=3D"9" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=
+=3D"height:6px; min-height:6px; max-height:6px; font-size:1px; mso-line-hei=
+ght-rule:exactly; line-height:1px;">&nbsp;</td>=0A</tr>=0A<tr>=0A<td style=
+=3D"width: 9px;" width=3D"9"><img style=3D"display: block; font-family: Ver=
+dana, Geneva, sans-serif; font-weight: bold; font-size: 12px; color: #84b81=
+9;" alt=3D"&radic;" src=3D"https://mail.eneco.nl/public/files/86/0/20160331=
+_ECR-Redesign_nieuwsbrief/Vink.png" width=3D"9" height=3D"10" border=3D"0" =
+/></td>=0A</tr>=0A</table>=0A</td>=0A<td style=3D"width: 10px;" width=3D"10=
+"></td>=0A<td style=3D"font-family: Verdana, Geneva, sans-serif; font-size:=
+ 12px; line-height: 20px; color:#414141;" align=3D"left">Altijd inzicht in =
+je eigen energieverbruik</td>=0A</tr>=0A<tr>=0A<td style=3D"width: 9px;" wi=
+dth=3D"9" valign=3D"top">=0A<table style=3D"width: 9px;" width=3D"9" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"height:6p=
+x; min-height:6px; max-height:6px; font-size:1px; mso-line-height-rule:exac=
+tly; line-height:1px;">&nbsp;</td>=0A</tr>=0A<tr>=0A<td style=3D"width: 9px=
+;" width=3D"9"><img style=3D"display: block; font-family: Verdana, Geneva, =
+sans-serif; font-weight: bold; font-size: 12px; color: #84b819;" alt=3D"&ra=
+dic;" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_=
+nieuwsbrief/Vink.png" width=3D"9" height=3D"10" border=3D"0" /></td>=0A</tr=
+>=0A</table>=0A</td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A<td =
+style=3D"font-family: Verdana, Geneva, sans-serif; font-size: 12px; line-he=
+ight: 20px; color:#414141;" align=3D"left">Online facturen bekijken</td>=0A=
+</tr>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td style=3D"padding-top: 21px;" =
+valign=3D"top">=0A<table style=3D"width: 270px;" width=3D"270" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">=0A<tr>=0A<td style=
+=3D"text-align: center; vertical-align: top; font-size: 0;" valign=3D"top">=
+=0A<table style=3D"width: 115px;" class=3D"center" width=3D"115" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"padding-top: =
+9px; padding-bottom: 9px; background: #FCBF00; -moz-border-radius: 5px; -we=
+bkit-border-radius: 5px; border-radius: 5px; border-bottom: 2px solid #C898=
+01 !important; line-height: 14px;" valign=3D"top" align=3D"center"><a style=
+=3D"color: #FFFFFF; display: block; font-size: 14px; text-align: center; te=
+xt-decoration: none; text-transform: uppercase; font-family: Verdana, Genev=
+a, sans-serif; line-height: 20px;" target=3D"_blank" rel=3D"report_MijnEnec=
+o_Inloggen" alt=3D"Mijn Eneco - BTN" href=3D"https://mail.eneco.nl/1/4/86/1=
+/74PgQrYOqnxZw2xoJEe1yDJXzRi3Oq762or4TtBTGXVFo_XzlzlYPrXqL0ooV2LRBfLhD5dr3K=
+EpAe10uLNkBnK4am3yAOAWO7pvc1glTIA">Inloggen</a></td>=0A</tr>=0A</table>=0A<=
+/td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A<td valign=3D"top">=
+=0A<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=
+=0A<tr>=0A<td style=3D"font-family: Verdana, Geneva, sans-serif; font-size:=
+ 12px; line-height: 16px; color:#00afdb;" valign=3D"top" align=3D"left"><a =
+alt=3D"Mijn Eneco - TXT" rel=3D"report_MijnEneco_Inloggen" style=3D"color:#=
+00afdb; text-decoration:none;" target=3D"_blank" href=3D"https://mail.eneco=
+.nl/1/4/86/1/qoksniVMwB9EA_BkvLRpOYgXgG4C0g2684zMui2zNsNqjl_jkTjlVzrtin7AM2=
+pwrBx6a2uScnyEXY_GihqITY_FY64tKkFBpiqoYt0WEoQ">Download hier de Eneco&nbsp;=
+app</a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=
+=0A</table>=0A</td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A</tr>=
+=0A<tr>=0A<td colspan=3D"3" height=3D"10">&nbsp;</td>=0A</tr>=0A</table>=0A=
+</td>=0A</tr>=0A<tr>=0A<td style=3D"width: 4px;" rowspan=3D"2" width=3D"4" =
+valign=3D"top" align=3D"right"><img style=3D"display: block;" alt=3D"" src=
+=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbri=
+ef/Hoek_Rood_LO.png" width=3D"4" height=3D"6" border=3D"0" /></td>=0A<td he=
+ight=3D"4" bgcolor=3D"#FFFFFF">&nbsp;</td>=0A<td style=3D"width: 4px;" rows=
+pan=3D"2" width=3D"4" valign=3D"top" align=3D"left"><img style=3D"display: =
+block;" alt=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_EC=
+R-Redesign_nieuwsbrief/Hoek_Rood_RO.png" width=3D"4" height=3D"6" border=3D=
+"0" /></td>=0A</tr>=0A<tr>=0A<td height=3D"2" bgcolor=3D"#D8D8D8">&nbsp;</t=
+d>=0A</tr>=0A</table>=0A</td>=0A<td style=3D"width: 5px; min-width: 5px;" w=
+idth=3D"5"></td>=0A</tr>=0A<tr>=0A<td style=3D"height:14px; min-height:14px=
+; max-height:14px; font-size:1px; mso-line-height-rule:exactly; line-height=
+:1px;" colspan=3D"3" height=3D"14">&nbsp;</td>=0A</tr>=0A</table>=0A</div>=
+=0A<!--[if (gte mso 9)|(IE)]></td><td width=3D"300" style=3D"width:=0A300px=
+;" valign=3D"top"><![endif]-->=0A<div style=3D"width: 300px; display: inlin=
+e-block; vertical-align: top;">=0A<table width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"width: =
+5px; min-width: 5px;" width=3D"5"></td>=0A<td valign=3D"top">=0A<table styl=
+e=3D"font-size:1px; line-height:1px; mso-line-height-alt: 0; mso-margin-top=
+-alt: 1px; mso-line-height-rule:exactly;" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"width: 4px;" width=3D=
+"4" valign=3D"bottom" align=3D"right"><img style=3D"display: block;" alt=3D=
+"" src=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nie=
+uwsbrief/Hoek_Rood_LB.png" width=3D"4" height=3D"4" border=3D"0" /></td>=0A=
+<td style=3D"width: 282px;" width=3D"282" height=3D"4" bgcolor=3D"#D21242">=
+&nbsp;</td>=0A<td style=3D"width: 4px;" width=3D"4" valign=3D"bottom" align=
+=3D"left"><img style=3D"display: block;" alt=3D"" src=3D"https://mail.eneco=
+.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoek_Rood_RB.png" w=
+idth=3D"4" height=3D"4" border=3D"0" /></td>=0A</tr>=0A<tr>=0A<td colspan=
+=3D"3" valign=3D"top" bgcolor=3D"#D21242">=0A<table cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"width: 10px=
+;" width=3D"10"></td>=0A<td style=3D"padding-top: 10px; padding-bottom: 10p=
+x; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height: =
+20px; color:#FFFFFF; text-transform: uppercase;" align=3D"left">Welkom op d=
+e Eneco&nbsp;Community</td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=
+=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td style=3D"height:235px;" co=
+lspan=3D"3" valign=3D"top" height=3D"235" bgcolor=3D"#FFFFFF">=0A<table sty=
+le=3D"width: 290px; font-size:1px; line-height:1px; mso-line-height-alt: 0;=
+ mso-margin-top-alt: 1px; mso-line-height-rule:exactly;" width=3D"290" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"width: =
+10px;" width=3D"10"></td>=0A<td valign=3D"top">=0A<table style=3D"width: 27=
+0px;" width=3D"270" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr=
+>=0A<td style=3D"padding-top: 16px; font-family: Verdana, Geneva, sans-seri=
+f; font-size: 12px; line-height: 20px; color:#414141;" align=3D"left">Neem =
+eens een kijkje op onze community, inspireer en help anderen door je tips e=
+n ervaringen te delen.<br />=0A<br />=0A<strong>Uitgelicht</strong><br />=
+=0A<a href=3D"https://mail.eneco.nl/1/4/86/1/GyGTi6WpmuXvhr5SVpjpu9MRlJaIr-=
+Bwc8JbJ2Wi4spNzEgkiISOM1ElRC9133lD7V7UhOtZf-pgBK26nbcJfa3K_LPG2CjvbgXzwvqeU=
+oE" alt=3D"Uitgelicht - TXT" rel=3D"report_Forum_uitgelicht" style=3D"color=
+:#00afdb; text-decoration:none;" target=3D"_blank">Energie en geld besparen=
+ als huurder, hoe doe je dat?</a></td>=0A</tr>=0A<tr>=0A<td style=3D"paddin=
+g-top: 21px;" valign=3D"top">=0A<table width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0">=0A<tr>=0A<td valign=3D"top">=0A<table width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=
+=3D"vertical-align: top; font-size: 0;" align=3D"left">=0A<table style=3D"w=
+idth: 125px;" width=3D"125" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+">=0A<tr>=0A<td style=3D"padding-top: 9px; padding-bottom: 9px; background:=
+ #FCBF00; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radiu=
+s: 5px; border-bottom: 2px solid #C89801 !important; line-height: 14px;" va=
+lign=3D"top" align=3D"center"><a style=3D"color: #FFFFFF; display:&#xA;bloc=
+k; font-size: 14px; text-align: center; text-decoration: none; text-transfo=
+rm: uppercase; font-family: Verdana, Geneva, sans-serif; line-height: 20px;=
+" target=3D"_blank" rel=3D"report_Forum_aanmelden" alt=3D"Community - BTN" =
+href=3D"https://mail.eneco.nl/1/4/86/1/SvCVTd4p78jNv839BNEKTTp4ZS7K0sCm3Gez=
+VXzza2iGOGvSfJKfuNcvXCnc1v40jZnwNU_t0v83kNJl9kPVfX8r90jTvwa32b7ZTGnU04k">Pr=
+aat mee</a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</=
+tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A<td style=3D"width: 10p=
+x;" width=3D"10"></td>=0A</tr>=0A<tr>=0A<td colspan=3D"3" style=3D"height: =
+10px;" height=3D"10">&nbsp;</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr>=
+=0A<td style=3D"width: 4px;" rowspan=3D"2" width=3D"4" valign=3D"top" align=
+=3D"right"><img style=3D"display: block;" alt=3D"" src=3D"https://mail.enec=
+o.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoek_Rood_LO.png" =
+width=3D"4" height=3D"6" border=3D"0" /></td>=0A<td height=3D"4" bgcolor=3D=
+"#FFFFFF">&nbsp;</td>=0A<td style=3D"width: 4px;" rowspan=3D"2" width=3D"4"=
+ valign=3D"top" align=3D"left"><img style=3D"display: block;" alt=3D"" src=
+=3D"https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbri=
+ef/Hoek_Rood_RO.png" width=3D"4" height=3D"6" border=3D"0" /></td>=0A</tr>=
+=0A<tr>=0A<td height=3D"2" bgcolor=3D"#D8D8D8">&nbsp;</td>=0A</tr>=0A</tabl=
+e>=0A</td>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D"5"></td>=0A=
+</tr>=0A<tr>=0A<td style=3D"height:14px; min-height:14px; max-height:14px; =
+font-size:1px; mso-line-height-rule:exactly; line-height:1px;" colspan=3D"3=
+" height=3D"14">&nbsp;</td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso =
+9)|(IE)]></td></tr></table><![endif]--></td>=0A</tr>=0A<tr>=0A<td style=3D"=
+height:14px; min-height:14px; max-height:14px; font-size:1px; mso-line-heig=
+ht-rule:exactly; line-height:1px;" height=3D"14">&nbsp;</td>=0A</tr>=0A</ta=
+ble>=0A</td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A</td>=0A</tr=
+>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A<table class=
+=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" bgcolor=3D"#F6F6F6">=0A  <tr>=0A<td valign=3D"top" align=3D"center=
+">=0A<div style=3D"max-width: 600px; margin: 0 auto;" class=3D"webkit"><!--=
+[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<tr>=0A<td=
+ width=3D"600" style=3D"width: 600px;">=0A<![endif]-->=0A<table width=3D"10=
+0%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">=0A<t=
+r>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D"5"></td>=0A<td vali=
+gn=3D"top">=0A<table style=3D"font-size:1px; line-height:1px; mso-line-heig=
+ht-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:exactly; width: 59=
+0px;" class=3D"width_290 center" width=3D"590" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"width: 4px;" width=3D"4" valign=
+=3D"bottom" align=3D"right"><img style=3D"display: block;" alt=3D"" src=3D"=
+https://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/H=
+oek_Rood_LB.png" width=3D"4" height=3D"4" border=3D"0" /></td>=0A<td style=
+=3D"width: 582px;" width=3D"582" height=3D"4" bgcolor=3D"#D21242">&nbsp;</t=
+d>=0A<td style=3D"width: 4px;" width=3D"4" valign=3D"bottom" height=3D"4" a=
+lign=3D"left"><img style=3D"display: block;" alt=3D"" src=3D"https://mail.e=
+neco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoek_Rood_RB.pn=
+g" width=3D"4" height=3D"4" border=3D"0" /></td>=0A</tr>=0A<tr>=0A<td colsp=
+an=3D"3" valign=3D"top" bgcolor=3D"#D21242">=0A<table cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td style=3D"width: 10=
+px;" width=3D"10"></td>=0A<td style=3D"padding-top: 10px; padding-bottom: 1=
+0px; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height=
+: 20px; color:#FFFFFF; text-transform: uppercase;" align=3D"left">Vind je a=
+ntwoord</td>=0A<td style=3D"width: 10px;" width=3D"10"></td>=0A</tr>=0A</ta=
+ble>=0A</td>=0A</tr>=0A<tr>=0A<td colspan=3D"3" valign=3D"top" bgcolor=3D"#=
+FFFFFF">=0A<table style=3D"font-size:1px; line-height:1px; mso-line-height-=
+alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule:exactly;" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A<tr>=0A<td colspan=
+=3D"3" height=3D"15">&nbsp;</td>=0A</tr>=0A<tr>=0A<td style=3D"width: 10px;=
+" width=3D"10"></td>=0A<td valign=3D"top" align=3D"left"><!--[if (gte mso 9=
+)|(IE)]><table width=3D"100%" align=3D"center"=0Acellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td width=3D"502" style=3D"width: 502px;"><![end=
+if]-->=0A<div style=3D"max-width: 502px; display: inline-block; vertical-al=
+ign: top;">=0A<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0">=0A<tr>=0A<td style=3D"padding-bottom: 9px; padding-right: 18px; =
+font-family: Verdana, Geneva, sans-serif; font-size: 12px; line-height: 20p=
+x; color:#313131;" align=3D"left">Heb je nog vragen? Op <a alt=3D"Vind je a=
+ntwoord - TXT" rel=3D"report_Vraag_zoek" style=3D"color:#00afdb; text-decor=
+ation:none;" target=3D"_blank" href=3D"https://mail.eneco.nl/1/4/86/1/ELyN0=
+WukQ32z5ya6DadCdK89luDxLc5D02rAKr8yd4zGu7WG-t0HjYKKI10BpIn2cjayrKOtBt1VcBeb=
+qmgVhRkeTQvnjBxg09s_n2djtfk">eneco.nl</a> hebben we veel gestelde vragen ve=
+rzameld.</td>=0A</tr>=0A</table>=0A</div>=0A<!--[if (gte mso 9)|(IE)]></td>=
+<td width=3D"80" style=3D"width: 80px;"><![endif]-->=0A<div style=3D"width:=
+ 80px; display: inline-block; vertical-align:top; text-align: right">=0A<ta=
+ble width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=
+=0A<td style=3D"text-align: center; vertical-align: top; font-size: 0;">=0A=
+<table style=3D"width: 80px;" width=3D"80" cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0">=0A<tr>=0A<td style=3D"padding-top: 9px; padding-bottom: 9=
+px; background: #FCBF00; -moz-border-radius: 5px; -webkit-border-radius: 5p=
+x; border-radius: 5px; border-bottom: 2px solid #C89801 !important; line-he=
+ight: 14px;" valign=3D"top" align=3D"center"><a style=3D"color: #FFFFFF; di=
+splay: block; font-size: 14px; text-align: center; text-decoration: none;  =
+text-transform: uppercase; font-family: Verdana, Geneva, sans-serif; line-h=
+eight: 20px;" target=3D"_blank" rel=3D"report_Vraag_zoek" alt=3D"Vind je an=
+twoord - BTN" href=3D"https://mail.eneco.nl/1/4/86/1/unH2UUh5OlAYdiuzLkYx6K=
+t6bILMngOQYzJJo0VJpiGODmUscYwk6k1z8QJUOqS_XrlSvdo2uBHO6ET-eP2N0YcQiLIFKYsw0=
+z-tc5vghRk">Zoek</a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<=
+/div>=0A<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td>=0A<td=
+ style=3D"width: 10px;" width=3D"10"></td>=0A</tr>=0A<tr>=0A<td colspan=3D"=
+3" height=3D"10">&nbsp;</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<t=
+d style=3D"width: 4px;" rowspan=3D"2" width=3D"4" valign=3D"top" align=3D"r=
+ight"><img style=3D"display: block;" alt=3D"" src=3D"https://mail.eneco.nl/=
+public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoek_Rood_LO.png" width=
+=3D"4" height=3D"6" border=3D"0" /></td>=0A<td height=3D"4" bgcolor=3D"#FFF=
+FFF">&nbsp;</td>=0A<td style=3D"width: 4px;" rowspan=3D"2" width=3D"4" vali=
+gn=3D"top" align=3D"left"><img style=3D"display: block;" alt=3D"" src=3D"ht=
+tps://mail.eneco.nl/public/files/86/0/20160331_ECR-Redesign_nieuwsbrief/Hoe=
+k_Rood_RO.png" width=3D"4" height=3D"6" border=3D"0" /></td>=0A</tr>=0A<tr>=
+=0A<td height=3D"2" bgcolor=3D"#D8D8D8">&nbsp;</td>=0A</tr>=0A</table>=0A</=
+td>=0A<td style=3D"width: 5px; min-width: 5px;" width=3D"5"></td>=0A</tr>=
+=0A<tr>=0A<td style=3D"height:28px; min-height:28px; max-height:28px; font-=
+size:1px; mso-line-height-rule:exactly; line-height:1px;" colspan=3D"3" hei=
+ght=3D"28">&nbsp;</td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(IE)]>=0A</=
+td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</table>=0A<t=
+able class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" bgcolor=3D"#ededed">=0A<tr>=0A<td valign=3D"top" align=
+=3D"center">=0A<div style=3D"max-width: 600px; margin: 0 auto;" class=3D"we=
+bkit"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px;">=0A<=
+tr>=0A<td>=0A<![endif]-->=0A<table style=3D"max-width: 600px;" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"=
+padding-top:28px; padding-bottom:28px; max-width: 600px;" width=3D"100%">=
+=0A<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=
+=0A<tr>=0A<td style=3D"padding-bottom:28px; font-family: Verdana, Geneva, s=
+ans-serif; font-size: 22px; line-height: 28px; color:#d21242; font-weight:b=
+old;" align=3D"center"><a style=3D"text-decoration:none; color:#d21242;" ta=
+rget=3D"_blank" alt=3D"Wat vind jij van onze nieuwsbrief? - TITEL" href=3D"=
+https://mail.eneco.nl/1/4/86/1/oFygOdCSJc070Gj8YbYJyhLcmAEgR8DsGFF2FUeYSbfK=
+m2FBUzs3EFTDyRb8KQJyUx2gZHWeov34PgFuphopBg">Wat vind jij van onze nieuwsbri=
+ef?</a></td>=0A</tr>=0A<tr>=0A<td align=3D"center">=0A<table cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"padding-left: 8px=
+; padding-right: 8px;"><a alt=3D"Mood 1 - IMG" target=3D"_blank" href=3D"ht=
+tps://mail.eneco.nl/1/4/86/1/6631oUdWnEGphFy_Q3oRS7qx7MFy8MLRhEd3OM2_f_o7FZ=
+SmnSxl9o_xf5i8bKhP3o1-QYwj3RBFyI-kP_JXLQ"><img style=3D"display:&#xA;block;=
+ font-family: Verdana, Geneva, sans-serif; color: #00afdb; font-size: 12px;=
+ line-height: 14px; color:#d21243;" alt=3D"Sad" src=3D"https://mail.eneco.n=
+l/public/files/86/0/20160630_ECR-Nieuwsbrief_juni/NB/Droevig.png" width=3D"=
+42" height=3D"42" border=3D"0" /></a></td>=0A<td style=3D"padding-left: 8px=
+; padding-right: 8px;"><a alt=3D"Mood 2 - IMG" target=3D"_blank" href=3D"ht=
+tps://mail.eneco.nl/1/4/86/1/Al9RhCQAioUN3nxjNNVkg9rWzczulJVNE7uz_OFXxOLj_3=
+RK619Bg9DLoj_C4dWGfW-WiF8kp6ierW9AWc-pWA"><img style=3D"display: block; fon=
+t-family: Verdana, Geneva, sans-serif; color: #00afdb; font-size: 12px; lin=
+e-height: 14px; color:#0dafdb;" alt=3D"Dislike" src=3D"https://mail.eneco.n=
+l/public/files/86/0/20160630_ECR-Nieuwsbrief_juni/NB/Teleurgesteld.png" wid=
+th=3D"42" height=3D"42" border=3D"0" /></a></td>=0A<td style=3D"padding-lef=
+t: 8px; padding-right: 8px;"><a alt=3D"Mood 3 - IMG" target=3D"_blank" href=
+=3D"https://mail.eneco.nl/1/4/86/1/PByJBEKw1X6TSfIA2uQq8CjVDK2KpeD5cfCmXJOs=
+p0dvqrcExO5OlSulQGtZ_7DqItXBlxQVrDRsll1PPvYx6Q"><img style=3D"display: bloc=
+k; font-family: Verdana, Geneva, sans-serif; color: #00afdb; font-size: 12p=
+x; line-height: 14px; color:#fbbf14;" alt=3D"Neutral" src=3D"https://mail.e=
+neco.nl/public/files/86/0/20160630_ECR-Nieuwsbrief_juni/NB/Neutraal.png" wi=
+dth=3D"42" height=3D"42" border=3D"0" /></a></td>=0A<td style=3D"padding-le=
+ft: 8px; padding-right: 8px;"><a alt=3D"Mood 4 - IMG" target=3D"_blank" hre=
+f=3D"https://mail.eneco.nl/1/4/86/1/YytYz6L7dm_Lv1oJEh5AEjtTZBctTj43wL9CzRA=
+kg-YEDuoo-II1HFVhLWDxCsxQamFD19AFq8i0V8_GONtDOQ"><img style=3D"display: blo=
+ck; font-family: Verdana, Geneva, sans-serif; color: #00afdb; font-size: 12=
+px; line-height: 14px; color:#f39220;" alt=3D"Happy" src=3D"https://mail.en=
+eco.nl/public/files/86/0/20160630_ECR-Nieuwsbrief_juni/NB/Blij.png" width=
+=3D"42" height=3D"42" border=3D"0" /></a></td>=0A<td style=3D"padding-left:=
+ 8px; padding-right: 8px;"><a alt=3D"Mood 5 - IMG" target=3D"_blank" href=
+=3D"https://mail.eneco.nl/1/4/86/1/cM3_FAgqggT_4B0mrSTEQ-e2zxvscLYEj-AMKlIg=
+ZNZEiBI2GWwicHn5FEUpb-fjbg2boXVrnFBUz7x3remmUQ"><img style=3D"display:&#xA;=
+block; font-family: Verdana, Geneva, sans-serif; color: #00afdb; font-size:=
+ 12px; line-height: 14px; color:#83b826;" alt=3D"Love" src=3D"https://mail.=
+eneco.nl/public/files/86/0/20160630_ECR-Nieuwsbrief_juni/NB/Houd_Ervan.png"=
+ width=3D"42" height=3D"42" border=3D"0" /></a></td>=0A</tr>=0A</table>=0A<=
+/td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<!--[if (gte mso 9)|(I=
+E)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=0A</tr>=0A</ta=
+ble>=0A<table class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A<tr>=0A<td valign=3D"top=
+" align=3D"center">=0A<div style=3D"max-width: 600px; margin: 0 auto;" clas=
+s=3D"webkit"><!--[if (gte mso 9)|(IE)]>=0A<table width=3D"600" align=3D"cen=
+ter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 600px=
+;">=0A<tr>=0A<td>=0A<![endif]-->=0A<table style=3D"max-width: 600px;" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A<tr>=0A<td st=
+yle=3D"padding-top:28px;">=0A<table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0">=0A<tr>=0A<td style=3D"padding-bottom:28px; font-s=
+ize: 12px; line-height:18px; font-family: Verdana,Verdana,Geneva,sans-serif=
+; color: #666666;" align=3D"center"><a href=3D"https://mail.eneco.nl/1/4/86=
+/1/4X2LtM22lezwMAbDb4Ep0rKpW24pLH3v7zkMKTztHGsMH1dTI18LvNvkQZOHIElek7ON6J0M=
+vMdZjey9724ON10OKefArPo8QMkMyEQtmS0" alt=3D"Footer - Contact" target=3D"_bl=
+ank" style=3D"text-decoration: underline; color: #666666;">Contact</a>&nbsp=
+;&nbsp;|&nbsp;&nbsp;<a href=3D"https://mail.eneco.nl/1/4/86/1/dJ7Z6SA2odCof=
+Coh68bZePxyi7KW7oXkEVMiINVyszptVvnb1_3MlKZj38Km_ytm-oFL5S0FUgXirzu87-zwZ35K=
+CURm0pmyoHC_pv_-Qsc" alt=3D"Footer - Privacy" target=3D"_blank" style=3D"te=
+xt-decoration: underline; color: #666666;">Privacy</a>&nbsp;&nbsp;|&nbsp;&n=
+bsp;<a alt=3D"Footer - Disclaimer" target=3D"_blank" style=3D"text-decorati=
+on: underline; color: #666666;" href=3D"https://mail.eneco.nl/1/4/86/1/xrF4=
+X8oQHaBD2zXaB2C6bMCABX_WlyJs6mT4etTkad9nTyLN6J-eqBWCfP3b9sqje3oGQiZSYvCi9tZ=
+CV3EUcZXGtIlXT7jAghnvO4cO60g">Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a=0Ah=
+ref=3D"https://mail.eneco.nl/2/4/86/1/pkskypbhWGrPNKRXtQgLIC_FCbU_Dp2twL-st=
+1snnOUjqWrPiDovN185xamNfQYF4km4fMYd0I7N4jG1DQxZYw" alt=3D"Footer - Afmelden=
+" target=3D"_blank" style=3D"text-decoration: underline; color: #666666;">A=
+fmelden</a></td>=0A</tr>=0A<tr>=0A<td style=3D"padding-bottom:28px; font-si=
+ze: 12px; line-height:18px; font-family: Verdana,Verdana,Geneva,sans-serif;=
+ color: #666666;" align=3D"center">Deze e-mail is verzonden in opdracht van=
+ Eneco Consumenten B.V., Postbus 1014, 3000 BA Rotterdam, KvK nr. 24324527.=
+ Bezoek voor vragen onze <a href=3D"https://mail.eneco.nl/1/4/86/1/GRvvtKhA=
+QyGc6RQwrzdP_gstb1TT4d8FglRzxSpxaIeEM_hSRc8K3KC0fJ1fdBn8Xwl1TawhfcLwq95S0O9=
+ci6BGl2gAeAmD0oM4SM4rT2s" style=3D"text-decoration: underline; color: #6666=
+66;" alt=3D"Footertekst - Contactpagina" target=3D"_blank">contactpagina</a=
+>. Of bel met onze Klantenservice, bereikbaar op <a alt=3D"TELEFOON" style=
+=3D"text-decoration:none; cursor:text; pointer-events: none; color: #666666=
+;" href=3D"tel:+31888955955">088&nbsp;-&nbsp;8&nbsp;955&nbsp;955</a> (je be=
+taalt de gebruikelijke belkosten).<br />=0A&nbsp;<br />=0AJe ontvangt deze =
+nieuwsbrief omdat je bij Eneco hebt aangegeven informatie per e-mail te wil=
+len ontvangen.</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<!--[if=
+ (gte mso 9)|(IE)]>=0A</td>=0A</tr>=0A</table>=0A<![endif]--></div>=0A</td>=
+=0A</tr>=0A</table>=0A<style data-ignore-inlining>@media print{ #_t { backg=
+round-image: url('https://doabgfvi.emltrk.com/doabgfvi?p&d=3D40879993');}} =
+div.OutlookMessageHeader {background-image:url('https://doabgfvi.emltrk.com=
+/doabgfvi?f&d=3D40879993')} table.moz-email-headers-table {background-image=
+:url('https://doabgfvi.emltrk.com/doabgfvi?f&d=3D40879993')} blockquote #_t=
+ {background-image:url('https://doabgfvi.emltrk.com/doabgfvi?f&d=3D40879993=
+')} #MailContainerBody #_t {background-image:url('https://doabgfvi.emltrk.c=
+om/doabgfvi?f&d=3D40879993')}</style><div id=3D"_t"></div>=0A<img src=3D"ht=
+tps://doabgfvi.emltrk.com/doabgfvi?d=3D40879993" width=3D"1" height=3D"1" b=
+order=3D"0" alt=3D"" />=0A<img src=3D"https://mail.eneco.nl/0/4/86/1/_Du74e=
+2uOOiLKJZ3TucC620YUyE3gC8zTntlVIInI2JvJUtm5R0KYqoPq7C-yRl7" width=3D"1" hei=
+ght=3D"1" border=3D"0" alt=3D"" style=3D"height:1px !important; width:1px !=
+important; border: 0 !important; margin: 0 !important; padding: 0 !importan=
+t" /></body>=0A</html>
+----C9ADAC3BDFB19364--
+

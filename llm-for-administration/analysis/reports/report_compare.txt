@@ -1,0 +1,42 @@
+===== uitgave
+                                        24 jan-sep  25 jan-sep  26 jan-sep       25 q4    Δ26-25
+wonen: hypotheek/huur                        10447       27529       32721        8210      5192
+gedeeld: klus/baby (via Tessa, 50/50)            0        8544       10024        9677      1480
+abonnementen/vrije tijd                       5903        6913        7754        2062       841
+kinderopvang                                     0           0        7463           0      7463
+overig                                       27237       11228        7324        1507     -3904
+boodschappen                                  5859        5552        7269        2342      1717
+verzekeringen                                 4348        3620        4057        1078       437
+wonen: energie/water/internet                 2062        4847        3884        1383      -963
+auto                                          1656        2318        2357        4970        39
+winkelen/huis/spullen                         8233        4286        1750        3299     -2536
+promovendum (?)                                557         844        1052         362       208
+zakelijk-achtig (privé betaald)               1657        1127         946         730      -181
+wonen: gemeentebelasting                       524        1263         913         170      -350
+tikkie/betaalverzoeken                        1026        1108         889         227      -219
+belasting (privé)                            74395         484         841         265       357
+studieschuld (DUO)                            3300        1104         763         259      -341
+telefoon                                      1201         734         756         247        22
+horeca                                        3545         947         716         339      -231
+creditcard (ICS)                              1033         594         424         221      -170
+vakantie/reizen/ov                            7236        2001         409         553     -1592
+contant                                         43        4190         270         280     -3920
+gezondheid                                     292         225         191          12       -34
+pinbetaling overig                             992           4         164          80       160
+winkelen                                         8           0         103          19       103
+bankkosten/rente                                65          75          83          26         9
+verzorging                                      59           0          34           0        34
+kleding                                         80           0          23           0        23
+huis/tuin/klus                                 134           0           8           7         8
+vrije tijd                                     304           0           0           0         0
+ov/reizen                                        1           1           0           0        -1
+vakantie                                       180           0           0           0         0
+TOTAAL                                      162377       89538       93189       38325      3651
+===== inkomen
+                                        24 jan-sep  25 jan-sep  26 jan-sep       25 q4    Δ26-25
+zakelijke omzet                                  0           0        1900           0      1900
+overige inkomsten                             6726        1932        1591        1462      -342
+kinderopvangtoeslag                              0           0         709           0       709
+belastingteruggave/toeslag                       0           0         303           0       303
+bankkosten/rente                                46          74          89          33        15
+TOTAAL                                        6772        2006        4591        1494      2585

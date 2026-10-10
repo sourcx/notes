@@ -1,0 +1,10 @@
+                                            24 jan-sep  25 jan-sep  26 jan-sep  25 okt-dec
+Tessa (netto)                                     3282       22838       28537        6698
+beleggen/crypto (netto, +=opname)                17147       -1534       -8000        6400
+ext. eigen rek (LPLN/overig) (netto)             72951        7266        -356        6318
+overig inkomen                                    6772        2006        4591        1494
+uit: belasting privé                            -74395        -484        -841        -265
+uit: overige uitgaven                           -77535      -61525      -59627      -29850
+uit: wonen                                      -10447      -27529      -32721       -8210
+zzp -> privé (loon)                              65105       60628       51057       35395
+SALDO verandering huishouden                      2880        1666      -17360       17979

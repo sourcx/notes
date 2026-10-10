@@ -1,0 +1,635 @@
+Delivered-To: te.my.vis@gmail.com
+Received: by 2002:a50:ee04:0:0:0:0:0 with SMTP id g4csp210425eds;
+        Fri, 23 Sep 2022 01:11:56 -0700 (PDT)
+X-Google-Smtp-Source: AMsMyM5kv3M60pZxniHhex722HFmaim1tpAYZQJskjb/OgVfUcsnlt8yDoh9h57DDsgAL9ezqQyv
+X-Received: by 2002:a05:6000:144a:b0:229:b76f:86f9 with SMTP id v10-20020a056000144a00b00229b76f86f9mr4420331wrx.613.1663920716035;
+        Fri, 23 Sep 2022 01:11:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1663920716; cv=none;
+        d=google.com; s=arc-20160816;
+        b=n59RFPT0Psh6X1g8S3Hyj8+T79BgttMo8WJbhTsoq1fmvLd7KFIsrNEXeJ/DivnwDS
+         8nWCgktWPbwu1kzDuIV1R4yIYGZenNyQPlWq9SPqAn68Zrwm1n2F1mmeWQEN3Mn3DoEe
+         F+ww/0BeqmkB9FRcuACMgtbzxSQdWPOGCeXADKjFUcxiYZN4UvYGjxGwsTXc0IQAE+1H
+         Rr7u7IAKNyTGzE317+xs87iq9c8EVANFYzfaQ4VX+Gzcek27SPSh8dFUtvZ+CfT6wkUQ
+         WpR5+LL4sZxeuiuf1/6ObBUT7iPrX9UA/5chr30S1w7v/besOKujKux/qSzZZbAJJjpP
+         yBkQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:feedback-id:mime-version:reply-to:list-unsubscribe
+         :list-unsubscribe-post:precedence:from:content-transfer-encoding
+         :subject:to:precedence:dkim-signature;
+        bh=ohlpntlPdlgGxrLavfOLMH4ShcSYjEzfSADNDdr1JTk=;
+        b=pd39H6G989kkfsiC8MtIxxTuy+RUgrGcrJhQOiwRJZ7ZvnzbPx9ctiXLxv5NaPiW6M
+         ZaAuqpDR9GygxhMmcBKOQAAeIrZYyDDdJ2ytZVOlMeUZrSTzvo8R3FjgcUcmEONG1HpS
+         KH1JIn2BOHe+sFyat1DJBJgccldfjozBmlgPIMrDANG0Yq++lj9r02MGKOl18k4NPzxH
+         J5jYGchvO0+dJDp/o6BmVr8eerHiUgAF0jGEt/A4A6v17ZFqTS3gGK4/ziJhrUMlAT83
+         LeItFLv2Gpkx5iblcaMYg+wqStjtnigilA0OsgIcuHn8o51Wwjxayn3WHucDGAXlak2F
+         81Sw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.eneco.com header.s=jan2020 header.b=mkS+7pxk;
+       spf=pass (google.com: domain of bounce-4r688lmgxclrku6k-zdc2fcehojquerobhfytmgpv4wa@e.eneco.com designates 52.58.182.9 as permitted sender) smtp.mailfrom=bounce-4r688LMgXCLRKU6K-ZdC2fcehoJQuERObHfYtMGPV4wA@e.eneco.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.eneco.com
+Return-Path: <bounce-4r688LMgXCLRKU6K-ZdC2fcehoJQuERObHfYtMGPV4wA@e.eneco.com>
+Received: from mta-051.msdp1.com (mta-051.msdp1.com. [52.58.182.9])
+        by mx.google.com with ESMTPS id be14-20020a05600c1e8e00b003b49a00934asi1052671wmb.97.2022.09.23.01.11.52
+        for <te.my.vis@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 23 Sep 2022 01:11:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-4r688lmgxclrku6k-zdc2fcehojquerobhfytmgpv4wa@e.eneco.com designates 52.58.182.9 as permitted sender) client-ip=52.58.182.9;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.eneco.com header.s=jan2020 header.b=mkS+7pxk;
+       spf=pass (google.com: domain of bounce-4r688lmgxclrku6k-zdc2fcehojquerobhfytmgpv4wa@e.eneco.com designates 52.58.182.9 as permitted sender) smtp.mailfrom=bounce-4r688LMgXCLRKU6K-ZdC2fcehoJQuERObHfYtMGPV4wA@e.eneco.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.eneco.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jan2020; d=e.eneco.com;
+ h=To:Subject:content-transfer-encoding:from:list-unsubscribe:reply-to:
+ mime-version:content-type:message-id:date; i=servicemail@e.eneco.com;
+ bh=ohlpntlPdlgGxrLavfOLMH4ShcSYjEzfSADNDdr1JTk=;
+ b=mkS+7pxkDhIr7fNiHk3ZrOTBpfelF0lzxA/YTGtczlL50rU1KQra4o6+G3y2oLO6HhNNsQMeskih
+   tpNk/jx6L2WkOPgbgb3+KloBQKdC1315aNc4VVIg82gwDQXKjJB7M4zHkksR95RpgC9xCeBZajuJ
+   au5FOxTVSTGXUOxX5djFtL4OnmDPakzVIu9Axd5vuAnu3NA53bYHbcMmtBie+o3PoXXssAOCV1K8
+   WutGObGz8rnYYAH3EC/8B0Z5RpUA9FF1PPfaczqrNJs5u8un/qg8B4jPTSKDFOQRi1A+lCzxcmLU
+   OfdOrkKSRJF2+yUONNNn26sjwiyRai8j+z5hsA==
+Precedence: bulk
+To: te.my.vis@gmail.com
+Subject: Prinsjesdag 2022, de energiemaatregelen
+content-transfer-encoding: 8bit
+from: "Eneco" <servicemail@e.eneco.com>
+precedence: bulk
+x-report-abuse: Please report abuse here: https://e.eneco.com/pub/report-abuse/?e=abuse-4r688LMgXCLRKU6K-ZdC2fcehoJQuERObHfYtMGPV4wA@e.eneco.com
+list-unsubscribe-post: List-Unsubscribe=One-Click
+list-unsubscribe: <https://e.eneco.com/18/5/86/1/WCE3wfFieB3nY1I2o1CpbxjdxgCIbOJ4lJQZKGxmM5U5LNAXjvSAqUFz1bYf3hbEf-yUQUjDVjZHKaim5eBTnFYFCPyf1RTn5oZYvtlXf1eHPmrDm8NRHcOHjlOKgMbSbUd_Y1RV84RqsRG4b8b7woctrE_W4QiRy3to6jNrlw>,<mailto:unsubscribe-4r688LMgXCLRKU6K-ZdC2fcehoJQuERObHfYtMGPV4wA@e.eneco.com>
+reply-to: "Eneco" <servicemail@e.eneco.com>
+mime-version: 1.0
+x-mailer: CanopyDeploy 3
+feedback-id: 86-1-82980812:86-1:evillage
+x-virtual-mta: bpool
+content-type: multipart/alternative; boundary="--632d6a3014344"
+message-id: <20220923081129.3542866421@app-mailmaster12>
+date: Fri, 23 Sep 2022 10:11:28 +0200 (CEST)
+
+This is a MIME Encoded Message
+----632d6a3014344
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Wat betekent dit voor jou? =0A=0AWebversie:=0Ahttps://e.eneco.com/2/4/86/1/=
+NKptHQhdrKUA8nCWw61aCXjSfrKIAEaFh1sgR3K7CPlqg4mGmRKCoOqzBqkTbJmm-qCCTbHwdhy=
+Gz3sqorHhCQ=0A=0A----------------------------------------------------------=
+---------=0A=0AEneco=0AKlantnummer: 40879993=0A=0A-------------------------=
+------------------------------------------=0A=0ABeste mevrouw Visser,=0A=0A=
+Op Prinsjesdag is door de overheid een aantal maatregelen aangekondigd voor=
+ de betaalbaarheid van de energierekening. We begrijpen dat je graag wilt w=
+eten wat dit voor jou betekent. Helaas is dat nu nog niet precies te zeggen=
+. =0A=0AZo komt er een prijsplafond voor energie. Dit houdt in dat je tot e=
+en bepaald energieverbruik een lager tarief betaalt. Boven dit verbruik bet=
+aal je de tarieven die in je energiecontract staan. De precieze invulling v=
+an het prijsplafond is nog niet definitief. =0A=0A-------------------------=
+------------------------------------------=0A=0AWat betekent dit voor jou? =
+=0A=0AKomende weken worden alle landelijke maatregelen door de overheid sam=
+en met de energiebedrijven uitgewerkt. Pas daarna weten we wat dit voor jou=
+w situatie betekent.  =0A=0ABelangrijk: we hebben in je huidige tarieven en=
+ termijnbedrag nog geen rekening gehouden met het prijsplafond. Wanneer all=
+e maatregelen definitief zijn informeren we je over de juiste hoogte van je=
+ termijnbedrag. Je hoeft nu nog niets te doen.=0A=0A-----------------------=
+--------------------------------------------=0A=0AMeer weten =0A=0AWil je m=
+eer weten over de energiemaatregelen? Op eneco.nl/klantenservice/tarieven-e=
+nergiemarkt vertellen we je wat er tot nu toe bekend is en houden we je op =
+de hoogte van het laatste nieuws. =0A=0ABekijk het laatste nieuws: =0Ahttps=
+://e.eneco.com/1/5/86/1/E7467pmoqbVaouSgX1YuZ_IgF3Cu_VwLKoTQRU7pIbCyvZIm6OY=
+xEhmpzYJq6lKM8VPA28WeiueCRX1zXlzodQTBuevE9u3bIHT75tkiSQiKqDI673acLzqmY5Ahz5=
+u8GzqqANqzNbJCv69Dd7-7NnTtWkv6uRWQeazeW767JtkKf65HGjq8O_N4J3a5W_CG7yTQMZIPZ=
+e-JuZpivXV5R5ua2cHtj55OBlUOSctsqsUddsAKJQ=0A=0A----------------------------=
+---------------------------------------=0A=0AOpen de webversie voor meer: =
+=0Ahttps://e.eneco.com/2/4/86/1/GDRITMhwQ9zI7823mRVbLRtRARtxO2oe73IxZOG_QCA=
+373x1HGkgn7Hkv0ClkhcMk8vXEHe80_qumEABL3uyzQ=0A=0A--------------------------=
+-----------------------------------------=0A=0AEneco app:=0Ahttps://e.eneco=
+.com/1/5/86/1/9Uc9nNkr7eWjTJDe8akwJ_8QB30nQ1fkLZfNTduAAodshpaKtsz_uPhuvbRI4=
+JLe9H_yrqFnEyR1SmfiSdvq9WtOrVEMHWva2JRDu8LB-1lcpJecXDvy4nvIXA2mHmIhlvgQW-Ln=
+mXpaPktB4ZIVubdyY--8GPrLgzIs8sT_M9cJcW_BP6z5WdaGZtV-sh9Kb-2IXdplTCqBYRmCX_N=
+qoVScVogEYDSGPVVLO6iDtCiYvrBXgg =0A=0AMijn Eneco:=0Ahttps://e.eneco.com/1/5=
+/86/1/5W2-EzROSlj4XPsNhCZQP4HL_HfP5BYc_uZetDU-rZ4QI5Fkyeq2NwLbv4m2x1DV4BmFa=
+GnpQrwwBCgESQ6cuNlG-ix_2kLphlx36IudiUpInpOejkXjCg0PGVqMpRioLKlAhAK4KqNJDoEg=
+XnyOMCuJOJnnk8KepbbZYMONzWQlkmd3EnQj7afRG4bYel8cdXCz099gzL8TG4tSnTj6qVHKxJK=
+vp5is6F-5S3LOli_mojx2xA=0A=0AKlantenservice:=0Ahttps://e.eneco.com/1/5/86/1=
+/C_q-iXul5Zdt-Iw9mUuRMXJhmsC0iouEIJMAl5dHs_HxD3eMNNlhpHR5yeoMO-YrnQs7OSbQDx=
+OehZ8A5ikYSLCBfIBR4AhPG8U04glyDPn4tVvC7RtLbvdsitVu0KHwPBVYcwiKIHjVVFP4BzYw0=
+ak01rXKZi8jq6T2twfI-Nhf_kcs1a3YyeTUSmoecutg3DZJQTo61EPf8ngMhYTQMsBq03GpmfaX=
+95QljJUyrUN5Dw9-2Q=0A=0AStroometiket:=0Ahttps://e.eneco.com/1/5/86/1/eKY8IN=
+bNfe-mHrxw_91kbNKlPNA7c_whuZdNDbo0DlkIN2GhjXES0MZgSdG-l6wXNzveykskVTsZ79rlQ=
+CCz032MBmiq2IqIw5NWKwOA9CVuzJLjxDL794VTrP3OqjkxvTZInkLko7d7UdkCT6PTNGB-xhL2=
+sUmGlmb4C8aKwE5tIp-e-rSUSlmO1iyH6dFqA029CZFX5C582E3hz69-SA4vm0PaniF71URSvms=
+sRJMixe4xXw=0A=0A----------------------------------------------------------=
+---------=0A=0AEneco=0A=0A-------------------------------------------------=
+------------------=0A=0ADeze e-mail is verzonden in opdracht van Eneco Cons=
+umenten B.V., Postbus 1014, 3000 BA Rotterdam, KvK nr. 24324527. Dit is een=
+ automatische e-mail, een antwoord op deze e-mail wordt niet gelezen of bea=
+ntwoord.=0A
+----632d6a3014344
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html><html lang=3D"nl" xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head></head><head><met=
+a charset=3D"utf-8"><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Ded=
+ge"><meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=
+=3D1"><meta name=3D"format-detection" content=3D"telephone=3Dno, date=3Dno,=
+ address=3Dno, email=3Dno"><meta name=3D"x-apple-disable-message-reformatti=
+ng"><meta name=3D"color-scheme" content=3D"light only"><link rel=3D"shortcu=
+t icon" href=3D"https://www.eneco.com/static/images/icons/favicon.png" type=
+=3D"image/x-icon"><base target=3D"_blank"><title>Eneco</title><!-- Reset St=
+yles --><style>* {box-sizing: border-box}body, .ev-body, .ev-wrapper {width=
+: 100%;height: 100%;margin: 0 !important;padding: 0 !important;background: =
+#F8F8F8}body, div, td, th, ul, ol, li, h1, h2, h3, h4, h5, h6, p {margin: 0=
+;padding: 0;font: inherit;font-weight: normal;font-style: normal;-webkit-te=
+xt-size-adjust: none;-ms-text-size-adjust: none}table {border-spacing: 0;bo=
+rder-collapse: collapse;border: 0}td, th {text-align: left;vertical-align: =
+top}img {-ms-interpolation-mode: bicubic;vertical-align: middle;height: aut=
+o;line-height: 100%;border: 0}ul, ol, li {margin: 5px 0 5px 5px}ul, ol {pad=
+ding: 0 0 0 10px}a, a:link, a:visited, a:hover {color: #1A171B;text-decorat=
+ion: underline}a.phonenumber {pointer-events: none;cursor: default}#outlook=
+ a {padding: 0}.gradient {background: -moz-linear-gradient(left, #E6384D 0%=
+, #EB754F 100%) !important;background: -webkit-linear-gradient(left, #E6384=
+D 0%, #EB754F 100%) !important;background: -ms-linear-gradient(left, #E6384=
+D 0%, #EB754F 100%) !important;background: linear-gradient(to right, #E6384=
+D 0%, #EB754F 100%) !important}.btn-primary a:hover {background: #300C38 !i=
+mportant;color: #FFF !important;border: none !important;border-radius: 5px =
+!important}.btn-secondary a:hover {background: #300C38 !important;color: #F=
+FFFFF !important;border-radius: 5px !important}.btn-secondary {-webkit-box-=
+shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.18) !important;-moz-box-shadow: 0 2px 6=
+px 0 rgba(0, 0, 0, 0.18) !important;box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0=
+.18) !important;border-radius: 5px !important}.btn-ghost a {border-radius: =
+5px !important;border: 2px solid #72BDCE !important}.btn-ghost a:hover {bac=
+kground: #300C38 !important;color: #FFFFFF !important;border-radius: 5px !i=
+mportant;border: 2px solid #300C38 !important}a.link span.underline {displa=
+y: inline-block;border-bottom: 0 !important;background-image: linear-gradie=
+nt(transparent calc(100% - 1px), #eb4356 1px);background-repeat: no-repeat;=
+background-size: 0% 100%;-webkit-transition: background-size .2s;transition=
+: background-size .2s;line-height: 1.5;}a.link span.underline:hover {backgr=
+ound-size: 100% 100% !important;}</style><!-- Webfont Styles --><!--[if !ms=
+o]><!--><style type=3D"text/css">@media screen {@font-face {font-family: 'E=
+telkaLight';src: url('https://e.eneco.com/public/files/86/0/fonts/Etelka/20=
+21/EtelkaLight.eot?#iefix') format('embedded-opentype'), url('https://e.ene=
+co.com/public/files/86/0/fonts/Etelka/2021/EtelkaLight.ttf') format('truety=
+pe'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaLi=
+ght.woff') format('woff'), url('https://e.eneco.com/public/files/86/0/fonts=
+/Etelka/2021/EtelkaLight.woff2') format('woff2'), url('https://e.eneco.com/=
+public/files/86/0/fonts/Etelka/2021/EtelkaLight.svg#webfontregular') format=
+('svg');font-weight: normal;font-style: normal;}@font-face {font-family: 'E=
+telkaMedium';src: url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2=
+021/EtelkaMedium.eot?#iefix') format('embedded-opentype'), url('https://e.e=
+neco.com/public/files/86/0/fonts/Etelka/2021/EtelkaMedium.ttf') format('tru=
+etype'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/Etelk=
+aMedium.woff') format('woff'), url('https://e.eneco.com/public/files/86/0/f=
+onts/Etelka/2021/EtelkaMedium.woff2') format('woff2'), url('https://e.eneco=
+.com/public/files/86/0/fonts/Etelka/2021/EtelkaMedium.svg#webfontregular') =
+format('svg');font-weight: normal;font-style: normal;}@font-face {font-fami=
+ly: 'EtelkaText-Bold';src: url('https://e.eneco.com/public/files/86/0/fonts=
+/Etelka/2021/EtelkaText-Bold.eot?#iefix') format('embedded-opentype'), url(=
+'https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaText-Bold.tt=
+f') format('truetype'), url('https://e.eneco.com/public/files/86/0/fonts/Et=
+elka/2021/EtelkaText-Bold.woff') format('woff'), url('https://e.eneco.com/p=
+ublic/files/86/0/fonts/Etelka/2021/EtelkaText-Bold.woff2') format('woff2'),=
+ url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaText-Bo=
+ld.svg#webfontregular') format('svg');font-weight: bold;font-style: normal;=
+}@font-face {font-family: 'EtelkaText';src: url('https://e.eneco.com/public=
+/files/86/0/fonts/Etelka/2021/EtelkaText.eot?#iefix') format('embedded-open=
+type'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/Etelka=
+Text.ttf') format('truetype'), url('https://e.eneco.com/public/files/86/0/f=
+onts/Etelka/2021/EtelkaText.woff') format('woff'), url('https://e.eneco.com=
+/public/files/86/0/fonts/Etelka/2021/EtelkaText.woff2') format('woff2'), ur=
+l('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaText.svg#w=
+ebfontregular') format('svg');font-weight: normal;font-style: normal;}}</st=
+yle><!--<![endif]--><!-- Responsive Styles --><style>@media only screen and=
+ (max-width: 599px) {.w25pc {min-width: 25% !important;width: 25% !importan=
+t;max-width: 25% !important}.w33pc {min-width: 33.3333% !important;width: 3=
+3.3333% !important;max-width: 33.3333% !important}.w50pc {min-width: 50% !i=
+mportant;width: 50% !important;max-width: 50% !important}.w100pc {min-width=
+: 100% !important;width: 100% !important;max-width: 100% !important}.height=
+-auto {height: auto !important}.hide-on-mobile {display: none !important}.s=
+how-on-mobile {display: block !important;width: auto !important;max-height:=
+ inherit !important;overflow: visible !important;float: none !important}a.p=
+honenumber {pointer-events: auto !important;cursor: auto !important}.inline=
+ {display: inline !important}.block {display: block !important}.inline-bloc=
+k {display: inline-block !important}.align-left {text-align: left !importan=
+t}.align-center {text-align: center !important}.align-right {text-align: ri=
+ght !important}.valign-top {vertical-align: top !important}.valign-middle {=
+vertical-align: middle !important}.valign-bottom {vertical-align: bottom !i=
+mportant}.left {float: left !important}.center {margin: 0 auto !important}.=
+right {float: right !important}.p0 {padding: 0 !important}.pt0 {padding-top=
+: 0 !important}.pr0 {padding-right: 0 !important}.pr6 {padding-right: 6px !=
+important}.pr8 {padding-right: 8px !important}.pr10 {padding-right: 10px !i=
+mportant}.pr24 {padding-right: 24px !important}.pb0 {padding-bottom: 0 !imp=
+ortant}.pl0 {padding-left: 0 !important}.pl8 {padding-left: 8px !important}=
+.pl10 {padding-left: 10px !important}.pl24 {padding-left: 24px !important}.=
+m0 {margin: 0 !important}.mt0 {margin-top: 0 !important}.mr0 {margin-right:=
+ 0 !important}.mb0 {margin-bottom: 0 !important}.ml0 {margin-left: 0 !impor=
+tant}}</style><!-- Specific iOS Date/Phonenumber Reset Styles --><style>a[x=
+-apple-data-detectors] {color: inherit !important;text-decoration: none !im=
+portant;font-size: inherit !important;font-family: inherit !important;font-=
+weight: inherit !important;line-height: inherit !important;}</style><!-- We=
+bkit/Blink/Gecko check and check on input status and necessary when using i=
+nteractive objects --><style>@media only screen and (-webkit-min-device-pix=
+el-ratio:0), (min--moz-device-pixel-ratio:0) {#ev-interactive-check:checked=
+~.ev-fallback {display: none}#ev-interactive-check:checked~div .ev-interact=
+ive {display: block !important;max-height: none !important}}</style><!-- Sp=
+ecific Gmail Styles, including Date/Phonenumber/Links Reset --><style>u+.ev=
+-body a {color: inherit;text-decoration: inherit}@media only screen and (ma=
+x-width: 639px) {u+.ev-body, div>u+.ev-body {width: 100vw !important;min-wi=
+dth: 100vw !important;margin: 0 !important;padding: 0 !important}div>u+.ev-=
+body {width: inherit !important;min-width: inherit !important;}}/* Necessar=
+y when using interactive objects */@media screen and (max-width:9999px) {u+=
+.ev-body .ev-fallback {display: block !important;max-height: none}u+.ev-bod=
+y .ev-interactive {display: none !important}}</style><!-- Specific Yahoo!Ma=
+il Targeting --><style>.& .ev-wrapper, .& .yahoo-fix-height {display: grid}=
+/* Necessary when using interactive objects */.yahoo-fix {}.& .ev-fallback =
+{display: block !important;max-height: none}.& .ev-interactive {display: no=
+ne !important}</style><!-- Specific Samsung Mail App Targeting --><style>@m=
+edia screen and (-webkit-min-device-pixel-ratio: 0) {#MessageViewBody, #Mes=
+sageWebViewDiv {margin: 0 !important;zoom: 1 !important}/* Necessary when u=
+sing interactive objects */#MessageViewBody .ev-fallback {display: block !i=
+mportant}#MessageViewBody .ev-interactive {display: none !important}#Messag=
+eViewBody .ev-samsung {display: none !important}}</style><!-- Specific Outl=
+ook App Targeting --><style>body[data-outlook-cycle] {min-width: 100vw !imp=
+ortant;margin: 0 !important;padding: 0 !important;}body[data-outlook-cycle]=
+ .outlook-overflow-scaling, body[data-outlook-cycle] .ev-wrapper {width: 10=
+0vw !important;min-width: 100vw !important;height: auto !important;display:=
+ block !important;transform: scale(1) !important}/* Necessary when using in=
+teractive objects */body[data-outlook-cycle] .ev-fallback {display: block !=
+important}body[data-outlook-cycle] .ev-interactive {display: none !importan=
+t}</style><!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:Pixel=
+sPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><=
+!-- Outlook 2007 and above Specific Styles --><!--[if gte mso 12]><style>a,=
+a:link,a:visited,a:hover {text-decoration: none}li {margin: 5px 0 5px 20px =
+!important;text-indent: -1em}.mso-gradient,.mso-gradient table {background-=
+color: none !important;background-color: transparent !important}</style><![=
+endif]--></head><body class=3D"ev-body"><div style=3D"display: none">Wat be=
+tekent dit voor jou? </div><div style=3D"display: none"> &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; =
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &=
+#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;=
+ &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; =
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &=
+#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;=
+ &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; =
+&#847; </div><div role=3D"article" aria-roledescription=3D"email" aria-labe=
+l=3D"Prinsjesdag 2022, de energiemaatregelen" lang=3D"nl" class=3D"ev-wrapp=
+er"><img src=3D"https://e.eneco.com/0/5/86/1/wBF6hXyoZCIQvES8eHtmqZMQhNE_9-=
+vx7VOqJGy_yUBOj768RZgN7mpfcYmWRmMsmdrtQF980M-Vugjs7TEcwmJtsdL3vXX6mVYYBtcF5=
+fxoAxKE742hca52btum4Zwun7AGtAw2fL1NUbxMv7_a6y8PconXqSN9" width=3D"1" height=
+=3D"1" border=3D"0" alt=3D"" style=3D"height:1px !important;width:1px !impo=
+rtant;border: 0 !important;margin: 0 !important;padding: 0 !important" />=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A<!--[if (gte mso 9)|(IE)]><table role=3D"present=
+ation" style=3D"width: 100%"><tr><td style=3D"height: 44px"><v:rect xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"false" style=3D"=
+mso-width-percent: 1000; position: absolute; mso-position-horizontal: right=
+"><v:fill type=3D"gradient" color=3D"#EB754F" color2=3D"#E6384D" angle=3D"9=
+0" /><v:textbox style=3D"mso-fit-shape-to-text:true" inset=3D"20,0,0,-20px"=
+><table role=3D"presentation" style=3D"width: 100%" align=3D"center"><tr><t=
+d height=3D"44" style=3D"height: 44px" class=3D"mso-gradient"><![endif]--><=
+table role=3D"presentation" style=3D"width: 100%; background-color: #E6384D=
+" class=3D"gradient"><tr><td style=3D"height: 44px"><table role=3D"presenta=
+tion" align=3D"center" style=3D"width: 620px; margin: 0 auto" class=3D"w100=
+pc"><tr><td class=3D"pr6" style=3D"padding: 15px 10px"><!--[if (gte mso 9)|=
+(IE)]><table role=3D"presentation" width=3D"640" style=3D"width: 640px"><tr=
+><td><![endif]--><table role=3D"presentation" style=3D"width: 100%"><tr><td=
+><!--[if (gte mso 9)|(IE)]><table role=3D"presentation"><tr><td width=3D"45=
+" style=3D"width: 45px">&nbsp;</td><td width=3D"547" style=3D"width: 547px"=
+><![endif]--><table role=3D"presentation" style=3D"width: 100%"><tr><td sty=
+le=3D"text-align: left; font: 14px/1.2 'EtelkaLight', Verdana, sans-serif; =
+mso-line-height-alt: 17px; color: #FFF">Wat betekent dit voor jou? </td></t=
+r></table><!--[if (gte mso 9)|(IE)]></td><td width=3D"20" style=3D"width: 2=
+0px">&nbsp;</td></tr></table><![endif]--></td><td><!--[if (gte mso 9)|(IE)]=
+><table role=3D"presentation"><tr><td width=3D"28" style=3D"width: 28px"><!=
+[endif]--><table role=3D"presentation" align=3D"right"><tr><td style=3D"pad=
+ding: 0 5px; font: 14px/1.2 'EtelkaLight', Verdana, sans-serif; mso-line-he=
+ight-alt: 17px; color: #FFF"><a href=3D"https://e.eneco.com/2/4/86/1/Wdz8gL=
+Lt4DnlwFXu2hkgwUFwvm9UOS5_gi1INr4oP46B4vq40eVNACvue4lImoTuqdoiVZ2KhJaMdE2Zl=
+nuQuQ" alt=3D"Header - Webversie" style=3D"color: #FFF; text-decoration: un=
+derline">Webversie</a></td></tr></table><!--[if (gte mso 9)|(IE)]></td></tr=
+></table><![endif]--></td></tr></table><!--[if (gte mso 9)|(IE)]></td></tr>=
+</table><![endif]--></td></tr></table></td></tr></table><!--[if (gte mso 9)=
+|(IE)]></td></tr></table></v:textbox></v:rect></td></tr></table><![endif]--=
+><table role=3D"presentation" align=3D"center" style=3D"width: 666px; margi=
+n: 0 auto" class=3D"w100pc"><tr><td class=3D"pr10" style=3D"padding: 15px 3=
+8px 25px 10px"><table role=3D"presentation" style=3D"width: 100%"><tr><td s=
+tyle=3D"width: 116px"><a href=3D"https://e.eneco.com/16/86/1/a3ef9d2de3e94a=
+ed771a80023bdd413702d626c0/r4clQreBaHSLAjVETtClF6CW2xoyEkT0JhmLggih91tS7A7T=
+SWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUHn3Cds_PYXOr0wyWnx=
+-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMFyreZmLNxLEz9rsbqt=
+J3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1I7PpNxaNAUYVBHoY0PwWcc-45nFMwzBEEZU8gx=
+vuWPW6_EMjpTKcuWWc0SPcd664Db6Sw8vnGYcFQ653y6YiMn-HaSbql7ysIVYUga1VBAyGRyScL=
+brpcgHePmZmvGribtgKfes3MdMMJDamDnP59eHlCZ8mngYfgwoom-o70bfpxC4oxNggIeRlRc9M=
+jYNSxh1DZdDVJTDuxfg7yuzs_x_AZvOUgzzEZTtLCcBr1Yg"><img src=3D"https://e.enec=
+o.com/public/files/86/0/email/Eneco-Logo.png" alt=3D"Eneco" width=3D"116" s=
+tyle=3D"width: 116px"></a></td><td><table role=3D"presentation" style=3D"wi=
+dth: 100%"><tr><td style=3D"padding: 15px 0 0; text-align: right; font: 14p=
+x/1 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 14px; color: #=
+8C8B8D">Klantnummer: 40879993</td></tr></table></td></tr></table></td></tr>=
+</table><table role=3D"presentation" style=3D"width: 100%"><tr><td style=3D=
+"padding: 0 10px"><table role=3D"presentation" align=3D"center" style=3D"wi=
+dth: 594px; margin: 0 auto; font-size: 1px; line-height: 1px; mso-line-heig=
+ht-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule: exactly" class=3D=
+"w100pc"><tr><td bgcolor=3D"#E9282C" style=3D"background: #FFF; border-top:=
+ solid 1px #E0E0E0; border-left: solid 1px #E0E0E0; border-right: solid 1px=
+ #E0E0E0"><!--[if (gte mso 9)|(IE)]>&nbsp;<![endif]--></td></tr></table></t=
+d></tr></table><table role=3D"presentation" style=3D"width: 100%"><tr><td s=
+tyle=3D"padding: 0 10px"><table role=3D"presentation" align=3D"center" styl=
+e=3D"width: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"backgr=
+ound: #FFF; border-left: solid 1px #E0E0E0; border-right: solid 1px #E0E0E0=
+"><table role=3D"presentation" style=3D"width: 100%"><tr><td class=3D"pl24 =
+pr24" style=3D"padding: 8px 30px 0"><a href=3D"https://e.eneco.com/16/86/1/=
+ade736e0f3b974e3ffb463bccf191396fedba879/r4clQreBaHSLAjVETtClF6CW2xoyEkT0Jh=
+mLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUHn3C=
+ds_PYXOr0wyWnx-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMFyre=
+ZmLNxLEz9rsbqtJ3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1JvbiSVsApxtI_D40DM6z9Ec8=
+aXNecn7Z_s-pePbIOUHYmNvDfCwsJvAg5xYUblgFrb48pdO4CmrzlCqbEuihAxw19039R6b4dtL=
+iNIn-BfQtfvaiiRgIsRwao0MbPS1LjhgF5lHdfRBGg1akXWIIQCkQHq7TyUpbPUgYs3nhTWP2ZK=
+_9IBe0qvvvURkxr6_jSi6ZoAyrIcDwJFer52hARTUiQ7yLjtbvst0ul1jIAPwI2hxNOyd2_5ObD=
+06gzWprM3bskSWPsEFOFN4QgP1UC" style=3D"color: #1A171B; text-decoration: und=
+erline"><img src=3D"https://cdn.msdp1.com/public/eneco/fde9cd1133/8f/fc/532=
+x_8ffc9f0e89f700902e2e319e007f67ed.jpg" alt=3D"Mannen met tablet - IMG" wid=
+th=3D"532" style=3D"width: 532px; min-width: 100%; max-width: 100%" class=
+=3D"w100pc height-auto"> </a></td></tr></table><table role=3D"presentation"=
+ style=3D"width: 100%"><tr><td class=3D"pl24 pr24" style=3D"padding: 12px 3=
+0px 0"><table role=3D"presentation" style=3D"width: 100%"><tr><td class=3D"=
+content" style=3D"padding: 12px 0 0"><table role=3D"presentation" style=3D"=
+width: 100%"><tr><td><h2 style=3D"margin: 0 0 8px; font: 18px/1.3 'EtelkaTe=
+xt-Bold', Verdana, sans-serif; mso-line-height-alt: 23px; color: #1A171B; f=
+ont-weight: bold">Beste  mevrouw Visser,</h2><p style=3D"margin: 0 0 8px; f=
+ont: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px=
+; color: #1A171B">Op Prinsjesdag is door de overheid een aantal maatregelen=
+ aangekondigd voor de betaalbaarheid van de energierekening. We begrijpen d=
+at je graag wilt weten wat dit voor jou betekent. Helaas is dat nu nog niet=
+ precies te zeggen.&nbsp;<br /><br />Zo komt er een prijsplafond voor energ=
+ie. Dit houdt in dat je tot een bepaald energieverbruik een lager tarief be=
+taalt. Boven dit verbruik betaal je de tarieven die in je energiecontract s=
+taan. De precieze invulling van het prijsplafond is nog niet definitief.</p=
+></td></tr></table></td></tr></table></td></tr></table></td></tr></table></=
+td></tr></table><table role=3D"presentation" style=3D"width: 100%"><tr><td =
+style=3D"padding: 0 10px"><table role=3D"presentation" align=3D"center" sty=
+le=3D"width: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"backg=
+round: #FFF; border-left: solid 1px #E0E0E0; border-right: solid 1px #E0E0E=
+0"><table role=3D"presentation" style=3D"width: 100%"><tr><td class=3D"pl24=
+ pr24" style=3D"padding: 20px 30px"><table role=3D"presentation" style=3D"w=
+idth: 100%; background-color: #E7E6F4" ><tr><td class=3D"content" style=3D"=
+padding: 20px 20px 12px"><table role=3D"presentation" style=3D"width: 100%"=
+><tr><td><h2 style=3D"margin: 0 0 8px; font: 18px/1.3 'EtelkaText-Bold', Ve=
+rdana, sans-serif; mso-line-height-alt: 23px; color: #1A171B; font-weight: =
+bold">Wat betekent dit voor jou? </h2><p style=3D"margin: 0 0 8px; font: 16=
+px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px; color=
+: #1A171B">Komende weken worden alle landelijke maatregelen door de overhei=
+d samen met de energiebedrijven uitgewerkt. Pas daarna weten we wat dit voo=
+r jouw situatie&nbsp;betekent. &nbsp;<br /><br /><em>Belangrijk:</em> we he=
+bben in je huidige tarieven en termijnbedrag nog geen rekening gehouden met=
+ het prijsplafond. Wanneer alle maatregelen definitief zijn informeren we j=
+e over de juiste hoogte van je termijnbedrag. Je hoeft nu nog niets te doen=
+.</p></td></tr></table></td></tr></table></td></tr></table></td></tr></tabl=
+e></td></tr></table><table role=3D"presentation" style=3D"width: 100%"><tr>=
+<td style=3D"padding: 0 10px"><table role=3D"presentation" align=3D"center"=
+ style=3D"width: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"b=
+ackground: #FFF; border-left: solid 1px #E0E0E0; border-right: solid 1px #E=
+0E0E0"><table role=3D"presentation" style=3D"width: 100%"><tr><td class=3D"=
+pl24 pr24" style=3D"padding: 12px 30px 8px"><table role=3D"presentation" st=
+yle=3D"width: 100%"><tr><td class=3D"content" style=3D"padding: 12px 0 0"><=
+table role=3D"presentation" style=3D"width: 100%"><tr><td><h1 style=3D"marg=
+in: 0 0 8px; font: 22px/1.2 'EtelkaText-Bold', Verdana, sans-serif; mso-lin=
+e-height-alt: 26px; color: #1A171B; font-weight: bold">Meer weten</h1><p st=
+yle=3D"margin: 0 0 8px; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; =
+mso-line-height-alt: 24px; color: #1A171B">Wil je meer weten over de energi=
+emaatregelen? Op <a href=3D"https://e.eneco.com/1/5/86/1/d-fYmYflFVf9UjvcRj=
+R5OEnZh3YW7G_iJk47IXGkOlg2Q8Z7YVr6rnuqxLA5SOIJvsipyMYrDJAcErXTuTt9I92Nx3w5S=
+bMDhP26QjwtaUWR-R3OPODcI8qREbCaVf_FfD1tcbIMsFwk83R92V6i_qrCS3HOIPukk2ps5gb-=
+NOl1V9peiW3FqlNtVNq1rQn0tXx7V_knGru7iWfNORnhN99ELOhoFpYyoh8FKY05_E3uSvZC" a=
+lt=3D"eneco.nl - TXT" target=3D"_blank" style=3D"text-decoration: underline=
+; color: #1a171b;">eneco.nl</a> vertellen we je wat er tot nu toe bekend is=
+ en houden we je op de hoogte van het laatste nieuws.</p></td></tr></table>=
+<table role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"padding=
+: 12px 0 8px"><table role=3D"presentation" style=3D"border-collapse: separa=
+te"><tr><td style=3D"font: 16px/1.5 'EtelkaText-Bold', Verdana, sans-serif;=
+ mso-line-height-alt: 16px"><a href=3D"https://e.eneco.com/16/86/1/a109d66f=
+c8c884b45463edecad1c68116d3fd136/r4clQreBaHSLAjVETtClF6CW2xoyEkT0JhmLggih91=
+tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUHn3Cds_PYXOr=
+0wyWnx-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMFyreZmLNxLEz=
+9rsbqtJ3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1JvbiSVsApxtI_D40DM6z9Ec8aXNecn7Z=
+_s-pePbIOUHYmNvDfCwsJvAg5xYUblgFrb48pdO4CmrzlCqbEuihAxw19039R6b4dtLiNIn-BfQ=
+tfvaiiRgIsRwao0MbPS1LjhgF5lHdfRBGg1akXWIIQCkQHq7TyUpbPUgYs3nhTWP2ZK_9IBe0qv=
+vvURkxr6_jSi6ZoAyrIcDwJFer52hARTUiQ7yLjtbvst0ul1jIAPwI2hxNOyd2_5ObD06gzWprM=
+3bskSWPsEFOFN4QgP1UC" style=3D"display: inline-block; color: #EB4356; text-=
+decoration: none" class=3D"link"> <img src=3D"https://e.eneco.com/public/fi=
+les/86/0/email/Textlink-Arrow.png" alt=3D"=E2=80=BA" width=3D"30" style=3D"=
+width: 30px" /></a><!--[if mso]></td><td style=3D"text-align: center; verti=
+cal-align: middle; font: 16px/1.5 'EtelkaText-Bold', Verdana, sans-serif; m=
+so-line-height-alt: 18px"><![endif]--><a href=3D"https://e.eneco.com/16/86/=
+1/30bfc7bcf6d50732af8f196e7cbf1f2b7b49b34e/r4clQreBaHSLAjVETtClF6CW2xoyEkT0=
+JhmLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUHn=
+3Cds_PYXOr0wyWnx-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMFy=
+reZmLNxLEz9rsbqtJ3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1JvbiSVsApxtI_D40DM6z9E=
+c8aXNecn7Z_s-pePbIOUHYmNvDfCwsJvAg5xYUblgFrb48pdO4CmrzlCqbEuihAxw19039R6b4d=
+tLiNIn-BfQtfvaiiRgIsRwao0MbPS1LjhgF5lHdfRBGg1akXWIIQCkQHq7TyUpbPUgYs3nhTWP2=
+ZK_9IBe0qvvvURkxr6_jSi6ZoAyrIcDwJFer52hARTUiQ7yLjtbvst0ul1jIAPwI2hxNOyd2_5O=
+bD06gzWprM3bskSWPsEFOFN4QgP1UC" style=3D"display: inline-block; color: #EB4=
+356; text-decoration: none" class=3D"link">&nbsp;<span class=3D"underline">=
+Lees meer over de energiemaatregelen</span></a></td></tr></table></td></tr>=
+</table></td></tr></table></td></tr></table></td></tr></table></td></tr></t=
+able><table role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"pa=
+dding: 0 10px"><table role=3D"presentation" align=3D"center" style=3D"width=
+: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"background: #FFF=
+; border-left: solid 1px #E0E0E0; border-right: solid 1px #E0E0E0"><table r=
+ole=3D"presentation" style=3D"width: 100%"><tr><td class=3D"pl24 pr24" styl=
+e=3D"padding: 12px 30px 8px"><table role=3D"presentation" style=3D"width: 1=
+00%"><tr><td class=3D"content" style=3D"padding: 12px 0 0"><table role=3D"p=
+resentation" style=3D"width: 100%"><tr><td><h1 style=3D"margin: 0 0 8px; fo=
+nt: 22px/1.2 'EtelkaText-Bold', Verdana, sans-serif; mso-line-height-alt: 2=
+6px; color: #1A171B; font-weight: bold">Hulp bij betalen</h1><p style=3D"ma=
+rgin: 0 0 8px; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-=
+height-alt: 24px; color: #1A171B">Als je moeite hebt om je energierekening =
+te betalen, dan helpen we je uiteraard graag. Je kan bijvoorbeeld een <a hr=
+ef=3D"https://e.eneco.com/1/5/86/1/v9RMy-84nOo60_0fZ6KSB647driT6-7VWprQjAbH=
+pqeIdQ9OLMpiW-49ehKniAvOzQhZfxlWsMOwiAdj1LplgmNXTlrBs-8hX4IihPfKYdx8xQ17JWA=
+lktiyEYaV2MNU7R0iQEUY3IaHYcPku8ktcesfhzl_4iDhjDI1RDK6Gp2UoYFvtjA19ghHVh1kxw=
+lL820U3YtfuF7tXodTp3frQz9I9zuMjzIURvV_jwZt7Q577APMBQ" alt=3D"betalingsregel=
+ing - TXT" target=3D"_blank" style=3D"text-decoration: underline; color: #1=
+a171b;">betalingsregeling</a> treffen. <br /><br />Ook werken we samen met =
+Geldfit. Ontdek wat jij kan doen om meer grip te krijgen op je energiereken=
+ing.</p></td></tr></table><table role=3D"presentation" style=3D"width: 100%=
+"><tr><td style=3D"padding: 12px 0 8px"><table role=3D"presentation" style=
+=3D"border-collapse: separate"><tr><td style=3D"font: 16px/1.5 'EtelkaText-=
+Bold', Verdana, sans-serif; mso-line-height-alt: 16px"><a href=3D"https://e=
+.eneco.com/16/86/1/af42a4b9366e9583d4359699a8c0ffac892f20ee/r4clQreBaHSLAjV=
+ETtClF6CW2xoyEkT0JhmLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxGjuNh=
+WUa2_dTPLARN-8FOlvi-A9X5tGElkGH40lO-1euYkWI0McC2CwaWGxBiNPPgkdkEQhYUooyExbN=
+bkeytb4Y1A3nWkLreTwgmVuU1-rQsAEEQZYIBQMwkOLQo_j3lfUf0wQwvn7S5AXA4L8VW5Q-Ltl=
+Q91_Ja4fmkfrfUxQFW8lU7XOo9QjFmrU4QBwjP06idL06srShrFmaMphSPKI9vhT6s5zuiKH-MU=
+vdkKaJ5Uu9VkVmwCGfVbHqaVQxMyevgBFW1fNRpiwObekj_wxx3XuL1MczUnX4DvL20ucbPn8G_=
+Pg52IpUo1HDkjFz_nTQUH9odz9_alWi8Wsclg2bcJHTlN9Ily85c4iz0_zNRUE-1oErtcXSto5L=
+rQw-dFI6OuClE8KQYCNSTHyhUs" style=3D"display: inline-block; color: #EB4356;=
+ text-decoration: none" class=3D"link"> <img src=3D"https://e.eneco.com/pub=
+lic/files/86/0/email/Textlink-Arrow.png" alt=3D"=E2=80=BA" width=3D"30" sty=
+le=3D"width: 30px" /></a><!--[if mso]></td><td style=3D"text-align: center;=
+ vertical-align: middle; font: 16px/1.5 'EtelkaText-Bold', Verdana, sans-se=
+rif; mso-line-height-alt: 18px"><![endif]--><a href=3D"https://e.eneco.com/=
+16/86/1/c614c7108f645452f392561918f7c9c0719ab8bf/r4clQreBaHSLAjVETtClF6CW2x=
+oyEkT0JhmLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxGjuNhWUa2_dTPLAR=
+N-8FOlvi-A9X5tGElkGH40lO-1euYkWI0McC2CwaWGxBiNPPgkdkEQhYUooyExbNbkeytb4Y1A3=
+nWkLreTwgmVuU1-rQsAEEQZYIBQMwkOLQo_j3lfUf0wQwvn7S5AXA4L8VW5Q-LtlQ91_Ja4fmkf=
+rfUxQFW8lU7XOo9QjFmrU4QBwjP06idL06srShrFmaMphSPKI9vhT6s5zuiKH-MUvdkKaJ5Uu9V=
+kVmwCGfVbHqaVQxMyevgBFW1fNRpiwObekj_wxx3XuL1MczUnX4DvL20ucbPn8G_Pg52IpUo1HD=
+kjFz_nTQUH9odz9_alWi8Wsclg2bcJHTlN9Ily85c4iz0_zNRUE-1oErtcXSto5LrQw-dFI6OuC=
+lE8KQYCNSTHyhUs" style=3D"display: inline-block; color: #EB4356; text-decor=
+ation: none" class=3D"link">&nbsp;<span class=3D"underline">Ga naar geldfit=
+.nl/energie</span></a></td></tr></table></td></tr></table></td></tr></table=
+></td></tr></table></td></tr></table></td></tr></table><table role=3D"prese=
+ntation" style=3D"width: 100%"><tr><td style=3D"padding: 0 10px"><table rol=
+e=3D"presentation" align=3D"center" style=3D"width: 594px; margin: 0 auto" =
+class=3D"w100pc"><tr><td style=3D"background: #FFF; border-left: solid 1px =
+#E0E0E0; border-right: solid 1px #E0E0E0"><table role=3D"presentation" styl=
+e=3D"width: 100%"><tr><td class=3D"pl24 pr24" style=3D"padding: 12px 30px 8=
+px"><table role=3D"presentation" style=3D"width: 100%"><tr><td class=3D"con=
+tent" style=3D"padding: 12px 0 0"><table role=3D"presentation" style=3D"wid=
+th: 100%"><tr><td><h1 style=3D"margin: 0 0 8px; font: 22px/1.2 'EtelkaText-=
+Bold', Verdana, sans-serif; mso-line-height-alt: 26px; color: #1A171B; font=
+-weight: bold">Heb je een vraag? </h1><p style=3D"margin: 0 0 8px; font: 16=
+px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px; color=
+: #1A171B">Het prijsplafond is goed nieuws voor de hoogte van je energierek=
+ening. Je hoeft hiervoor niks te doen. Wij zorgen ervoor dat alles goed ger=
+egeld is en houden je op de hoogte. Heb je&nbsp;tussentijds nog een vraag? =
+Stel 'm online aan onze <a href=3D"https://e.eneco.com/1/5/86/1/eUJwMyafkP6=
+icL_glodqW_Ho7xXhs4S3DOJFH6eM38eXuADD6ttpqg4eW528HyV-K2vUfOGkA8IRUwVaJVCrle=
+Yz8sE_gBeukLW3YtuviN_mQDojDR0moLIJK44jAl-cZn-z5fMXw2kSxClGBaCrh3htPHRqL4RTL=
+WJ-tKUYaKvRizfMwvjhZTtI9KzDh9El9C-McNUpBs61lCBnpVsVCS8-48bGatLwfczwZnrICIZ2=
+FwXFrQ" alt=3D"Klantenservice - TXT" target=3D"_blank" style=3D"text-decora=
+tion: underline; color: #1a171b;">Klantenservice</a>. Of bekijk <a href=3D"=
+https://e.eneco.com/1/5/86/1/8OW6e8Lfoy_TwMl9qzta-xsmBn485UhNgoikZBF5QkXt82=
+zfUGKz6r8EJ7qa2Jjn1Zuu2hQ3ib8NwI2Tpkl0YBjZmgRQnTdiD4Gcd1HqCHnlm7Hb0QLvYw5Z_=
+ojPOGYpXv7Wg_YiphGIkwuR38DY62-M0seVRfGmO9mQBDMkEKHxqy0iI1ouhOKfJFYzxVxj1ZJC=
+dT60UChUNqKlcGawBHG3Y_nnsjqmm_GjpTAFh5OK_3YoZQ" alt=3D"eneco.nl - TXT" targ=
+et=3D"_blank" style=3D"text-decoration: underline; color: #1a171b;">eneco.n=
+l</a> voor meer informatie en de laatste updates.&nbsp;<br /></p></td></tr>=
+</table></td></tr></table></td></tr></table></td></tr></table></td></tr></t=
+able><table role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"pa=
+dding: 0 10px"><table role=3D"presentation" align=3D"center" style=3D"width=
+: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"background: #fff=
+; border-left: solid 1px #E0E0E0; border-right: solid 1px #E0E0E0"><table r=
+ole=3D"presentation" style=3D"width: 100%"><tr><td class=3D"pl24 pr24" styl=
+e=3D"padding: 20px 30px"><table role=3D"presentation" style=3D"width: 100%"=
+><tr><td class=3D"content" style=3D"padding: 0 0 22px; text-align: center; =
+font: 18px/1.3 'EtelkaText-Bold', Verdana, sans-serif; mso-line-height-alt:=
+ 23px; color: #1A171B; font-weight: bold">Geef je mening over deze e-mail</=
+td></tr><tr><td><table role=3D"presentation" align=3D"center"><tr><td class=
+=3D"pl8 pr8" style=3D"padding: 0 11px"><a href=3D"https://e.eneco.com/16/86=
+/1/550ab0177be903491053882b4b929e21fd4d259d/r4clQreBaHSLAjVETtClF6CW2xoyEkT=
+0JhmLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUH=
+n3Cds_PYXOr0wyWnx-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMF=
+yreZmLNxLEz9rsbqtJ3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1JvbiSVsApxtI_D40DM6z9=
+Ec8aXNecn7Z_s-pePbIOUHYmNvDfCwsJvAg5xYUblgFrb48pdO4CmrzlCqbEuihAxw19039R6b4=
+dtLiNIn-BfQtfvaiiRgIsRwao0MbPS1LjhgF5lHdfRBGg1akXWIIQCkQHq7TyUpbPUgYs3nhTWP=
+2ZK_9IBe0qvvvURkxr6_jSi6ZoAyrIcDwJFer52hARTUiQ7yLjtbvst0ul1jIAPwI2hxNOyd2_5=
+ObD06gzWprM3bskSWPsEFOFN4QgP1UC" style=3D"display: inline-block; color: #EB=
+4356; text-decoration: none" class=3D"link"><img src=3D"https://e.eneco.com=
+/public/files/86/0/email/Usabilla-1.png" alt=3D"1" width=3D"30" style=3D"wi=
+dth: 30px"></a></td><td class=3D"pl8 pr8" style=3D"padding: 0 11px"><a href=
+=3D"https://e.eneco.com/16/86/1/26f8eaee13536d14346b00c08f860b2aeafb3516/r4=
+clQreBaHSLAjVETtClF6CW2xoyEkT0JhmLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyya=
+bEFAlvnxBpbxuiI-jgEhdmHvsHnUHn3Cds_PYXOr0wyWnx-s7LhuxOKluCFd85ScTTP5rESs4VJ=
+oMeGaFQw4-uqpY6pfau3etwXE2RMFyreZmLNxLEz9rsbqtJ3rUTr4MtUphBPWsJfwUFqIZUd1uM=
+EQew-uK1JvbiSVsApxtI_D40DM6z9Ec8aXNecn7Z_s-pePbIOUHYmNvDfCwsJvAg5xYUblgFrb4=
+8pdO4CmrzlCqbEuihAxw19039R6b4dtLiNIn-BfQtfvaiiRgIsRwao0MbPS1LjhgF5lHdfRBGg1=
+akXWIIQCkQHq7TyUpbPUgYs3nhTWP2ZK_9IBe0qvvvURkxr6_jSi6ZoAyrIcDwJFer52hARTUiQ=
+7yLjtbvst0ul1jIAPwI2hxNOyd2_5ObD06gzWprM3bskSWPsEFOFN4QgP1UC" style=3D"disp=
+lay: inline-block; color: #EB4356; text-decoration: none" class=3D"link"><i=
+mg src=3D"https://e.eneco.com/public/files/86/0/email/Usabilla-2.png" alt=
+=3D"2" width=3D"30" style=3D"width: 30px"></a></td><td class=3D"pl8 pr8" st=
+yle=3D"padding: 0 11px"><a href=3D"https://e.eneco.com/16/86/1/dbebea309efa=
+fda8a3f609e5c94f8462fd5fb4c0/r4clQreBaHSLAjVETtClF6CW2xoyEkT0JhmLggih91tS7A=
+7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUHn3Cds_PYXOr0wyW=
+nx-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMFyreZmLNxLEz9rsb=
+qtJ3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1JvbiSVsApxtI_D40DM6z9Ec8aXNecn7Z_s-p=
+ePbIOUHYmNvDfCwsJvAg5xYUblgFrb48pdO4CmrzlCqbEuihAxw19039R6b4dtLiNIn-BfQtfva=
+iiRgIsRwao0MbPS1LjhgF5lHdfRBGg1akXWIIQCkQHq7TyUpbPUgYs3nhTWP2ZK_9IBe0qvvvUR=
+kxr6_jSi6ZoAyrIcDwJFer52hARTUiQ7yLjtbvst0ul1jIAPwI2hxNOyd2_5ObD06gzWprM3bsk=
+SWPsEFOFN4QgP1UC" style=3D"display: inline-block; color: #EB4356; text-deco=
+ration: none" class=3D"link"><img src=3D"https://e.eneco.com/public/files/8=
+6/0/email/Usabilla-3.png" alt=3D"3" width=3D"30" style=3D"width: 30px"></a>=
+</td><td class=3D"pl8 pr8" style=3D"padding: 0 11px"><a href=3D"https://e.e=
+neco.com/16/86/1/7f2ee2f5429124e73f8a576e23726988652c00cb/r4clQreBaHSLAjVET=
+tClF6CW2xoyEkT0JhmLggih91tS7A7TSWoLiWXxZUg9JtSQY4cMt6r8kbyyabEFAlvnxBpbxuiI=
+-jgEhdmHvsHnUHn3Cds_PYXOr0wyWnx-s7LhuxOKluCFd85ScTTP5rESs4VJoMeGaFQw4-uqpY6=
+pfau3etwXE2RMFyreZmLNxLEz9rsbqtJ3rUTr4MtUphBPWsJfwUFqIZUd1uMEQew-uK1JvbiSVs=
+ApxtI_D40DM6z9Ec8aXNecn7Z_s-pePbIOUHYmNvDfCwsJvAg5xYUblgFrb48pdO4CmrzlCqbEu=
+ihAxw19039R6b4dtLiNIn-BfQtfvaiiRgIsRwao0MbPS1LjhgF5lHdfRBGg1akXWIIQCkQHq7Ty=
+UpbPUgYs3nhTWP2ZK_9IBe0qvvvURkxr6_jSi6ZoAyrIcDwJFer52hARTUiQ7yLjtbvst0ul1jI=
+APwI2hxNOyd2_5ObD06gzWprM3bskSWPsEFOFN4QgP1UC" style=3D"display: inline-blo=
+ck; color: #EB4356; text-decoration: none" class=3D"link"><img src=3D"https=
+://e.eneco.com/public/files/86/0/email/Usabilla-4.png" alt=3D"4" width=3D"3=
+0" style=3D"width: 30px"></a></td><td class=3D"pl8 pr8" style=3D"padding: 0=
+ 11px"><a href=3D"https://e.eneco.com/16/86/1/82232b058f728d1e72229f0a40789=
+0b89e496206/r4clQreBaHSLAjVETtClF6CW2xoyEkT0JhmLggih91tS7A7TSWoLiWXxZUg9JtS=
+QY4cMt6r8kbyyabEFAlvnxBpbxuiI-jgEhdmHvsHnUHn3Cds_PYXOr0wyWnx-s7LhuxOKluCFd8=
+5ScTTP5rESs4VJoMeGaFQw4-uqpY6pfau3etwXE2RMFyreZmLNxLEz9rsbqtJ3rUTr4MtUphBPW=
+sJfwUFqIZUd1uMEQew-uK1JvbiSVsApxtI_D40DM6z9Ec8aXNecn7Z_s-pePbIOUHYmNvDfCwsJ=
+vAg5xYUblgFrb48pdO4CmrzlCqbEuihAxw19039R6b4dtLiNIn-BfQtfvaiiRgIsRwao0MbPS1L=
+jhgF5lHdfRBGg1akXWIIQCkQHq7TyUpbPUgYs3nhTWP2ZK_9IBe0qvvvURkxr6_jSi6ZoAyrIcD=
+wJFer52hARTUiQ7yLjtbvst0ul1jIAPwI2hxNOyd2_5ObD06gzWprM3bskSWPsEFOFN4QgP1UC"=
+ style=3D"display: inline-block; color: #EB4356; text-decoration: none" cla=
+ss=3D"link"><img src=3D"https://e.eneco.com/public/files/86/0/email/Usabill=
+a-5.png" alt=3D"5" width=3D"30" style=3D"width: 30px"> </a></td></tr></tabl=
+e></td></tr></table></td></tr></table></td></tr></table></td></tr></table><=
+table style=3D"width: 100%;" role=3D"presentation"><tbody><tr><td style=3D"=
+padding: 0 10px;"><table class=3D"w100pc" style=3D"width: 594px; margin: 0 =
+auto; font-size: 1px; line-height: 1px; mso-line-height-alt: 0; mso-margin-=
+top-alt: 1px; mso-line-height-rule: exactly;" role=3D"presentation" align=
+=3D"center"><tbody><tr><td style=3D"padding: 0 0 20px; background: #FFF; bo=
+rder-bottom: solid 1px #E0E0E0; border-left: solid 1px #E0E0E0; border-righ=
+t: solid 1px #E0E0E0;">&nbsp;</td></tr></tbody></table></td></tr></tbody></=
+table><table style=3D"width: 100%;" role=3D"presentation"><tbody><tr><td st=
+yle=3D"padding: 0 10px;"><table class=3D"w100pc" style=3D"width: 594px; mar=
+gin: 0 auto;" role=3D"presentation" align=3D"center"><tbody><tr><td><table =
+style=3D"width: 100%;" role=3D"presentation"><tbody><tr><td class=3D"pl24 p=
+r24" style=3D"padding: 20px 30px;"><table style=3D"width: 100%;" role=3D"pr=
+esentation"><tbody><tr><td style=3D"padding: 0 0 24px;"><table role=3D"pres=
+entation" align=3D"center"><tbody><tr><td class=3D"pl10 pr10" style=3D"padd=
+ing: 0 18px; text-align: center; font: 16px/1.5 'EtelkaLight', Verdana, san=
+s-serif; mso-line-height-alt: 24px;"><a href=3D"https://e.eneco.com/1/5/86/=
+1/WSqwP2XCc9uCRHkYxZyaOIF7_thDQYx9Sgvx9fGJktOXcoUSsDp3msGeYj-UcCGQqAOCwu3UC=
+qMElpeUum2I-9mptvg1oVpOnyiAGjFcMNqb5uZbkmLq5CIsSSScAdlHH1xrJA8Py3gZ_NcpN0Lt=
+4Ww6kvtahMVQi873LY_p0OM" style=3D"color: #1a171b; text-decoration: underlin=
+e;">Eneco app</a></td><td style=3D"padding: 0 18px; text-align: center; fon=
+t: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px;"=
+><a href=3D"https://e.eneco.com/1/5/86/1/396wPDQmdxG6Xie6XCRGJXVjkrtvrydXLO=
+c6vrsyLsq3SR23r-MqS9grucahVNwAdUqih81kHS_zcqWhnj_eVeFVVirek2xfZVXXSZAc-1AIC=
+HX8lqIJ59qhjMLRs2vyxeD1Rcb0GqCIcP3z8at5tMWJ6oKtDj_wc1q9V5m7-A" style=3D"col=
+or: #1a171b; text-decoration: underline;">Mijn Eneco</a></td><td style=3D"p=
+adding: 0 18px; text-align: center; font: 16px/1.5 'EtelkaLight', Verdana, =
+sans-serif; mso-line-height-alt: 24px;"><a href=3D"https://e.eneco.com/1/5/=
+86/1/AWxohpuD9KDbtBTfffzhUYx6_eutrBcCdmk3q2ML4F3W0hQHQxDrsIrGhZwYB_E-4O4VTG=
+WwhvoQjWmmyTQ01ry4TpfAxIHjqytXmVys6QFtFTXXzHd2r-urv_gX73RoZCsx4P0cuW6Qd4GQu=
+2HIscVAn4P9c8dKXaQ5xRioRKA" style=3D"color: #1a171b; text-decoration: under=
+line;">Klantenservice</a></td><td style=3D"padding: 0 18px; text-align: cen=
+ter; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt=
+: 24px;"><a href=3D"https://e.eneco.com/1/5/86/1/_vRXyEEUVp-zfyXwpUoMrb6W_g=
+Ijnjdnlnq4ht6PFCYia4NAKFTo2egTXSuyYYk3MbYi_y-CqbRrlGGY9XbsZDOVY4iDNdtv_-fPk=
+lPLShAD4A_dkwkLsRwQmEinC70O6-Pl0ysQixD8lw3uN9g_oT6jibuI9M-C39Y9W9z8LA" styl=
+e=3D"color: #1a171b; text-decoration: underline;">Stroometiket</a></td></tr=
+></tbody></table></td></tr><tr><td style=3D"padding: 0 0 24px;"><table role=
+=3D"presentation" align=3D"center"><tbody><tr><td style=3D"text-align: cent=
+er; font: 12px / 1.5 'EtelkaLight', Verdana, sans-serif; color: #8c8b8d !im=
+portant;">Deze e-mail is verzonden in opdracht van Eneco Consumenten B.V., =
+Postbus 1014, 3000 BA Rotterdam, KvK nr. 24324527.&nbsp;Dit is een automati=
+sche e-mail, een antwoord op deze e-mail wordt niet gelezen of beantwoord.<=
+/td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tabl=
+e></td></tr></tbody></table></td></tr></tbody></table></div><img src=3D"htt=
+ps://e.eneco.com/0/5/86/1/P_4DzSrHZ_neFgmQI6AghjrgIYJdrGTM790pd_zc390aYu5xW=
+4g2yvOejD7t760eKsdkNNhwqXzV6vNcjY8zO2WaxT-TzepjcTN4UGY0vDWqxCe4HX3CLOesmd0h=
+wxspHgbO9oTUnUV6T9U7hsxNYvDwPZ-KjNBJ" width=3D"1" height=3D"1" border=3D"0"=
+ alt=3D"" style=3D"height:1px !important;width:1px !important;border: 0 !im=
+portant;margin: 0 !important;padding: 0 !important" /></body></html>
+----632d6a3014344--
+
+

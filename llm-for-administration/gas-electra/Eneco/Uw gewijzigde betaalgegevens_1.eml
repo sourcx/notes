@@ -1,0 +1,504 @@
+Delivered-To: te.my.vis@gmail.com
+Received: by 2002:a5e:9903:0:0:0:0:0 with SMTP id t3-v6csp4575363ioj;
+        Tue, 11 Sep 2018 14:32:17 -0700 (PDT)
+X-Google-Smtp-Source: ANB0VdbgDemTXjpfXB16ulTwAnGxnKbnf6GzUK39hCezPkMLwEko3cT2LCoSAwAQM2VqBMhKuaHh
+X-Received: by 2002:a1c:8682:: with SMTP id i124-v6mr2393448wmd.77.1536701537231;
+        Tue, 11 Sep 2018 14:32:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1536701537; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FB8cTlk0TDmXj3L5Sda15J/R5Kj/YCXIQi75JYYAg53xafN3xnJ7YMQibt1GPxhbAA
+         an/rlgty89lfl2ssxhVaiyZBNeWGJurQ7NRGB/u0QcPSmOKc8/T36MhJBFCUqhi7Zzt/
+         ZUCFQ/f1laKp4heO8BRMWf0et6amYOWRXUeBohk3xweJ66bD20bCas0pYJUvP05cxp8R
+         tcphoqaQW42+65+0TJu5tZICyVzLg0VFfe58MdVTpjYYwu+nVwWHkxZBkzuqsDVJH+Xu
+         6nCvFmLzQ94xVjpWGco/nCB5p9QAHH04Iv6H1fNPH7WFoXRbzd4uX0lqEiTTKDMzPNKI
+         depQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:list-unsubscribe:feedback-id:mime-version
+         :content-transfer-encoding:to:precedence:subject:reply-to:from
+         :dkim-signature;
+        bh=UbRDqT+CXBzYWFutt25Iyoohma6gwQ8I7tRYiriFOgU=;
+        b=ku5qTd28sGMXI8I99TsrItQfOj5R0rQkd1yysUxivis4Uhz9CBSnJUERhEwZhUPWxX
+         JLhEOlkrAO8t9s8prXajLwhqRyda+suySHw9OhETwVvA6+qY7eP9cbg+5plP4hp+rO1R
+         yv5eOBlIC3hiCbDpnpvYwg+yL2fyj26N+w14Q9huoxRM6wXD+Ng8PZvoJGsn77ggl6sc
+         365yMpbsXWP109KN6HFUGuw92dr1CExjKGfsn00F6eaA7F5FP2oCSgXXRqyE+aGm51ZH
+         5QhLHr0WNpNRSf6yCoDnhZy28IV01EGX7dVRYqAZ2Ym4UpwwhHkOPnTa4/88qJ+vOIZn
+         UsLg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@msdp1.com header.s=jan2017 header.b=QSkD1ggz;
+       spf=pass (google.com: domain of bounce-4igt0_aozxn_y70e45iff5bny5krmxjf-c46zuwga7ki@msdp1.com designates 52.58.56.105 as permitted sender) smtp.mailfrom=bounce-4IGt0_aOzxN_Y70e45Iff5bNy5krMXJf-C46zuwga7KI@msdp1.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=eneco.com
+Return-Path: <bounce-4IGt0_aOzxN_Y70e45Iff5bNy5krMXJf-C46zuwga7KI@msdp1.com>
+Received: from mta-012.msdp1.com (mta-012.msdp1.com. [52.58.56.105])
+        by mx.google.com with ESMTPS id t3-v6si20314078wrq.287.2018.09.11.14.32.16
+        for <te.my.vis@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 11 Sep 2018 14:32:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-4igt0_aozxn_y70e45iff5bny5krmxjf-c46zuwga7ki@msdp1.com designates 52.58.56.105 as permitted sender) client-ip=52.58.56.105;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@msdp1.com header.s=jan2017 header.b=QSkD1ggz;
+       spf=pass (google.com: domain of bounce-4igt0_aozxn_y70e45iff5bny5krmxjf-c46zuwga7ki@msdp1.com designates 52.58.56.105 as permitted sender) smtp.mailfrom=bounce-4IGt0_aOzxN_Y70e45Iff5bNy5krMXJf-C46zuwga7KI@msdp1.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=eneco.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jan2017; d=msdp1.com;
+ h=From:Reply-To:Subject:To:Content-Transfer-Encoding:MIME-Version:Content-Type:List-Unsubscribe:Message-Id:Date;
+ bh=UbRDqT+CXBzYWFutt25Iyoohma6gwQ8I7tRYiriFOgU=;
+ b=QSkD1ggzhcw25RhxwwFel81F4SV3HR/eRTsb3zpldKjuSpT20Ok703exxDXswMm7eZ7VpiqVMs45
+   ZvfckZoG3ff4QyLE+PNgEt1kNoz6k5aBQB8e1Sn2gLk4ipg12lpQPvjrMDDOd9diQxSOGGIfkmip
+   Su3a9uhwPEsZAQLVO7Jxrc5cSd5Mn7Qkqrq6KF5XuYrQqFVI5AK5qNB/8ufcfz2v3jU62do/cXQf
+   bof7FoOPdzVLYbUR68IVyIQrUGWNaApaAUGVPgtK8bPAUC9v/e4Mbt1Cz9aSLKzeAyRCJllw3+mh
+   aFziIkYcEcUr8jIrxfyUyJFJQHIPuE4Ubkm8lQ==
+From: "Eneco" <services@eneco.com>
+Reply-To: "Eneco" <services@eneco.com>
+Subject: Uw gewijzigde betaalgegevens
+Precedence: bulk
+To: te.my.vis@gmail.com
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--C8969EC6595FD6C3"
+X-Mailer: Clang 2.7.0
+X-Clang-PortalId: 86
+X-Clang-BrandId: 86/1
+x-virtual-mta: apool
+Feedback-ID: 86-1-80326628:86-1:evillage
+List-Unsubscribe: <https://mail.eneco.nl/2/4/86/1/-Jqjpknn1tPye6zz2IG4UOH2Qpr8pERtnb5y7mDXCVQAba8z3dspVhFiK9E2wAqMJYBZBIlnqNodWysmEGCclg>,<mailto:unsubscribe-4IGt0_aOzxN_Y70e45Iff5bNy5krMXJf-C46zuwga7KI@msdp1.com>
+X-Report-Abuse: Please report abuse here: https://mail.eneco.nl/pub/report-abuse/?e=abuse-4IGt0_aOzxN_Y70e45Iff5bNy5krMXJf-C46zuwga7KI@msdp1.com
+Message-Id: <20180911213216.BBD7D2469B@dcg-app-mailmaster06>
+Date: Tue, 11 Sep 2018 23:32:16 +0200 (CEST)
+
+This is a MIME Encoded Message
+
+
+
+----C8969EC6595FD6C3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Uw gewijzigde betaalgegevens=0A=0ABekijk deze e-mail opgemaakt in uw browse=
+r:=0Ahttps://mail.eneco.nl/2/4/86/1/F9KEYlljtpn3MuSAj82BvNglLuNk_Fx024MqoJK=
+S4EAqVndHQmsuReW8KnFfDWeRTmceq12mU2RMa9jtX9yfkQ=0A=0A----------------------=
+-----------------------------------------------   =0A=0AEneco | Uw gewijzig=
+de betaalgegevens=0A=0ABeste mevrouw, heer Visser,=0A=0AHartelijk dank voor=
+ het doorgeven van uw betaalgegevens.=0A=0AIn de online versie vindt u een =
+overzicht van de gegevens die u aan ons heeft doorgegeven:=0Ahttps://mail.e=
+neco.nl/2/4/86/1/l0WvFEzv13Uv3YW2fLVDGN5uS5JVNU5t7I3MWMe5ufG65Dkyx0vuH1qE2l=
+Hcg-zTnRUbmAVLS_WOx7d0P2tNbg=0A=0A-----------------------------------------=
+----------------------------   =0A=0AVolg ons:=0A=0ATWITTER=0Ahttps://mail.=
+eneco.nl/1/4/86/1/mF51x5EzN4qWk3IHPenznySXioSBCerXkduTHWMTv7cKae1PVoTCFLANV=
+vW2YupD0jxvr4I99_rqb6oU1NYFlQ=0A=0AFACEBOOK=0Ahttps://mail.eneco.nl/1/4/86/=
+1/DWCLsYYXtEy952iu5ZKutBw4zJ877iiADfLKYfLWt1dJV6rPMX5HJNokvkJkmx2FePPm_Ptpe=
+8WgyYkn6efFZw=0A=0AYOUTUBE=0Ahttps://mail.eneco.nl/1/4/86/1/qNO3wJ9ybgnb9tJ=
+Bk6MFUN8Zfoi75P07N570PK5Vdt_Kk3PeejpthIexkwDSmBxYdaxMGKi5JK-hRVvR9XBwRg=0A=
+=0AFORUM=0Ahttps://mail.eneco.nl/1/4/86/1/ygBadkZlxjQfw0Znj9-Xwguj5Skv_AQPp=
+B7dDyCvvsrxjxS50yVN8Z4qlGYVM0URKpkYUSdY8NnSc_ckNOe67Q4RfNgr4iuhtrT32mvJcNQ=
+=0A=0A---------------------------------------------------------------------=
+   =0A=0APRIVACY=0Ahttps://mail.eneco.nl/1/4/86/1/vAqGx7mWeeNM0_nIYQ1_elPh1=
+9Tj-K36YAOyC0LrYGd-bDiT0okl8tHP-HR0RUbtFWE4iInYw4Kz6T8aQrmRelJHlQQS0Zkl0ThY=
+TATT_u4=0A=0ADISCLAIMER=0Ahttps://mail.eneco.nl/1/4/86/1/oFc5rH4d3ml90OPZ5H=
+BHE9eDzyezYsb4JELcslFO2zOv03LM1w4lyqSC7EQV7UcMetLB9D2ABo8NStm1GxKSI6xuu9ggn=
+S7TD4kAs3MsuOk=0A=0AUw klantnummer: 40879993=0A=0ADeze e-mail is verzonden =
+in opdracht van Eneco Consumenten B.V., Postbus 1014, 3000 BA Rotterdam, Kv=
+K nr.24324527. Bezoek voor vragen onze contactpagina.=0Ahttps://mail.eneco.=
+nl/1/4/86/1/8R_j5RFzayj1KdMMCLyUuu86i2ZUXajFj1rYCsHipPXzKwJkE-ms-V0_QwUJiyH=
+YXq4cCLGr6aki7H3BRXxrGHouMmVphCUzdvRDr1xTGkU=0AOf bel onze klantenservice, =
+op werkdagen tussen 08.00 en 20.00 uur bereikbaar op 088-8955955 (u betaalt=
+ uw gebruikelijke belkosten).
+----C8969EC6595FD6C3
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html>=0A    <head>=0A<met=
+a http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=0A<meta http-equi=
+v=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />=0A<meta name=
+=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0"/>=0A<me=
+ta name=3D"format-detection" content=3D"telephone=3Dno" />=0A<link rel=3D"s=
+hortcut icon" href=3D"https://mail.eneco.nl/public/files/86/0/2014_template=
+/images/favicon.ico" type=3D"image/x-icon" />=0A<title>Eneco</title>=0A<!--=
+ Vul hieronder de juiste UTM-gegevens in door waarde van "default" aan te p=
+assen -->=0A<!---->=0A<!-- Maatwerk exports=0A-->=0A<style type=3D"text/css=
+">=0Abody {=0Awidth: 100% !important;=0Amargin: 0;=0Apadding: 0;=0Abackgrou=
+nd-color: #ffffff;=0A-webkit-font-smoothing: antialiased;=0A-webkit-text-si=
+ze-adjust: none;=0A-ms-text-size-adjust: none;=0A}=0A.ReadMsgBody {=0Awidth=
+: 100%;=0A}=0A.ExternalClass {=0Awidth: 100%;=0A}=0A.ExternalClass * {=0Ali=
+ne-height: 100%;=0A}=0Atable td {=0Aborder-collapse: collapse;=0A}=0A.wrapp=
+er, .wrapperPadding {=0Amargin: 0;=0Apadding: 0;=0Awidth: 100% !important;=
+=0A}=0Aa, a:link, a:visited, a:hover {=0Acolor: #d21242;=0Atext-decoration:=
+ none;=0A}=0Aimg {=0Adisplay: block;=0Aline-height: 100%;=0Aoutline: none;=
+=0Atext-decoration: none;=0Amargin: 0;=0A}=0A@media only screen and (max-wi=
+dth: 625px) {=0A[class=3DwrapperPadding] {=0Awidth:auto;=0Apadding:0 15px;=
+=0A}=0A[class=3DfullWidth] {=0Awidth:100% !important;=0Amax-width:100% !imp=
+ortant;=0Atext-align:center !important;=0A}=0A[class=3Dhide] {=0Adisplay:no=
+ne;=0A}=0A[class=3Dcenter] {=0Amargin:0px auto;=0A}=0A[class=3DtextCenter] =
+{=0Atext-align:center !important;=0A}=0A}=0A</style>=0A<!--[if gte mso 15]>=
+=0A<style type=3D"text/css">=0Atable {=0Afont-size: 1px;=0Amso-line-height-=
+alt: 0;=0Aline-height: 0;=0Amso-margin-top-alt: 1px;=0A}=0A</style>=0A<![en=
+dif]-->=0A</head>=0A    <body>=0A        <table class=3D"wrapperPadding" wi=
+dth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#e=
+deded">=0A            =0A                <tr>=0A                    <td val=
+ign=3D"top" align=3D"center">=0A                    <table class=3D"fullWid=
+th" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A     =
+                   =0A                            <tr>=0A                  =
+              <td style=3D"padding-top:30px; padding-bottom:15px;" class=3D=
+"fullWidth" width=3D"600" valign=3D"top">=0A                               =
+ <table class=3D"fullWidth" width=3D"300" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" align=3D"left">=0A                                    =0A  =
+                                      <tr>=0A                              =
+              <td style=3D"padding-bottom:15px; font-family: Verdana, Genev=
+a, sans-serif; font-size: 11px; line-height: 14px; color: #414141;" class=
+=3D"fullWidth" valign=3D"top" align=3D"left">Uw gewijzigde betaalgegevens</=
+td>=0A                                        </tr>=0A                     =
+               =0A                                </table>=0A              =
+                  <!--[if (gte mso 9)|(IE)]></td><td width=3D"300" valign=
+=3D"top" style=3D"padding-top:30px; padding-bottom:30px;"><![endif]-->=0A<t=
+able cellspacing=3D"0" cellpadding=3D"0" width=3D"300" border=3D"0" class=
+=3D"fullWidth">=0A    <tbody>=0A        <tr>=0A            <td valign=3D"to=
+p" align=3D"right" class=3D"fullWidth" style=3D"padding-bottom:15px; font-f=
+amily: Verdana, Geneva, sans-serif; font-size: 11px; line-height: 14px; col=
+or: #414141;"><a href=3D"https://mail.eneco.nl/2/4/86/1/ZQWI7HHgSzbxTObM6PG=
+oqVIN01TDYp9PoXgP6iu-Bc06z_20ramSWn1jK4jfe6pC0GVrF6rqXzTD1IqtX5K_bQ" alt=3D=
+"Header - Bekijk in uw browser" title=3D"Bekijk in uw browser" target=3D"_b=
+lank" style=3D"color: #00afdb; text-decoration: none;">Bekijk in uw browser=
+</a></td>=0A        </tr>=0A    </tbody>=0A</table></td>=0A                =
+            </tr>=0A                        =0A                    </table>=
+=0A                    </td>=0A                </tr>=0A            =0A     =
+   </table>=0A        <table class=3D"wrapperPadding" width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A         =
+   =0A                <tr>=0A                    <td valign=3D"top" align=
+=3D"center">=0A                    <table class=3D"fullWidth" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">=0A                        =0A       =
+                     <tr>=0A                                <td style=3D"fo=
+nt-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height: 24px;=
+ padding-bottom:20px; padding-top:30px;" class=3D"fullWidth" width=3D"600" =
+align=3D"right">=0A                                <table class=3D"fullWidt=
+h" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A     =
+                               =0A                                        <=
+tr>=0A                                            <td style=3D"padding-bott=
+om:10px;" class=3D"fullWidth" width=3D"168" align=3D"left"><a href=3D"https=
+://mail.eneco.nl/1/4/86/1/iObT683k5fP7MI_pZ45c6s66C9_AnxkG4juF4rEcAELzcSv7k=
+RKDDwAbp9i8Ppgi-Jql7mYXZOPmrjpxq7cDpF5MZEZ836umTadd7uptJBI" target=3D"_blan=
+k" alt=3D"IMG - Eneco Logo" style=3D"text-decoration: none;"><img style=3D"=
+display: block; font-family:Arial, Helvetica, sans-serif; color: #d21242; f=
+ont-size: 38px; line-height: 61px; font-weight:bold;" title=3D"Ga naar Enec=
+o.nl" alt=3D"Eneco" src=3D"https://mail.eneco.nl/public/files/86/0/2014_tem=
+plate/images/2x/eneco_logo_klein@2x.png" class=3D"center" height=3D"61" wid=
+th=3D"139" border=3D"0" /></a></td>=0A                                     =
+   </tr>=0A                                    =0A                         =
+       </table>=0A                                <table class=3D"fullWidth=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"right">=0A     =
+                               =0A                                        <=
+tr>=0A                                            <td style=3D"padding-bott=
+om:10px; padding-top:21px; font-family: Verdana, Geneva, sans-serif; font-s=
+ize: 14px; line-height: 24px;" class=3D"fullWidth" width=3D"375" align=3D"r=
+ight"><span style=3D"font-size: 22px; line-height: 30px; color: #d21242;">M=
+ijn&nbsp;<span style=3D"color: #ec740f;">Eneco</span></span></td>=0A       =
+                                 </tr>=0A                                  =
+  =0A                                </table>=0A                           =
+     </td>=0A                            </tr>=0A                        =
+=0A                    </table>=0A                    </td>=0A             =
+   </tr>=0A            =0A        </table>=0A        <table class=3D"wrappe=
+rPadding" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" b=
+gcolor=3D"#f6931e">=0A            =0A                <tr>=0A               =
+     <td valign=3D"top" align=3D"center">=0A                    <table clas=
+s=3D"fullWidth" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">=0A                        =0A                            <tr>=0A      =
+                          <td style=3D"padding-top:28px; padding-bottom: 28=
+px;" class=3D"fullWidth" width=3D"600">=0A                                <=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A  =
+                                  =0A                                      =
+  <tr>=0A                                            <td style=3D"font-fami=
+ly: Verdana, Geneva, sans-serif; font-size: 22px; line-height: 28px; color:=
+#ffffff; font-weight:bold;" class=3D"fullWidth" align=3D"left">=0A         =
+                                   <table class=3D"hide" width=3D"120" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"right">=0A           =
+                                     =0A                                   =
+                 <tr>=0A                                                   =
+     <td width=3D"10"></td>=0A                                             =
+           <td><img alt=3D"Uw gewijzigde betaalgegevens" style=3D"display: =
+block; border: none; text-decoration: none; color: #ffffff; font-size: 14px=
+; line-height: 16px;" src=3D"https://mail.eneco.nl/public/files/86/0/2014_t=
+emplate/images/mijneneco_persoon.jpg" height=3D"106" width=3D"102" border=
+=3D"0" /></td>=0A                                                    </tr>=
+=0A                                                =0A                     =
+                       </table>=0A                                         =
+   <br />=0A                                            Uw gewijzigde betaa=
+lgegevens</td>=0A                                        </tr>=0A          =
+                          =0A                                </table>=0A   =
+                             </td>=0A                            </tr>=0A  =
+                      =0A                    </table>=0A                   =
+ </td>=0A                </tr>=0A            =0A        </table>=0A        =
+<table class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A            =0A                =
+<tr>=0A                    <td valign=3D"top" align=3D"center">=0A         =
+           <table class=3D"fullWidth" width=3D"600" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0">=0A                        =0A                   =
+         <tr>=0A                                <td style=3D"padding-top:28=
+px; padding-bottom:28px;" class=3D"fullWidth" width=3D"600">=0A            =
+                    <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0">=0A                                    =0A                 =
+                       <tr>=0A                                            <=
+td style=3D"padding-bottom:28px; font-family: Verdana, Geneva, sans-serif; =
+font-size: 22px; line-height: 28px; color:#d21242; font-weight:bold;" align=
+=3D"center">Beste mevrouw, heer Visser,</td>=0A                            =
+            </tr>=0A                                        <tr>=0A        =
+                                    <td style=3D"font-family: Verdana, Gene=
+va, sans-serif; color: #414141; font-size: 14px; line-height: 20px;" align=
+=3D"center">Hartelijk dank voor het doorgeven van uw betaalgegevens.<br />=
+=0A                                            <br />=0A                   =
+                         Hieronder vindt u een overzicht van de gegevens di=
+e nu bij ons bekend zijn.</td>=0A                                        </=
+tr>=0A                                    =0A                              =
+  </table>=0A                                </td>=0A                      =
+      </tr>=0A                        =0A                    </table>=0A   =
+                 </td>=0A                </tr>=0A            =0A        </t=
+able>=0A        <table class=3D"wrapperPadding" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ededed">=0A            =
+=0A                <tr>=0A                    <td valign=3D"top" align=3D"c=
+enter">=0A                    <table class=3D"fullWidth" width=3D"600" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0">=0A                        =0A=
+                            <tr>=0A                                <td styl=
+e=3D"padding-top:28px;" class=3D"fullWidth" width=3D"600">=0A              =
+                  <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0">=0A                                    =0A                   =
+                     <tr>=0A                                            <td=
+ style=3D"padding-bottom:28px; font-family: Verdana, Geneva, sans-serif; co=
+lor: #ec740f; font-size: 18px; line-height: 24px;" align=3D"center">Uw beta=
+algegevens</td>=0A                                        </tr>=0A         =
+                           =0A                                </table>=0A  =
+                              <table width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0">=0A                                    =0A       =
+                                 <tr>=0A                                   =
+         <td style=3D"font-family: Verdana, Geneva, sans-serif; color: #414=
+141; font-size: 14px; line-height: 20px;" align=3D"left">=0A               =
+                             <table cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0">=0A                                                =0A           =
+                                         <tr>=0A                           =
+                             <td style=3D"padding-bottom:10px; font-family:=
+ Verdana, Geneva, sans-serif; color: #414141; font-size: 14px; line-height:=
+ 20px; font-weight:bold;" width=3D"150" valign=3D"top" align=3D"left">Betaa=
+lwijze:</td>=0A                                                        <td =
+width=3D"10" valign=3D"top" align=3D"left"><img style=3D"display:block;" al=
+t=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/images/=
+spacer.gif" height=3D"1" width=3D"10" border=3D"0" /></td>=0A              =
+                                          <td style=3D"padding-bottom:10px;=
+ font-family: Verdana, Geneva, sans-serif; color: #414141; font-size: 14px;=
+ line-height: 20px;" valign=3D"top" align=3D"left">Automatische incasso</td=
+>=0A                                                    </tr>=0A           =
+                                         <tr>=0A                           =
+                             <td style=3D"font-family: Verdana, Geneva, san=
+s-serif; color: #414141; font-size: 14px; line-height: 20px; font-weight:bo=
+ld;" width=3D"150" valign=3D"top" align=3D"left">Rekeningnummer:</td>=0A   =
+                                                     <td width=3D"10" valig=
+n=3D"top" align=3D"left"></td>=0A                                          =
+              <td style=3D"font-family: Verdana, Geneva, sans-serif; color:=
+ #414141; font-size: 14px; line-height: 20px;" valign=3D"top" align=3D"left=
+">NL11SNSB0706257057</td>=0A                                               =
+     </tr>=0A                                                =0A           =
+                                 </table>=0A                               =
+             </td>=0A                                        </tr>=0A      =
+                              =0A                                </table>=
+=0A                                </td>=0A                            </tr=
+>=0A                        =0A                    </table>=0A             =
+       </td>=0A                </tr>=0A            =0A        </table>=0A  =
+      <!-- Incassodag optioneel -->=0A<table class=3D"wrapperPadding" bgcol=
+or=3D"#ededed" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">=0A<tr>=0A<td align=3D"center" valign=3D"top">=0A<table class=3D"fullWi=
+dth" width=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=0A<tr>=
+=0A<td class=3D"fullWidth" width=3D"600" style=3D"padding-top:10px;">=0A<ta=
+ble width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=0A<tr>=
+=0A<td align=3D"left" style=3D"font-family: Verdana, Geneva, sans-serif; co=
+lor: #414141; font-size: 14px; line-height: 20px;">=0A<table cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">=0A<tr>=0A<td width=3D"150" align=3D"lef=
+t" valign=3D"top" style=3D"padding-bottom:10px; font-family: Verdana, Genev=
+a, sans-serif; color: #414141; font-size: 14px; line-height: 20px; font-wei=
+ght:bold;">=0AIncassodag:</td>=0A<td width=3D"10" align=3D"left" valign=3D"=
+top">=0A<img width=3D"10" height=3D"1" border=3D"0" src=3D"https://mail.ene=
+co.nl/public/files/86/0/2014_template/images/spacer.gif" alt=3D"" style=3D"=
+display:block;" /></td>=0A<td align=3D"left" valign=3D"top" style=3D"paddin=
+g-bottom:10px; font-family: Verdana, Geneva, sans-serif; color: #414141; fo=
+nt-size: 14px; line-height: 20px;">=0A0</td>=0A</tr>=0A</table>=0A</td>=0A<=
+/tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<!-=
+- Incassodag optioneel einde -->=0A        <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0">=0A            =0A                <t=
+r>=0A                    <td height=3D"28" bgcolor=3D"#ededed"><img style=
+=3D"display: block;" alt=3D"" src=3D"https://mail.eneco.nl/public/files/86/=
+0/2014_template/images/spacer.gif" height=3D"28" width=3D"1" border=3D"0" /=
+></td>=0A                </tr>=0A            =0A        </table>=0A        =
+<table class=3D"wrapperPadding" width=3D"100%" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A            =0A                =
+<tr>=0A                    <td valign=3D"top" align=3D"center">=0A         =
+           <table class=3D"fullWidth" width=3D"600" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0">=0A                        =0A                   =
+         <tr>=0A                                <td style=3D"padding-top:28=
+px; padding-bottom:28px;" class=3D"fullWidth" width=3D"600">=0A            =
+                    <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0">=0A                                    =0A                 =
+                       <tr>=0A                                            <=
+td style=3D"padding-bottom:28px; font-family: Verdana, Geneva, sans-serif; =
+color: #ec740f; font-size: 18px; line-height: 24px;" align=3D"center">Uw no=
+ta adres</td>=0A                                        </tr>=0A           =
+                         =0A                                </table>=0A    =
+                            <table width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0">=0A                                    =0A         =
+                               <tr>=0A                                     =
+       <td style=3D"font-family: Verdana, Geneva, sans-serif; color: #41414=
+1; font-size: 14px; line-height: 20px;" align=3D"left">=0A                 =
+                           <table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0">=0A                                                =0A             =
+                                       <tr>=0A                             =
+                           <td style=3D"padding-bottom:10px; font-family: V=
+erdana, Geneva, sans-serif; color: #414141; font-size: 14px; line-height: 2=
+0px; font-weight:bold;" width=3D"150" valign=3D"top" align=3D"left">Straat =
+en huisnummer:</td>=0A                                                     =
+   <td width=3D"10" valign=3D"top" align=3D"left"><img style=3D"display:blo=
+ck;" alt=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/=
+images/spacer.gif" height=3D"1" width=3D"10" border=3D"0" /></td>=0A       =
+                                                 <td style=3D"padding-botto=
+m:10px; font-family: Verdana, Geneva, sans-serif; color: #414141; font-size=
+: 14px; line-height: 20px;" valign=3D"top" align=3D"left">Hoogstraat 89 A</=
+td>=0A                                                    </tr>=0A         =
+                                           <tr>=0A                         =
+                               <td style=3D"padding-bottom:10px; font-famil=
+y: Verdana, Geneva, sans-serif; color: #414141; font-size: 14px; line-heigh=
+t: 20px; font-weight:bold;" width=3D"150" valign=3D"top" align=3D"left">Pos=
+tcode en plaats:</td>=0A                                                   =
+     <td width=3D"10" valign=3D"top" align=3D"left"></td>=0A               =
+                                         <td style=3D"padding-bottom:10px; =
+font-family: Verdana, Geneva, sans-serif; color: #414141; font-size: 14px; =
+line-height: 20px;" valign=3D"top" align=3D"left">6701BR WAGENINGEN</td>=0A=
+                                                    </tr>=0A               =
+                                     <tr>=0A                               =
+                         <td style=3D"padding-bottom:10px; font-family: Ver=
+dana, Geneva, sans-serif; color: #414141; font-size: 14px; line-height: 20p=
+x; font-weight:bold;" width=3D"150" valign=3D"top" align=3D"left">Land:</td=
+>=0A                                                        <td width=3D"10=
+" valign=3D"top" align=3D"left"></td>=0A                                   =
+                     <td style=3D"padding-bottom:10px; font-family: Verdana=
+, Geneva, sans-serif; color: #414141; font-size: 14px; line-height: 20px;" =
+valign=3D"top" align=3D"left">Nederland</td>=0A                            =
+                        </tr>=0A                                           =
+     =0A                                            </table>=0A            =
+                                </td>=0A                                   =
+     </tr>=0A                                    =0A                       =
+         </table>=0A                                </td>=0A               =
+             </tr>=0A                        =0A                    </table=
+>=0A                    </td>=0A                </tr>=0A            =0A    =
+    </table>=0A        <table class=3D"wrapperPadding" width=3D"100%" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A        =
+    =0A                <tr>=0A                    <td valign=3D"top" align=
+=3D"center">=0A                    <table class=3D"fullWidth" width=3D"600"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A                      =
+  =0A                            <tr>=0A                                <td=
+ class=3D"fullWidth" width=3D"600">=0A                                <tabl=
+e class=3D"fullWidth" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0">=0A                                    =0A                       =
+                 <tr>=0A                                            <td sty=
+le=3D"padding-top: 28px;" class=3D"fullWidth" align=3D"left">=0A           =
+                                 <table width=3D"100%" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0">=0A                                           =
+     =0A                                                    <tr>=0A        =
+                                                <td style=3D"padding-bottom=
+:28px;" align=3D"center">=0A                                               =
+         <table width=3D"150" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">=0A                                                            =0A     =
+                                                           <tr>=0A         =
+                                                           <td width=3D"30"=
+ valign=3D"middle" align=3D"center"><a style=3D"text-decoration: none; colo=
+r: #f6931e;" alt=3D"Footer - Twitter" target=3D"_blank" href=3D"https://mai=
+l.eneco.nl/1/4/86/1/7lzaAxGgm1byD15kPKTjscrCqOokqoLfmg9WSrCDis424yCGirCnUHc=
+08xdCqkKDPrIMnSjKvTY4FV1XUXYBfg"><img style=3D"display:block; font-size:16p=
+x; line-height:28px; font-family: Verdana,Geneva,sans-serif; background-col=
+or: #f6931e; color: #ffffff; font-weight:bold;" title=3D"Bekijk ons Twitter=
+-kanaal @Eneco" alt=3D"t" src=3D"https://mail.eneco.nl/public/files/86/0/20=
+14_template/images/twitter_bol.gif" height=3D"30" width=3D"30" border=3D"0"=
+ /></a></td>=0A                                                            =
+        <td width=3D"10"><img style=3D"display:block;" alt=3D"" src=3D"http=
+s://mail.eneco.nl/public/files/86/0/2014_template/images/spacer.gif" height=
+=3D"1" width=3D"10" border=3D"0" /></td>=0A                                =
+                                    <td width=3D"30" valign=3D"middle" alig=
+n=3D"center"><a style=3D"text-decoration: none; color: #f6931e;" alt=3D"Foo=
+ter - Facebook" target=3D"_blank" href=3D"https://mail.eneco.nl/1/4/86/1/2A=
+Gqcmu8LSCEnTmRAKAZFOUZWX_ip7EXHeg2-dCmnAXylG2ExrneRWlvSpGsHmN2RDzqbmwdkoc93=
+rQqbXE14Q"><img style=3D"display:block; font-size:16px; line-height:28px; f=
+ont-family: Verdana,Geneva,sans-serif; background-color: #f6931e; color: #f=
+fffff; font-weight:bold;" title=3D"Bezoek onze Facebook-pagina" alt=3D"f" s=
+rc=3D"https://mail.eneco.nl/public/files/86/0/2014_template/images/facebook=
+_bol.gif" height=3D"30" width=3D"30" border=3D"0" /></a></td>=0A           =
+                                                         <td width=3D"10"><=
+img style=3D"display:block;" alt=3D"" src=3D"https://mail.eneco.nl/public/f=
+iles/86/0/2014_template/images/spacer.gif" height=3D"1" width=3D"10" border=
+=3D"0" /></td>=0A                                                          =
+          <td width=3D"30" valign=3D"middle" align=3D"center"><a style=3D"t=
+ext-decoration: none; color: #f6931e;" alt=3D"Footer - Youtube" target=3D"_=
+blank" href=3D"https://mail.eneco.nl/1/4/86/1/tHTsy7NI3a93cpf840X4I7P2ShhLp=
+dCJF_f4FaBLBJYvZp0e65e-O82BKckaBVRiQNYc8M5QK_Id3A8QmpnGCg"><img style=3D"di=
+splay:block; font-size:16px; line-height:28px; font-family: Verdana,Geneva,=
+sans-serif; background-color: #f6931e; color: #ffffff; font-weight:bold;" t=
+itle=3D"Bezoek ons YouTube-kanaal" alt=3D"y" src=3D"https://mail.eneco.nl/p=
+ublic/files/86/0/2014_template/images/youtube_bol.gif" height=3D"30" width=
+=3D"30" border=3D"0" /></a></td>=0A                                        =
+                            <td width=3D"10"><img style=3D"display:block;" =
+alt=3D"" src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/image=
+s/spacer.gif" height=3D"1" width=3D"10" border=3D"0" /></td>=0A            =
+                                                        <td width=3D"30" va=
+lign=3D"middle" align=3D"center"><a style=3D"text-decoration: none; color: =
+#f6931e;" alt=3D"Footer - Forum" target=3D"_blank" href=3D"https://mail.ene=
+co.nl/1/4/86/1/uKPoeJT0GjPtJDGVyRuXlJSb_DvgPjf0K-718XohYGJAQtZXssqj7VTXFZt6=
+bfvBAAM2kWwhQsqQx-6XwNlpvj3AWR1BR1GT1Av5nioeCOo"><img style=3D"display:bloc=
+k; font-size:16px; line-height:28px; font-family: Verdana,Geneva,sans-serif=
+; background-color: #f6931e; color: #ffffff; font-weight:bold;" title=3D"Be=
+zoek ons forum" alt=3D"F" src=3D"https://mail.eneco.nl/public/files/86/0/20=
+14_template/images/forum_bol.gif" height=3D"30" width=3D"30" border=3D"0" /=
+></a></td>=0A                                                              =
+  </tr>=0A                                                            =0A  =
+                                                      </table>=0A          =
+                                              </td>=0A                     =
+                               </tr>=0A                                    =
+            =0A                                            </table>=0A     =
+                                       </td>=0A                            =
+            </tr>=0A                                    =0A                =
+                </table>=0A                                </td>=0A        =
+                    </tr>=0A                        =0A                    =
+</table>=0A                    </td>=0A                </tr>=0A            =
+=0A        </table>=0A        <table class=3D"wrapperPadding" width=3D"100%=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ededed">=0A =
+           =0A                <tr>=0A                    <td valign=3D"top"=
+ align=3D"center">=0A                    <table class=3D"fullWidth" width=
+=3D"600" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A              =
+          =0A                            <tr>=0A                           =
+     <td style=3D"padding-top:28px;" class=3D"fullWidth" width=3D"600">=0A =
+                               <table width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0">=0A                                    =0A      =
+                                  <tr>=0A                                  =
+          <td style=3D"padding-bottom:28px; font-size: 12px; line-height:18=
+px; font-family: Verdana,Verdana,Geneva,sans-serif; color: #414141;" align=
+=3D"center"><a style=3D"text-decoration: underline; color: #414141;" target=
+=3D"_blank" alt=3D"Footer - Privacy" title=3D"Privacy" href=3D"https://mail=
+.eneco.nl/1/4/86/1/8X8-5OvCFBndhBA5rSEwvx03nXzpgx0wirOD2bK3iASnGKxpBQJTXDvK=
+SgwMvT3wG3lhiPnlNxejwvnpVCswz09ctK2S4V3a-O40Yylk1A0">Privacy</a>&nbsp;&nbsp=
+;|&nbsp;&nbsp;<a style=3D"text-decoration: underline; color: #414141;" targ=
+et=3D"_blank" alt=3D"Footer - Disclaimer" title=3D"Disclaimer" href=3D"http=
+s://mail.eneco.nl/1/4/86/1/NelnpUCpZz_Z9ollh9W5fpYLKLkVLFo3I9_TxIt9gvGfzmUM=
+cLMggnJaT6McQR_LoiYyAxDVy1ptztjmWOhieMHWmdm3OVOo_SdYx5XtqTA">Disclaimer</a>=
+</td>=0A                                        </tr>=0A                   =
+                     <tr>=0A                                            <td=
+ style=3D"padding-bottom:28px; font-size: 12px; line-height:18px; font-fami=
+ly: Verdana,Verdana,Geneva,sans-serif; color: #414141;" align=3D"center">De=
+ze e-mail is verzonden in opdracht van Eneco Consumenten B.V., Postbus 1014=
+, 3000 BA Rotterdam, KvK&nbsp;nr.&nbsp;24324527. Bezoek voor vragen onze <a=
+ href=3D"https://mail.eneco.nl/1/4/86/1/UNNB5AZQfHCdFS1-4pD1wV7nLsW-1qTSqmh=
+leALz2ir2XNtHtOF2q--b-NDd9YN93CVNSZbRSV3Dw1lYXypfMC42pD4xpp39CkSMGLCRA0E" t=
+arget=3D"_blank" alt=3D"Footertekst - Contactpagina" title=3D"Bezoek voor v=
+ragen onze contactpagina" style=3D"text-decoration: underline; color: #4141=
+41;">contactpagina</a>. Of bel onze klantenservice op 088&nbsp;&ndash;&nbsp=
+;8&nbsp;955&nbsp;955 (u betaalt uw gebruikelijke belkosten).</td>=0A       =
+                                 </tr>=0A                                  =
+  =0A                                </table>=0A                           =
+     </td>=0A                            </tr>=0A                        =
+=0A                    </table>=0A                    </td>=0A             =
+   </tr>=0A            =0A        </table>=0A    <img src=3D"https://mail.e=
+neco.nl/0/4/86/1/F1B3vltCmoPN28rnLJRnmEJrlN3hHxwvVbB9GEVWUMh7tura9QgHR5_6KQ=
+lzeqbb" width=3D"1" height=3D"1" border=3D"0" alt=3D"" style=3D"height:1px =
+!important; width:1px !important; border: 0 !important; margin: 0 !importan=
+t; padding: 0 !important" /></body>=0A</html>
+----C8969EC6595FD6C3--
+

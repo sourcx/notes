@@ -1,0 +1,508 @@
+Delivered-To: te.my.vis@gmail.com
+Received: by 2002:a5e:991a:0:0:0:0:0 with SMTP id t26-v6csp1500050ioj;
+        Sun, 1 Jul 2018 10:56:18 -0700 (PDT)
+X-Google-Smtp-Source: AAOMgpdZO1Y2qSNrzrTuKDvuNDCmJbuZpeSTa15UzZibxMrnVlGkOS4N5ejY816cMFTefTA/oKlh
+X-Received: by 2002:a1c:5752:: with SMTP id l79-v6mr5975033wmb.103.1530467778608;
+        Sun, 01 Jul 2018 10:56:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1530467778; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZRX9GtX41z/F0llt2PS8b2UWLg6aDxTF3dh5vjWm6um0JnG6XI0f8ExexlvCqAK/tp
+         21T7/+KlBXkydH1OI/0B463JUIq7/+mX6n1LVc9w+LCQsSw3owMHtcwkBhU3Bj1hIyqB
+         FHZPLNENEX+oF2fwn/T/tRAjbfTBQHZd2i9rdSVHKCgEIMNN8ra5xUg+Okisefr5Gmgd
+         5nG3I/YLijwrk07WmK13NNaHZYTRkDenWHoFkwkGhuSCG5qy3bD4JlpPFiwBuOLK1WbZ
+         i8P5ZzfVPFu/3krnmo9VTH+kalVMXH5MHXRjTZyehnCwwMOZAQmtxpzUURxX0Eu5qDwU
+         zb7g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:list-unsubscribe:feedback-id:mime-version
+         :content-transfer-encoding:to:precedence:subject:reply-to:from
+         :dkim-signature:arc-authentication-results;
+        bh=ni+GpKZhW1pI2v2iqfLKTm2Gz1jWymCXfsC2/XKvd0Q=;
+        b=nAUcMjYR+WeEx0oiK+sxLOi8TUvKyvMAVZre37WMh6IR8oIzZSl1o8j5ycg7BFlfML
+         IO86Pwy/ow48Xz6IJAjQ0/iaitdN7uL2p8U0UuLyn/h3PVXC9O1Z6e1kVGAJuY4Ie7uJ
+         0G/I6OxU9vFqwSDB5JSNFK0GRVuRmt9T2Q9wIhVctGLUK3jIo4N76rwESP8qyoxC3d/W
+         THfq6XzME/zkFqKlbmp9mG5YbDUOrcA8Q4UP5kzsDYuzgqLhzUaXwO7kw3IutlRYRnLz
+         1C5lMmwHcBgDmsWnHcqRnLU/b/IDCUO3/UQfLuKiRtC5uwVgISnfudTpKfy2wztCfmC3
+         aU8Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@msdp1.com header.s=jan2017 header.b="h/SWqNK/";
+       spf=pass (google.com: domain of bounce-40xtoius4psabg21wkdmuhinknnut8lqx9qy5jtn3qq4@msdp1.com designates 52.58.118.49 as permitted sender) smtp.mailfrom=bounce-40XTOIUs4PsABG21wkDmuhiNkNNUT8LQx9QY5JTN3qQ4@msdp1.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=eneco.com
+Return-Path: <bounce-40XTOIUs4PsABG21wkDmuhiNkNNUT8LQx9QY5JTN3qQ4@msdp1.com>
+Received: from mta-007.msdp1.com (mta-007.msdp1.com. [52.58.118.49])
+        by mx.google.com with ESMTPS id c4-v6si8532926wro.419.2018.07.01.10.56.18
+        for <te.my.vis@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 01 Jul 2018 10:56:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-40xtoius4psabg21wkdmuhinknnut8lqx9qy5jtn3qq4@msdp1.com designates 52.58.118.49 as permitted sender) client-ip=52.58.118.49;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@msdp1.com header.s=jan2017 header.b="h/SWqNK/";
+       spf=pass (google.com: domain of bounce-40xtoius4psabg21wkdmuhinknnut8lqx9qy5jtn3qq4@msdp1.com designates 52.58.118.49 as permitted sender) smtp.mailfrom=bounce-40XTOIUs4PsABG21wkDmuhiNkNNUT8LQx9QY5JTN3qQ4@msdp1.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=eneco.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jan2017; d=msdp1.com;
+ h=From:Reply-To:Subject:To:Content-Transfer-Encoding:MIME-Version:Content-Type:List-Unsubscribe:Message-Id:Date;
+ bh=ni+GpKZhW1pI2v2iqfLKTm2Gz1jWymCXfsC2/XKvd0Q=;
+ b=h/SWqNK/Ds4fd7D5YWVuxwtpwBqHQ+MYljW1Dj4DoyHe0CYLIeusNQNh/jXUrBxI6h/5EeYObGGO
+   gwMYtd/KAn7Jv3z1MaQ1nRxiZKeR3pQ/PHhmoV57q8niHtbsWfqJ1urMyuP2hXFotRx1tX/pqLjL
+   fP9v/1cvn8phaa5oSLvA67a66weMnTfsFcO3diFdewggCugw09A8yEHosmuo4e12V+Xo7BUoJpjF
+   jHJIhyTXtShFSKjTeSTiytBX9oxmv+Yw+EeLyula3Olc5WQ2EQGhxBc7D0UGh0ceqvoAc0DQCTkf
+   f3NLkdIMXPyg+J2ZMXnoJhU0WzQz52eGQq4tXQ==
+From: "Eneco" <services@eneco.com>
+Reply-To: "Eneco" <services@eneco.com>
+Subject: Uw wachtwoord voor Mijn Eneco
+Precedence: bulk
+To: te.my.vis@gmail.com
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--C8A88B87AC6636B1"
+X-Mailer: Clang 2.7.0
+X-Clang-PortalId: 86
+X-Clang-BrandId: 86/1
+x-virtual-mta: apool
+Feedback-ID: 86-1-80029377:86-1:evillage
+List-Unsubscribe: <https://mail.eneco.nl/2/4/86/1/lAe01PAboKvq7gEuk5iSInuyZF-nwwD8sxp3uJYY0UMYJbig731PD6ngNCyrV22FL3rIWs-hxkBd9F3CztuRUA>,<mailto:unsubscribe-40XTOIUs4PsABG21wkDmuhiNkNNUT8LQx9QY5JTN3qQ4@msdp1.com>
+X-Report-Abuse: Please report abuse here: https://mail.eneco.nl/pub/report-abuse/?e=abuse-40XTOIUs4PsABG21wkDmuhiNkNNUT8LQx9QY5JTN3qQ4@msdp1.com
+Message-Id: <20180701175618.395D227650@dcg-app-mailmaster01>
+Date: Sun,  1 Jul 2018 19:56:18 +0200 (CEST)
+
+This is a MIME Encoded Message
+
+
+
+----C8A88B87AC6636B1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Activeer uw aanmelding voor Mijn Eneco=0A=0ABekijk deze e-mail opgemaakt in=
+ uw browser:=0Ahttps://mail.eneco.nl/2/4/86/1/kS_gE3ZIBH-PhUUQo-q1D1YSMBUAa=
+qpzmuoZdsrlYCGAPNW-WriWL1cRpyM6mOrLtZRr7JivXDohJKoXgldCrg=0A=0A------------=
+---------------------------------------------------------   =0A=0AEneco | A=
+ctiveer uw aanmelding voor Mijn Eneco=0A=0AGeachte heer, mevrouw,=0A=0AU he=
+eft op Eneco.nl aangegeven dat u uw wachtwoord voor Mijn Eneco bent vergete=
+n. Om veiligheidsredenen sturen wij uw huidige wachtwoord niet per e-mail. =
+=0A=0AMeer informatie? Bekijk de volledige mail:=0Ahttps://mail.eneco.nl/2/=
+4/86/1/cQPRZBBhM3gE2G21QxkGlgH_EVjjWCo1SkeR1IArmkWZwHSeVW4pN81HgrYUKoZpZceH=
+9aoPa-1BqtgPk8NWpg=0A=0A---------------------------------------------------=
+------------------   =0A=0ASamen gaan we voor duurzaam=0A=0AVolg ons:=0A=0A=
+TWITTER=0Ahttps://mail.eneco.nl/1/4/86/1/yIVPBUqxE4v1kSkrFqIrARbfQQR84MqPir=
+Ossh8bJ6u-TvzUwilrC8o64TZjZoTkA0OV8eO7LrvAuwFrGQowJg=0A=0AFACEBOOK=0Ahttps:=
+//mail.eneco.nl/1/4/86/1/HqS7_DbT8N0GADNaFna09fhJYCFeyBG3Kpy_m770Ql-NuAk_Y2=
+HfXT__Se8FSB_Pcg_BYWDIq6aSH48ypyHzrg=0A=0AYOUTUBE=0Ahttps://mail.eneco.nl/1=
+/4/86/1/7Kf1Dku08z2J__9M3uHNCpIHDe2LbFjV9Jjd-yFv70c5m3it4r2TmPnViZ5iKxcsMG-=
+F4CbGGkRokQYBF51-mw=0A=0AFORUM=0Ahttps://mail.eneco.nl/1/4/86/1/z8RUZmrrfg0=
+IKt4mTBGo-RO5vukGuZlIz_NRfilG7GIzIn496lhOozyRHLllthGRYMulniNtXebAcLAjBIR57F=
+_O1HAafMPlVbJ0QQV2cKA=0A=0ANIEUWSBRIEF=0Ahttps://mail.eneco.nl/1/4/86/1/Yrv=
+WTy17F9BLIECGRiwaTK2WEOp2wapTkIaWPIbvHovVgSBGtBA6u-QrFk6jSDK_w5U3uwNkCRX71f=
+m4rlUVMB9xijqJbmjXidNmkzXvQQs=0A=0A----------------------------------------=
+-----------------------------   =0A=0APRIVACY=0Ahttps://mail.eneco.nl/1/4/8=
+6/1/f3H4nrtgh0jKswYsKy99uJV9SaU_zsoJJUxmK2FqeKKzoFLC0Su6ArT69NB8jMboB3ofYwa=
+2AWqtyAP22dw-WgzzFFg5GtV5jsKcORv-tMs=0A=0ADISCLAIMER=0Ahttps://mail.eneco.n=
+l/1/4/86/1/szug7rxnE4jI5Wr7H-OI4MPG_qFrrX6FPxcYn37noYCljV8EPv8iFDPRftA2XYf7=
+42VveDaGC_bIie43Hp9nJIP5T1B-eFAbyM891Vxxq38=0A=0AUw klantnummer: 40879993=
+=0A=0ADeze e-mail is verzonden in opdracht van Eneco Consumenten B.V., Post=
+bus 1014, 3000 BA Rotterdam, KVK nr.24324527. Bezoek voor vragen onze conta=
+ctpagina.=0Ahttps://mail.eneco.nl/1/4/86/1/uIO0z2l3pAy2EBp07dsHoCL9x7K3jjGr=
+2uxi4TUdwceRCH1gLSe1egE0SXPGY2ZrScb0GvhqlUwXh7oNrutGyND2wKvyoDrNN8RF6xeGRqg=
+=0AOf bel onze klantenservice, op werkdagen tussen 08.00 en 20.00 uur berei=
+kbaar op 088-8955955 (u betaalt uw gebruikelijke belkosten). U ontvangt dez=
+e nieuwsbrief omdat u bij Eneco heeft aangegeven informatie per e-mail te w=
+illen ontvangen.
+----C8A88B87AC6636B1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html>=0A    <head>=0A<met=
+a http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />=0A<=
+meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=0A<meta name=
+=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0" />=0A<l=
+ink rel=3D"shortcut icon" href=3D"https://mail.eneco.nl/public/files/86/0/2=
+014_template/images/favicon.ico" type=3D"image/x-icon" />=0A<title>Eneco</t=
+itle>=0A<!-- Vul hieronder de juiste UTM-gegevens in door waarde van "defau=
+lt" aan te passen -->=0A<!---->=0A<!-- Maatwerk exports=0A-->=0A<style type=
+=3D"text/css">=0Abody {=0Awidth: 100% !important;=0Amargin: 0;=0Apadding: 0=
+;=0Abackground-color: #f6f6f6;=0Afont-family: Verdana, Geneva, sans-serif;=
+=0Afont-size: 14px;=0Aline-height: 24px;=0Acolor: #414141;=0A-webkit-font-s=
+moothing: antialiased;=0A-webkit-text-size-adjust: none;=0A-ms-text-size-ad=
+just: none;=0A}=0A.ReadMsgBody {=0Awidth: 100%;=0A}=0A.ExternalClass {=0Awi=
+dth: 100%;=0A}=0Atable td {=0Aborder-collapse: collapse;=0A}=0A.wrapper {=
+=0Amargin: 0;=0Apadding: 0;=0Awidth: 100% !important;=0A}=0A.text {=0Afont-=
+family: Verdana, Geneva, sans-serif;=0Afont-size: 14px;=0Aline-height: 24px=
+;=0Acolor: #414141;=0A}=0A.footertext {=0Afont-family: Verdana, Geneva, san=
+s-serif;=0Afont-size: 12px;=0Aline-height: 18px;=0Acolor: #414141;=0A}=0Aa,=
+ a:link, a:visited {=0Acolor: #00afdb;=0Atext-decoration: none;=0A}=0A.link=
+ a:hover {=0Atext-decoration: underline !important;=0A}=0A.snippet.text {=
+=0Afont-family: Verdana, Geneva, sans-serif;=0Afont-size: 11px;=0Acolor: #4=
+14141;=0A}=0A.snippet a, a:link, a:visited {=0Afont-family: Verdana, Geneva=
+, sans-serif;=0Afont-size: 11px;=0Acolor: #00afdb;=0A}=0A.snippet a:hover {=
+=0Atext-decoration: underline !important;=0A}=0Aa.telefoon {=0Acolor: #4141=
+41 !important;=0Atext-decoration: none !important;=0A}=0Aa:hover .telefoon =
+{=0Acolor: #414141 !important;=0Atext-decoration: none !important;=0A}=0Aim=
+g {=0Adisplay: block;=0Aline-height: 100%;=0Aoutline: none;=0Atext-decorati=
+on: none;=0A}=0A=0A@media only screen and (max-width: 640px) {=0A[class=3DF=
+ullWidth] {=0Awidth: 100% !important;=0Amax-width: 100% !important;=0A}=0A[=
+class=3Dhide640] {=0Adisplay: none;=0A}=0A}=0A=0A@media only screen and (ma=
+x-width: 480px) {=0A[class=3Dtext] {=0Afont-size: 14px !important;=0Aline-h=
+eight: 20px !important;=0A}=0A[class=3Dhide] {=0Adisplay: none;=0A}=0A[clas=
+s=3DFullWidth] {=0Awidth: 100% !important;=0Amax-width: 100% !important;=0A=
+}=0A[class=3D"telefoon"] {=0Atext-decoration: underline !important;=0A}=0A[=
+class=3D"mobCenter"] {=0Atext-align: center;=0A}=0A[class=3D"logoCenter"] {=
+=0Atext-align: center;=0Amargin-left: auto;=0Amargin-right: auto;=0A}=0A[cl=
+ass=3DmobileMargin] {=0Apadding-left: 5px !important;=0Apadding-right: 5px =
+!important;=0A}=0A}=0A=0A@media only screen and (max-width: 300px) {=0A[cla=
+ss=3Dhide300] {=0Adisplay: none;=0A}=0A[class=3DmobileMargin] {=0Apadding-l=
+eft: 5px !important;=0Apadding-right: 5px !important;=0A}=0A}=0A</style>=0A=
+<!--[if gte mso 9]>=0A<style type=3D"text/css">=0Atable {=0Amso-table-lspac=
+e:0 !important;=0Amso-table-rspace:0 !important;=0A}=0Atable td {=0Aborder-=
+collapse:collapse !important;=0Aborder:none !important;=0Amso-border-alt:0 =
+!important;=0A}=0A</style>=0A<![endif]-->=0A<!--[if gte mso 15]>=0A<style t=
+ype=3D"text/css">=0Atable {=0Afont-size:1px;=0Amso-line-height-alt:0;=0Alin=
+e-height:0;=0Amso-margin-top-alt:1px;=0A}=0A</style>=0A<![endif]-->=0A</hea=
+d>=0A    <body>=0A        <table class=3D"wrapper" width=3D"100%" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#f6f6f6">=0A            =
+=0A                <tr>=0A                    <td valign=3D"top" align=3D"c=
+enter">=0A                    <table id=3D"container" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0">=0A                        =0A                 =
+           <tr>=0A                                <td><img src=3D"https://m=
+ail.eneco.nl/public/files/86/0/2014_template/images/spacer630.gif" alt=3D""=
+ height=3D"1" width=3D"100%" /></td>=0A                            </tr>=0A=
+                            <tr>=0A                                <td styl=
+e=3D"width:630px; max-width:630px; padding-left: 15px; padding-right: 15px;=
+" class=3D"mobileMargin" valign=3D"top" align=3D"left">=0A                 =
+               <table id=3D"preHeader" width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0">=0A                                    =0A     =
+                                   <tr>=0A                                 =
+           <td style=3D"width: 600px; max-width: 600px;" valign=3D"top" ali=
+gn=3D"left">=0A                                            <table id=3D"sni=
+ppetText" class=3D"FullWidth" width=3D"50%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" align=3D"left">=0A                                     =
+           =0A                                                    <tr>=0A  =
+                                                      <td style=3D"font-fam=
+ily: Verdana, Geneva, sans-serif; font-size: 11px; line-height: 14px; color=
+: #414141;" class=3D"mobCenter" height=3D"40" valign=3D"middle"><span class=
+=3D"snippet text">Uw wachtwoord voor Mijn Eneco</span></td>=0A             =
+                                       </tr>=0A                            =
+                    =0A                                            </table>=
+=0A                                            <!--[if (gte mso 9)|(IE)]>=
+=0A</td>=0A<td>=0A<![endif]-->  <table class=3D"FullWidth" id=3D"snippetLin=
+ks" width=3D"50%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A    <=
+tbody>=0A        <tr>=0A            <td class=3D"mobCenter" style=3D"font-f=
+amily: Verdana, Geneva, sans-serif; font-size: 11px; line-height: 14px; col=
+or: #00afdb;" align=3D"right" valign=3D"middle" height=3D"40"><a style=3D"c=
+olor: #00afdb;" class=3D"snippet" target=3D"_blank" title=3D"Bekijk&nbsp;in=
+&nbsp;uw&nbsp;browser" alt=3D"Bekijk&nbsp;in&nbsp;uw&nbsp;browser" href=3D"=
+https://mail.eneco.nl/2/4/86/1/A7j071bewfr_qw82VRfSacXVl4p2Z1PaOVJaMoscJzs9=
+KFbtXKycrpWNRJ5pIAVxop_zZhxAMt5eBieif9bWAw">Bekijk&nbsp;in&nbsp;uw&nbsp;bro=
+wser</a></td>=0A        </tr>=0A    </tbody>=0A</table></td>=0A            =
+                            </tr>=0A                                    =0A=
+                                </table>=0A                                =
+</td>=0A                            </tr>=0A                        =0A    =
+                </table>=0A                    </td>=0A                </tr=
+>=0A            =0A        </table>=0A        <table class=3D"wrapper" widt=
+h=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#fff=
+fff">=0A            =0A                <tr>=0A                    <td valig=
+n=3D"top" align=3D"center">=0A                    <table id=3D"container" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A                        =
+=0A                            <tr>=0A                                <td><=
+img src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/images/spa=
+cer630.gif" alt=3D"" height=3D"1" width=3D"100%" /></td>=0A                =
+            </tr>=0A                            <tr>=0A                    =
+            <td style=3D"width:630px; max-width:630px; padding-left: 15px; =
+padding-right: 15px;" class=3D"mobileMargin" valign=3D"top" align=3D"left">=
+=0A                                <table id=3D"branding" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A                         =
+           =0A                                        <tr>=0A              =
+                              <td style=3D"width: 600px; max-width: 600px; =
+padding-top: 15px; padding-bottom: 25px;" valign=3D"top" align=3D"left">=0A=
+                                            <table id=3D"logo" class=3D"Ful=
+lWidth" width=3D"50%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">=0A                                                =0A          =
+                                          <tr>=0A                          =
+                              <td height=3D"74" valign=3D"bottom" align=3D"=
+left"><a style=3D"text-decoration: none;" alt=3D"IMG - Eneco Logo" target=
+=3D"_blank" href=3D"https://mail.eneco.nl/1/4/86/1/sWBGoPd6XQuhd5sLPjyMx_3W=
+p7E8GcgpM5hdAW63VPImFOyWBCipAmfIoThFWBOvBFbJFgPSCRrWYLmPK2yHkZSc6wg9nXauKud=
+yes2gvlo"><img src=3D"https://mail.eneco.nl/public/files/86/0/2014_template=
+/images/eneco_logo.gif" alt=3D"Eneco" title=3D"Ga naar Eneco.nl" style=3D"d=
+isplay: block; font-family: 'Arial Black',Gadget,sans-serif; color: #d21242=
+; font-size: 38px; line-height: 94px; font-weight: bold;" class=3D"logoCent=
+er" height=3D"74" width=3D"138" border=3D"0" /></a></td>=0A                =
+                                    </tr>=0A                               =
+                 =0A                                            </table>=0A=
+                                            <!--[if (gte mso 9)|(IE)]>=0A</=
+td>=0A<td>=0A<![endif]-->=0A                                            <ta=
+ble id=3D"title" class=3D"FullWidth" width=3D"50%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0">=0A                                               =
+ =0A                                                    <tr>=0A            =
+                                            <td style=3D"font-family: Verda=
+na, Geneva, sans-serif; font-size: 22px; line-height: 30px; padding-top: 18=
+px;" class=3D"mobCenter" height=3D"49" valign=3D"top" align=3D"right"><span=
+ style=3D"font-family: Verdana, Geneva, sans-serif; font-size: 22px; line-h=
+eight: 30px; color: #d21242;">Mijn</span>&nbsp;<span style=3D"font-family: =
+Verdana, Geneva, sans-serif; font-size: 22px; line-height: 30px; color: #ec=
+740f;">Eneco</span></td>=0A                                                =
+    </tr>=0A                                                =0A            =
+                                </table>=0A                                =
+            </td>=0A                                        </tr>=0A       =
+                             =0A                                </table>=0A=
+                                </td>=0A                            </tr>=
+=0A                        =0A                    </table>=0A              =
+      </td>=0A                </tr>=0A            =0A        </table>=0A   =
+     <table class=3D"wrapper" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" bgcolor=3D"#f6931e">=0A            =0A                <=
+tr>=0A                    <td valign=3D"top" align=3D"center">=0A          =
+          <table id=3D"container" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0">=0A                        =0A                            <tr>=0A  =
+                              <td><img src=3D"https://mail.eneco.nl/public/=
+files/86/0/2014_template/images/spacer630.gif" alt=3D"" height=3D"1" width=
+=3D"100%" /></td>=0A                            </tr>=0A                   =
+         <tr>=0A                                <td style=3D"width:630px; m=
+ax-width:630px; padding-left: 15px; padding-right: 15px; padding-top: 30px;=
+ padding-bottom: 30px;" class=3D"mobileMargin" valign=3D"top" align=3D"left=
+">=0A                                <table id=3D"pushBoxes" width=3D"100%"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A                      =
+              =0A                                        <tr>=0A           =
+                                 <td style=3D"width: 600px; max-width: 600p=
+x;" valign=3D"bottom" align=3D"left">=0A                                   =
+         <table id=3D"txtCTA" class=3D"FullWidth" width=3D"75%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A                   =
+                             =0A                                           =
+         <tr>=0A                                                        <td=
+ style=3D"font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-h=
+eight: 20px; color: #414141; padding-top: 30px; padding-bottom: 30px;" vali=
+gn=3D"top" align=3D"left"><span style=3D"color: #ffffff; font-size: 22px; f=
+ont-weight: bold; line-height: 28px;">Uw wachtwoord voor<br />=0A          =
+                                              Mijn Eneco</span></td>=0A    =
+                                                </tr>=0A                   =
+                             =0A                                           =
+ </table>=0A                                            <!--[if (gte mso 9)=
+|(IE)]>=0A</td>=0A<td>=0A<![endif]-->=0A                                   =
+         <table id=3D"picture2" class=3D"hide640" width=3D"25%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">=0A                                  =
+              =0A                                                    <tr>=
+=0A                                                        <td style=3D"pad=
+ding-left: 15px;" valign=3D"bottom" align=3D"right"><img src=3D"https://mai=
+l.eneco.nl/public/files/86/0/2014_template/images/mijneneco_persoon.jpg" al=
+t=3D"" style=3D"display: block;" height=3D"106" width=3D"102" border=3D"0" =
+align=3D"right" /></td>=0A                                                 =
+   </tr>=0A                                                =0A             =
+                               </table>=0A                                 =
+           </td>=0A                                        </tr>=0A        =
+                            =0A                                </table>=0A =
+                               </td>=0A                            </tr>=0A=
+                        =0A                    </table>=0A                 =
+   </td>=0A                </tr>=0A            =0A        </table>=0A      =
+  <!---->=0A        <table class=3D"wrapper" width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A            =0A   =
+             <tr>=0A                    <td valign=3D"top" align=3D"center"=
+>=0A                    <table id=3D"container" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0">=0A                        =0A                       =
+     <tr>=0A                                <td><img src=3D"https://mail.en=
+eco.nl/public/files/86/0/2014_template/images/spacer630.gif" alt=3D"" heigh=
+t=3D"1" width=3D"100%" /></td>=0A                            </tr>=0A      =
+                      <tr>=0A                                <td style=3D"w=
+idth:630px; max-width:630px; padding-left: 15px; padding-right: 15px;" clas=
+s=3D"mobileMargin">=0A                                <table id=3D"contentS=
+tacks2" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A=
+                                    =0A                                    =
+    <tr>=0A                                            <td style=3D"width: =
+600px; max-width: 600px; padding-top: 30px; padding-bottom: 30px;" valign=
+=3D"top" align=3D"left">=0A                                            <tab=
+le id=3D"contactContent" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0">=0A                                                =0A       =
+                                             <tr>=0A                       =
+                                 <td style=3D"font-family: Verdana, Geneva,=
+ sans-serif; font-size: 14px; line-height: 24px; color: #414141;" valign=3D=
+"top" align=3D"center"><span style=3D"font-family: Verdana, Geneva, sans-se=
+rif; font-size: 22px; line-height: 40px; color: #d21242;">Geachte heer, mev=
+rouw,<br />=0A                                                        </spa=
+n><span class=3D"text">U heeft op Eneco.nl aangegeven dat u uw wachtwoord v=
+oor Mijn Eneco bent vergeten. Om veiligheidsredenen sturen wij uw huidige w=
+achtwoord niet per e-mail. Via onderstaande knop kunt u zelf een nieuw wach=
+twoord aanmaken.<br />=0A                                                  =
+      &nbsp;<br />=0A                                                      =
+  <span style=3D"color: #d21242;">Let op!</span> Onderstaande knop is 48 uu=
+r actief, daarna werkt deze niet meer.<br />=0A                            =
+                            &nbsp;<br />=0A                                =
+                        </span>=0A                                         =
+               <div><!--[if mso]>=0A<v:roundrect xmlns:v=3D"urn:schemas-mic=
+rosoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"h=
+ttps://mail.eneco.nl/1/4/86/1/bggPhHzUhQqCaXtrcbzbHkxoRup4n0QJo3i1UdphXdl8V=
+_FBaEGY-897OR647s6ogTYIHbWmJj6OmEHc3ddpBRejYbt23RDbBUm_A4v5iLyMBGHFgbOBVQ6Z=
+7aFndBtbUvxw4360e5fO4NRa4Sk15wo3KEYdCwD0w_Lqe5nkRdBJMVvWr_ANQTG0MgYOKf-8jCg=
+5vwQqrc2g7yCm9PNBtdsjjIELGWCbmTMLGNd3wQs" style=3D"height:40px;v-text-ancho=
+r:middle;width:265px;" arcsize=3D"10%" stroke=3D"f" fill=3D"t">=0A<v:fill t=
+ype=3D"tile" src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/i=
+mages/greenbutton.jpg" color=3D"#84b819" />=0A<w:anchorlock/>=0A<center sty=
+le=3D"color:#ffffff;font-family:sans-serif;font-size:13px;text-transform:up=
+percase;text-decoration:none;">Nieuw wachtwoord aanmaken</center>=0A</v:rou=
+ndrect>=0A<![endif]-->  <a href=3D"https://mail.eneco.nl/1/4/86/1/_bBztvIz6=
+dWCiKOK3QR2qBSC4SOCUdzrOfaBGfVm94mgTbalp7nQ56-pEP4SI4i1RGpzzNNNUBSUYWW6iXQ2=
+zBUDT83cySFez7ki-GbTqHZZnyUi7kfCkpJ6ABwLXKgo6MKJqXvDCagtT7sQkH5nSiEUwQ_Vahe=
+phqUFyL7HB-na7-3hFV_3RkLNzxKw5Ru2S3ggyPkNTwj8_hntWsA0BSlUV6Qsap0DapdRtAfXiI=
+A" target=3D"_blank" alt=3D"BTN - Nieuw wachtwoord aanmaken" title=3D"Nieuw=
+ wachtwoord aanmaken" style=3D"background-color:#84b819;background-image:ur=
+l(https://mail.eneco.nl/public/files/86/0/2014_template/images/greenbutton.=
+jpg);border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-=
+serif;font-size:13px;text-transform:uppercase;line-height:40px;text-align:c=
+enter;text-decoration:none;width:265px;-webkit-text-size-adjust:none;mso-hi=
+de:all;">Nieuw wachtwoord aanmaken</a></div>=0A                            =
+                            &nbsp;<br />=0A                                =
+                        <span class=3D"text">Werkt de knop niet, of ziet u =
+deze niet, <a href=3D"https://mail.eneco.nl/2/4/86/1/w9h7QP-yfSeL3lLkZSAnts=
+Nsw4CgS_1l70jTUNxV7DXTflYHLkTvpqm5sqVJTw1KidfvBKyJAROBZkjbhTAd3w" alt=3D"Kl=
+ik hier als de knop niet werkt." title=3D"Klik hier als de knop niet werkt.=
+" target=3D"_blank" style=3D"color: #00afdb; font-size: 14px;">klik dan hie=
+r</a>.<br />=0A                                                        &nbs=
+p;<br />=0A                                                        <strong>=
+Met vriendelijke groet,</strong><br />=0A                                  =
+                      Eneco</span></td>=0A                                 =
+                   </tr>=0A                                                =
+=0A                                            </table>=0A                 =
+                           </td>=0A                                        =
+</tr>=0A                                    =0A                            =
+    </table>=0A                                </td>=0A                    =
+        </tr>=0A                        =0A                    </table>=0A =
+                   </td>=0A                </tr>=0A                <tr>=0A =
+                   <td valign=3D"top" bgcolor=3D"#f3f3f3" align=3D"left"><i=
+mg src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/images/spac=
+er.gif" alt=3D"" style=3D"display: block;" height=3D"1" width=3D"1" border=
+=3D"0" /></td>=0A                </tr>=0A            =0A        </table>=0A=
+        <table class=3D"wrapper" width=3D"100%" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" bgcolor=3D"#ffffff">=0A            =0A               =
+ <tr>=0A                    <td valign=3D"top" align=3D"center">=0A        =
+            <table id=3D"container" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0">=0A                        =0A                            <tr>=0A=
+                                <td><img src=3D"https://mail.eneco.nl/publi=
+c/files/86/0/2014_template/images/spacer630.gif" alt=3D"" height=3D"1" widt=
+h=3D"100%" /></td>=0A                            </tr>=0A                  =
+          <tr>=0A                                <td style=3D"width: 630px;=
+ max-width: 630px; padding-top: 30px; padding-bottom: 30px; padding-left: 1=
+5px; padding-right: 15px;" class=3D"mobileMargin" valign=3D"top" align=3D"c=
+enter">=0A                                <table id=3D"social" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A                    =
+                =0A                                        <tr>=0A         =
+                                   <td style=3D"padding-top: 20px;" valign=
+=3D"top" align=3D"center">=0A                                            <t=
+able id=3D"socialButtons" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=
+=0A                                                =0A                     =
+                               <tr>=0A                                     =
+                   <td style=3D"line-height: 1px;" width=3D"30" valign=3D"m=
+iddle" align=3D"center"><a href=3D"https://mail.eneco.nl/1/4/86/1/Ub9int-6y=
+mRYYkEhWltM8I0-SVWME4NxucE8f2maCx5vMrdg1qdYP_akGUGBGJyrSPGhohUyYVQz9Ye77P09=
+_A" target=3D"_blank" alt=3D"Twitter" style=3D"text-decoration: none; color=
+: #ec740f;"><img src=3D"https://mail.eneco.nl/public/files/86/0/2014_templa=
+te/images/twitter_bol.gif" alt=3D"t" title=3D"Bekijk ons Twitter-kanaal @En=
+eco" style=3D"display:block; font-size:16px; line-height:30px; font-family:=
+ Verdana,Geneva,sans-serif; background-color: #ec740f; color: #ffffff; font=
+-weight:bold;" height=3D"30" width=3D"30" border=3D"0" /></a></td>=0A      =
+                                                  <td width=3D"10"><img src=
+=3D"https://mail.eneco.nl/public/files/86/0/2014_template/images/spacer.gif=
+" alt=3D"" style=3D"display:block;" height=3D"1" width=3D"10" border=3D"0" =
+/></td>=0A                                                        <td style=
+=3D"line-height: 1px;" width=3D"30" valign=3D"middle" align=3D"center"><a h=
+ref=3D"https://mail.eneco.nl/1/4/86/1/Z6I-kPuX9KltPWmFNQYQBaPGvU5pufjlS8Yb4=
+jAM2XyleW8shbZWhNFN4-2XV_mgeW5ZC6RKE71LM0M3FaSY4Q" target=3D"_blank" alt=3D=
+"Facebook" style=3D"text-decoration: none; color: #ec740f;"><img src=3D"htt=
+ps://mail.eneco.nl/public/files/86/0/2014_template/images/facebook_bol.gif"=
+ alt=3D"f" title=3D"Bezoek onze Facebook-pagina" style=3D"display:block; fo=
+nt-size:16px; line-height:30px; font-family: Verdana,Geneva,sans-serif; bac=
+kground-color: #ec740f; color: #ffffff; font-weight:bold;" height=3D"30" wi=
+dth=3D"30" border=3D"0" /></a></td>=0A                                     =
+                   <td width=3D"10"><img src=3D"https://mail.eneco.nl/publi=
+c/files/86/0/2014_template/images/spacer.gif" alt=3D"" style=3D"display:blo=
+ck;" height=3D"1" width=3D"10" border=3D"0" /></td>=0A                     =
+                                   <td style=3D"line-height: 1px;" width=3D=
+"30" valign=3D"middle" align=3D"center"><a href=3D"https://mail.eneco.nl/1/=
+4/86/1/2RbSPeVraBAuRsLIK9AEpD758HbJrrKecGGixL2G64TFpXNu60PUcHE5qC5EFH4TrhpY=
+EU8Ih-0COiYJMj3XeQ" target=3D"_blank" alt=3D"Youtube" style=3D"text-decorat=
+ion: none; color: #ec740f;"><img src=3D"https://mail.eneco.nl/public/files/=
+86/0/2014_template/images/youtube_bol.gif" alt=3D"y" title=3D"Bezoek ons Yo=
+uTube-kanaal" style=3D"display:block; font-size:16px; line-height:30px; fon=
+t-family: Verdana,Geneva,sans-serif; background-color: #ec740f; color: #fff=
+fff; font-weight:bold;" height=3D"30" width=3D"30" border=3D"0" /></a></td>=
+=0A                                                        <td width=3D"10"=
+><img src=3D"https://mail.eneco.nl/public/files/86/0/2014_template/images/s=
+pacer.gif" alt=3D"" style=3D"display:block;" height=3D"1" width=3D"10" bord=
+er=3D"0" /></td>=0A                                                        =
+<td style=3D"line-height: 1px;" width=3D"30" valign=3D"middle" align=3D"cen=
+ter"><a href=3D"https://mail.eneco.nl/1/4/86/1/t2P8dUUzkBtbYMB8IX4Is0cBDo4G=
+bbRaQA1Z2JasUHz728puYV9tzGBqppAi5sw4jmLxAM3Cf1DoQF07qIdVN5SrJl14F1qUIAxShPg=
+qQIc" target=3D"_blank" alt=3D"Forum" style=3D"text-decoration: none; color=
+: #ec740f;"><img src=3D"https://mail.eneco.nl/public/files/86/0/2014_templa=
+te/images/forum_bol.gif" alt=3D"F" title=3D"Bezoek ons forum" style=3D"disp=
+lay:block; font-size:16px; line-height:30px; font-family: Verdana,Geneva,sa=
+ns-serif; background-color: #ec740f; color: #ffffff; font-weight:bold;" hei=
+ght=3D"30" width=3D"30" border=3D"0" /></a></td>=0A                        =
+                            </tr>=0A                                       =
+         =0A                                            </table>=0A        =
+                                    </td>=0A                               =
+         </tr>=0A                                    =0A                   =
+             </table>=0A                                </td>=0A           =
+                 </tr>=0A                        =0A                    </t=
+able>=0A                    </td>=0A                </tr>=0A            =0A=
+        </table>=0A        <table class=3D"wrapper" width=3D"100%" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#f3f3f3">=0A           =
+ =0A                <tr>=0A                    <td valign=3D"top" align=3D"=
+center">=0A                    <table id=3D"container" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0">=0A                        =0A                =
+            <tr>=0A                                <td><img src=3D"https://=
+mail.eneco.nl/public/files/86/0/2014_template/images/spacer630.gif" alt=3D"=
+" height=3D"1" width=3D"100%" /></td>=0A                            </tr>=
+=0A                            <tr>=0A                                <td s=
+tyle=3D"width:630px; max-width:630px; padding-left: 15px; padding-right: 15=
+px; padding-top: 30px; padding-bottom: 30px;" class=3D"mobileMargin">=0A   =
+                             <table id=3D"onderSchrift" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0">=0A                                    =0A   =
+                                     <tr>=0A                               =
+             <td colspan=3D"3" style=3D"font-size: 12px; line-height:18px; =
+font-family: Verdana,Verdana,Geneva,sans-serif; color: #414141;" align=3D"c=
+enter"><span class=3D"text"><a href=3D"https://mail.eneco.nl/1/4/86/1/6bAL6=
+VRTj09-Sid1Ygr0Ix3pj1PIAjeHU_feY6WZ4wHVkAAo9ojf6UHTstOGXXU6qJeaSxeCGC6IzOTe=
+9_leRt5LAoDuXZewVh9iAbYmXNc" title=3D"Privacy" alt=3D"Privacy" target=3D"_b=
+lank" style=3D"text-decoration: underline; color: #414141; font-size: 12px;=
+ line-height:18px;">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https://=
+mail.eneco.nl/1/4/86/1/j4fGdk7jAC21tYzV3OezRfNIdR7MbIXNRG__ci4lK8OHOirnHZW_=
+sAbbYuQhrij66X3CWmZZsVfAIF1y4T4GUFX365o5Vflp1-uG9RXiNlo" title=3D"Disclaime=
+r" alt=3D"Disclaimer" target=3D"_blank" style=3D"text-decoration: underline=
+; color: #414141; font-size: 12px; line-height:18px;">Disclaimer</a></span>=
+</td>=0A                                        </tr>=0A                   =
+                     <tr>=0A                                            <td=
+ style=3D"padding-top: 20px; padding-bottom: 30px; padding-left: 15px; padd=
+ing-right: 15px; font-size: 12px; line-height:18px; font-family: Verdana,Ge=
+neva,sans-serif; color: #414141;" class=3D"mobileMargin" valign=3D"top" ali=
+gn=3D"center"><span class=3D"footertext">Deze e-mail is verzonden in opdrac=
+ht van Eneco Consumenten B.V., Postbus 1014, 3000 BA Rotterdam, KVK&nbsp;nr=
+.&nbsp;<span style=3D"color: #414141">24324527</span>. Bezoek voor vragen o=
+nze <a style=3D"text-decoration: underline; color: #414141; font-size: 12px=
+; line-height:18px;" title=3D"Bezoek voor vragen onze contactpagina" alt=3D=
+"Contactpagina" target=3D"_blank" href=3D"https://mail.eneco.nl/1/4/86/1/fQ=
+utypgn4GQaaMxt5AVWUojjI4gNTnn9NQNT1KwDzxRZhKsPLDZ37-b3SGXX8WmL37zHkiXlEsNPA=
+zQGLGbMWJ2Exa0Fip08IF1bYf2X69k">contactpagina</a>. Of bel onze klantenservi=
+ce op=0A<a href=3D"https://mail.eneco.nl/1/4/86/1/7qPOO8ooCHDhl2vQZP2hlfoO6=
+1Rf46r8LKvi6HkZEt5BiopfR0ztsFx9J5EEGI33SFqQkh-d9Uv5mosnhZOtxQ" class=3D"pho=
+neNumber" style=3D"text-decoration:none; line-height:18px; font-size:12px; =
+cursor:text; pointer-events: none; color: #414141;">088&nbsp;&ndash;&nbsp;8=
+&nbsp;955&nbsp;955 (u betaalt uw gebruikelijke belkosten).</a><br />=0A    =
+                                        &nbsp;<br />=0A                    =
+                        U ontvangt deze nieuwsbrief omdat u bij Eneco heeft=
+ aangegeven informatie per e-mail te willen ontvangen.</span></td>=0A      =
+                                  </tr>=0A                                 =
+   =0A                                </table>=0A                          =
+      </td>=0A                            </tr>=0A                        =
+=0A                    </table>=0A                    </td>=0A             =
+   </tr>=0A            =0A        </table>=0A        <table id=3D"bottomSpa=
+ce" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=0A    =
+        =0A                <tr>=0A                    <td style=3D"font-fam=
+ily: Verdana, Geneva, sans-serif; text-transform:uppercase; font-size: 14px=
+; line-height: 18px; padding-left: 15px; padding-right: 15px;" class=3D"mob=
+ileMargin" valign=3D"middle" align=3D"center"><br />=0A                    =
+&nbsp;<br />=0A                    &nbsp;<br />=0A                    &nbsp=
+;<br />=0A                    &nbsp;</td>=0A                </tr>=0A       =
+     =0A        </table>=0A    <img src=3D"https://mail.eneco.nl/0/4/86/1/c=
+Ujcz1KInP7qaRt8rgxAfssnim8GPENErNwYv3-1QjnwohFgadF6nyeQ_KugeZlS" width=3D"1=
+" height=3D"1" border=3D"0" alt=3D"" style=3D"height:1px !important; width:=
+1px !important; border: 0 !important; margin: 0 !important; padding: 0 !imp=
+ortant" /></body>=0A</html>
+----C8A88B87AC6636B1--
+

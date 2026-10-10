@@ -1,0 +1,14 @@
+﻿Ter info
+--------
+
+huidige gasprijs eneco vast: €27.25
+huidige gasprijs eneco vari: €2.41 per m3
+
+huidige stroomprijs eneco vast: €34.80
+huidige stroomprijs eneco vari: 0.73 per kWh / 0.57 per kWh (dal)
+
+gasprijs easyenergy vast: €22
+gasprijs easyenergy vari: €0.50 per m3
+
+stroomprijs easyenergy vast: €31
+stroomprijs easyenergy vari: 0.19 per kWh / 0.10 per kWh (dal)

@@ -1,0 +1,570 @@
+Delivered-To: te.my.vis@gmail.com
+Received: by 2002:a05:6402:1855:0:0:0:0 with SMTP id v21csp3616607edy;
+        Wed, 14 Sep 2022 09:54:43 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR4iYrmzU4Kr20gS565H7V4pgPUjwRvStsHoEnxX/KUNqkH80AGvtIV0a1LxnLwagVvCVs3B
+X-Received: by 2002:a05:6000:178c:b0:222:f8ec:9977 with SMTP id e12-20020a056000178c00b00222f8ec9977mr21222222wrg.509.1663174483606;
+        Wed, 14 Sep 2022 09:54:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1663174483; cv=none;
+        d=google.com; s=arc-20160816;
+        b=tYcHyVerxFrGjPYlxWyxvT5ptvykR1eDYc/XPpoDS6ZnoBSBDJT4V0yL/PtNLlxAWH
+         ODekdFMVBQ1tLZjnoCehQXos8Rc02B0XVFiMr6a4Qknjp2uajIkSQC/Un82c5G1ZsNQQ
+         zobs+VHzkG/q8U4q7+S1U00/Gak2OIePgAM89vaH12aZ8tIfPYcVf8c6RuiH3XRzoqDN
+         ntvkhiO1NiucIpIwXVxaqUVSyTHIeqeIMjhQLKwMOLYHkbgKU2OInX3eUExxtuq75DBu
+         5pbUSXUTXumVyDFUatKdgpQcpI5Dw6RW4gPh4gwg+BLfnpvy3NW8i9zzY55YmG0KVNmC
+         vkNg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:feedback-id:mime-version:list-unsubscribe
+         :list-unsubscribe-post:precedence:from:content-transfer-encoding
+         :subject:to:precedence:dkim-signature;
+        bh=GwTnQwnYv69+U295dFVQo5oFefHkKcrpMijV/9oflcQ=;
+        b=tvtydYV4lX36nj4lCD2B5qj+fPiTWggtBoIo7KMzFcQsZMZwzyLXP/7vNzy5qvr9Us
+         cLGvL8DgMy7JNBzbxr1/NtZ8YOOATvaCnaMGIlpPlug9Rc69Zb1n7pBRosL9ECUUF+ra
+         WjP6FGHwI0MJlWcXLjPpAZ1bVdDWqFewNwBgGkRJSsjXuM/MEEkawl5K7znnL0cGRvV6
+         JyHujR/AY4NetqexePqMuVtMHrvVmF9Tp1mvATeHTbTM3DFoM2rswe8s8UXzNK3OY7aQ
+         79N9bLWZZOBLwhADVG+MPs0lJmx9gyxwALS+K60O6ubihnYAU4OSrKnUUvK09LDpp7qt
+         UuYQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.eneco.com header.s=jan2020 header.b=lgNA239D;
+       spf=pass (google.com: domain of bounce-4d_ktwwknt5uqlpbc50s2kbxwqthtep5fvrpw7gwz2_k@e.eneco.com designates 52.58.149.59 as permitted sender) smtp.mailfrom=bounce-4d_KtWWkNT5UqlPbc50S2kbxWQtHtEP5FVrpw7GWZ2_k@e.eneco.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.eneco.com
+Return-Path: <bounce-4d_KtWWkNT5UqlPbc50S2kbxWQtHtEP5FVrpw7GWZ2_k@e.eneco.com>
+Received: from mta-030.msdp1.com (mta-030.msdp1.com. [52.58.149.59])
+        by mx.google.com with ESMTPS id n5-20020a5d4845000000b00228dba70db6si7712563wrs.993.2022.09.14.09.54.28
+        for <te.my.vis@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 14 Sep 2022 09:54:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-4d_ktwwknt5uqlpbc50s2kbxwqthtep5fvrpw7gwz2_k@e.eneco.com designates 52.58.149.59 as permitted sender) client-ip=52.58.149.59;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.eneco.com header.s=jan2020 header.b=lgNA239D;
+       spf=pass (google.com: domain of bounce-4d_ktwwknt5uqlpbc50s2kbxwqthtep5fvrpw7gwz2_k@e.eneco.com designates 52.58.149.59 as permitted sender) smtp.mailfrom=bounce-4d_KtWWkNT5UqlPbc50S2kbxWQtHtEP5FVrpw7GWZ2_k@e.eneco.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.eneco.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jan2020; d=e.eneco.com;
+ h=To:Subject:content-transfer-encoding:from:list-unsubscribe:mime-version:
+ content-type:message-id:date; i=servicemail@e.eneco.com;
+ bh=GwTnQwnYv69+U295dFVQo5oFefHkKcrpMijV/9oflcQ=;
+ b=lgNA239D6ZF31qhByYqcWMXg3btuc2TF/afRRByb2KQO8ND7A6RKjS9jaZ84Djfyth6aQ0WmpQT3
+   HCtCvyLSFUjvLFr75LbpM00rYAMec3QjkF2csVVr+xEEd7WbggZy42JpvWf5fkrijMs5dCRGlj5E
+   Ys2jGWjuaNWSf/IXKFXn7YLmKdMWoVr0ja1/XzLX0QCPABzygsCbUi1t0xket21Zi7JQOXA2khq+
+   47PhcIx89SXc16rXLRr5xB5kakafZdGkrUN4cfprdXXVTwVpB55KARjWRG3sFhOVTPiVNrtbtxBT
+   6RZZeCtbEXemVpZ+6DblS+pcj1pjoRT6SCeU3Q==
+Precedence: bulk
+To: te.my.vis@gmail.com
+Subject: Let op: we hebben je termijnbedrag verhoogd
+content-transfer-encoding: 8bit
+from: "Eneco" <servicemail@e.eneco.com>
+precedence: bulk
+x-report-abuse: Please report abuse here: https://e.eneco.com/pub/report-abuse/?e=abuse-4d_KtWWkNT5UqlPbc50S2kbxWQtHtEP5FVrpw7GWZ2_k@e.eneco.com
+list-unsubscribe-post: List-Unsubscribe=One-Click
+list-unsubscribe: <https://e.eneco.com/18/5/86/1/Ezyb0-Clp5t4gggQ26cqy4X8LfzpNmVVHCpIYWwz5aVKY8Juf021Xg-c4f1HqS-hlYp2wb70Mx4bDDAOm-BLlhXHecqSNZx75Lyp24jcUShG1CekhkdNL3e0Yk96bMF011mBcoT20O0-hNAeEAM1_X42UyhoxWzZwz492YTctw>,<mailto:unsubscribe-4d_KtWWkNT5UqlPbc50S2kbxWQtHtEP5FVrpw7GWZ2_k@e.eneco.com>
+mime-version: 1.0
+x-mailer: CanopyDeploy 3
+feedback-id: 86-1-82980569:86-1:evillage
+x-virtual-mta: bpool
+content-type: multipart/alternative; boundary="--6321fb1f17375"
+message-id: <20220914160309.DE599665AA@app-mailmaster12>
+date: Wed, 14 Sep 2022 18:02:39 +0200 (CEST)
+
+This is a MIME Encoded Message
+----6321fb1f17375
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Lees in deze e-mail waarom=0A=0AWebversie:=0Ahttps://e.eneco.com/2/4/86/1/b=
+AzHkXm_oVapaA4LVThgioSLOOxj0kC2MxJH-hb20LG0RCI3gin8DSSrSZ4BXfLEBRlpOjvRxLu7=
+18iW0OLh5g=0A=0A-----------------------------------------------------------=
+--------=0A=0AEneco=0AKlantnummer: 40879993-1=0A=0A------------------------=
+-------------------------------------------=0A=0ABeste mevrouw Visser,=0A=
+=0ADe energiemarkt is in beweging en dat zorgt voor stijgende energieprijze=
+n. We begrijpen dat dit vragen bij je oproept. Daarom kijken we regelmatig =
+met je mee of je termijnbedrag nog bij je past. We zien dat het termijnbedr=
+ag voor Hoogstraat 89 A 6701BR WAGENINGEN te laag is. Dit komt door de gest=
+egen energieprijzen of door een hoger energieverbruik.=0A=0AJe hebt nu een =
+contract met variabele tarieven die tussentijds kunnen wijzigen. Daarom hou=
+den we rekening met de hogere energieprijzen tot aan je jaarnota in juni 20=
+23 en is je termijnbedrag verhoogd. Zo voorkomen we een flinke bijbetaling =
+op je jaarnota.=0A=0A------------------------------------------------------=
+-------------=0A=0AJe nieuwe termijnbedrag=0A=0AJe termijnbedrag is verhoog=
+d van =E2=82=AC 239 naar =E2=82=AC 375. Zo voorkom je een bijbetaling van =
+=E2=82=AC 1224 op je jaarnota in juni 2023.=0A=0AHet kan zijn dat er al een=
+ termijnnota voor je klaar staat. In dat geval schrijven we nog =C3=A9=C3=
+=A9n keer je oude termijnbedrag af. De wijziging gaat dan vanaf je volgende=
+ termijnnota in.=0A=0A-----------------------------------------------------=
+--------------=0A=0AJe nieuwe termijnbedrag houdt rekening met:=0A=0A=E2=9C=
+=93 De verlaging in btw van 21% naar 9% tot 31 december 2022=0A=E2=9C=93 De=
+ termijnbedragen die tot nu toe zijn betaald=0A=E2=9C=93 Je recente en toek=
+omstige energieverbruik tot aan je jaarnota=0A=E2=9C=93 Hogere energietarie=
+ven na afloop van je huidige variabele tarieven tot aan je jaarnota=0A=0ATi=
+p: Verandert je tarief of energieverbruik? Bekijk dan de Tussenstand om te =
+zien of je termijnbedrag nog passend is. =0A=0ABekijk de Tussenstand: =0Aht=
+tps://e.eneco.com/1/5/86/1/kbvraX-Hk5YPK5en4vXU-7aGpvjGZjopECGiMsxBgffEqNeX=
+v6aODIlO3g_BgHjrB9_AXVqN1gui9w3fgA0pMEenhXx3THGamgUhKhTzNxCO1v-_RpfH8r6KAkl=
+i1zqkCzNXlOHOJZ6CLTcBmaiFxU5QCnm_arrErtSzwMXTkA=0A=0AOpen de webversie voor=
+ meer: https://e.eneco.com/2/4/86/1/BE_Z6t1vU9NmqWYN7fKoSHsjcOhplRh-17o0hJj=
+axDQ2TY9Gja9CbJ1vGfUEM7jb3_LLV4rA5qKLOnVQfxsDBQ=0A=0A----------------------=
+---------------------------------------------=0A=0AEneco app:=0Ahttps://e.e=
+neco.com/1/5/86/1/tsa5w9GNxXKKuhKRiSghGYoHb31pZULziQlFRlriwzXbSC2H67lqjGBwv=
+WHJqMH7v3lXct0c1of2Bw0jBDkDpH3I2doPQzHUQ24vMMAyb9UgYIUCZQpWjxnfmnU8lRuC7-sW=
+rWHSD5kPaTLxOME1tDgpkjerdJatobGFEqnY0EY=0A=0AMijn Eneco:=0Ahttps://e.eneco.=
+com/1/5/86/1/b1ttIxefPrad_6q4tf1Czlo-Ey75jc9WCJRGtZ6h5-3Zojx8Py5g94ftVbcc_2=
+4m8uKt22Ur2uzohNvkJS2omih_fEqXkdAIMKWTmxRQORdh7BuxOpYzUEch2chDNHyGpsXxXXW0I=
+sXrNLzoEYinRyfJHNAj4aUOl6R-NrDcJQ=0A=0AKlantenservice:=0Ahttps://e.eneco.co=
+m/1/5/86/1/ZKtjddZ5M4T76-Oiuhj0RGYndgRzHM7M-CDRZtcLvx0zXtPOmJefXvHvh5R2Uyqg=
+V7JOk2gF_z5DvMtrzzzD5rsRQ-wr0bC5u_3qrpeFNio341PpzkQRRSIoGaN313XpwNDXlpWvhFK=
+dzq13EBgHb694qNZMNwqGkcWBlm3Lr-g19vck1V67m5OKE4FCzNxdKAytoaksr94kK7D-Drse0k=
+1kbAqXY6Y30qcaPQ=0A=0AStroometiket:=0Ahttps://e.eneco.com/1/5/86/1/4nnhSj-g=
+lx6E65yg2NE45W5qrx-T27jLxb-QxsNWDRNOnfRS_2ibSy48cNt6aG54vMVQF61q0oQ_PjCWT_L=
+XFU_dhCGiH-shzFjBFvBZK8I62KsN8gmKU_NJvqiJXxiKkfigurDyEvMuohBrY-mv-J1_PupBHd=
+9iZbTid_Y6iqlDaKw4GBfsI0K7OUeUzltl-_69RPpuul2LaWQv0cnsk6vS36vAYcnLCY1HlQ=0A=
+=0A=0ADeze e-mail is verzonden in opdracht van Eneco Consumenten B.V., Post=
+bus 1014, 3000 BA Rotterdam, KvK nr. 24324527. Dit is een automatische e-ma=
+il, een antwoord op deze e-mail wordt niet gelezen of beantwoord.
+----6321fb1f17375
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html><html lang=3D"nl" xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head></head><head><met=
+a charset=3D"utf-8"><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Ded=
+ge"><meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=
+=3D1"><meta name=3D"format-detection" content=3D"telephone=3Dno, date=3Dno,=
+ address=3Dno, email=3Dno"><meta name=3D"x-apple-disable-message-reformatti=
+ng"><meta name=3D"color-scheme" content=3D"light only"><link rel=3D"shortcu=
+t icon" href=3D"https://www.eneco.com/static/images/icons/favicon.png" type=
+=3D"image/x-icon"><base target=3D"_blank"><title>Eneco</title><!-- Reset St=
+yles --><style>* {box-sizing: border-box}body, .ev-body, .ev-wrapper {width=
+: 100%;height: 100%;margin: 0 !important;padding: 0 !important;background: =
+#F8F8F8}body, div, td, th, ul, ol, li, h1, h2, h3, h4, h5, h6, p {margin: 0=
+;padding: 0;font: inherit;font-weight: normal;font-style: normal;-webkit-te=
+xt-size-adjust: none;-ms-text-size-adjust: none}table {border-spacing: 0;bo=
+rder-collapse: collapse;border: 0}td, th {text-align: left;vertical-align: =
+top}img {-ms-interpolation-mode: bicubic;vertical-align: middle;height: aut=
+o;line-height: 100%;border: 0}ul, ol, li {margin: 5px 0 5px 5px}ul, ol {pad=
+ding: 0 0 0 10px}a, a:link, a:visited, a:hover {color: #501318;text-decorat=
+ion: underline}a.phonenumber {pointer-events: none;cursor: default}#outlook=
+ a {padding: 0}.gradient {background: -moz-linear-gradient(left, #E6384D 0%=
+, #EB754F 100%) !important;background: -webkit-linear-gradient(left, #E6384=
+D 0%, #EB754F 100%) !important;background: -ms-linear-gradient(left, #E6384=
+D 0%, #EB754F 100%) !important;background: linear-gradient(to right, #E6384=
+D 0%, #EB754F 100%) !important}.btn-primary a:hover {background: #300C38 !i=
+mportant;color: #FFF !important;border: none !important;border-radius: 5px =
+!important}.btn-secondary a:hover {background: #300C38 !important;color: #F=
+FFFFF !important;border-radius: 100px !important}.btn-secondary {-webkit-bo=
+x-shadow: 0 5px 10px rgba(0, 0, 0, 0.18) !important;-moz-box-shadow: 0 5px =
+10px rgba(0, 0, 0, 0.18) !important;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.=
+18) !important;border-radius: 100px !important}a.link span.underline {displ=
+ay: inline-block;border-bottom: 0 !important;background-image: linear-gradi=
+ent(transparent calc(100% - 1px), #eb4356 1px);background-repeat: no-repeat=
+;background-size: 0% 100%;-webkit-transition: background-size .2s;transitio=
+n: background-size .2s;line-height: 1.5;}a.link span.underline:hover {backg=
+round-size: 100% 100% !important;}</style><!-- Webfont Styles --><!--[if !m=
+so]><!--><style type=3D"text/css">@media screen {@font-face {font-family: '=
+EtelkaLight';src: url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2=
+021/EtelkaLight.eot?#iefix') format('embedded-opentype'), url('https://e.en=
+eco.com/public/files/86/0/fonts/Etelka/2021/EtelkaLight.ttf') format('truet=
+ype'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaL=
+ight.woff') format('woff'), url('https://e.eneco.com/public/files/86/0/font=
+s/Etelka/2021/EtelkaLight.woff2') format('woff2'), url('https://e.eneco.com=
+/public/files/86/0/fonts/Etelka/2021/EtelkaLight.svg#webfontregular') forma=
+t('svg');font-weight: normal;font-style: normal;}@font-face {font-family: '=
+EtelkaMedium';src: url('https://e.eneco.com/public/files/86/0/fonts/Etelka/=
+2021/EtelkaMedium.eot?#iefix') format('embedded-opentype'), url('https://e.=
+eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaMedium.ttf') format('tr=
+uetype'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/Etel=
+kaMedium.woff') format('woff'), url('https://e.eneco.com/public/files/86/0/=
+fonts/Etelka/2021/EtelkaMedium.woff2') format('woff2'), url('https://e.enec=
+o.com/public/files/86/0/fonts/Etelka/2021/EtelkaMedium.svg#webfontregular')=
+ format('svg');font-weight: normal !important;font-style: normal;}@font-fac=
+e {font-family: 'EtelkaText-Bold';src: url('https://e.eneco.com/public/file=
+s/86/0/fonts/Etelka/2021/EtelkaText-Bold.eot?#iefix') format('embedded-open=
+type'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/Etelka=
+Text-Bold.ttf') format('truetype'), url('https://e.eneco.com/public/files/8=
+6/0/fonts/Etelka/2021/EtelkaText-Bold.woff') format('woff'), url('https://e=
+.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaText-Bold.woff2') form=
+at('woff2'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/E=
+telkaText-Bold.svg#webfontregular') format('svg');font-weight: bold;font-st=
+yle: normal;}@font-face {font-family: 'EtelkaText';src: url('https://e.enec=
+o.com/public/files/86/0/fonts/Etelka/2021/EtelkaText.eot?#iefix') format('e=
+mbedded-opentype'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka=
+/2021/EtelkaText.ttf') format('truetype'), url('https://e.eneco.com/public/=
+files/86/0/fonts/Etelka/2021/EtelkaText.woff') format('woff'), url('https:/=
+/e.eneco.com/public/files/86/0/fonts/Etelka/2021/EtelkaText.woff2') format(=
+'woff2'), url('https://e.eneco.com/public/files/86/0/fonts/Etelka/2021/Etel=
+kaText.svg#webfontregular') format('svg');font-weight: normal;font-style: n=
+ormal;}}</style><!--<![endif]--><!-- Responsive Styles --><style>@media onl=
+y screen and (max-width: 599px) {.w100pc {min-width: 100% !important;width:=
+ 100% !important;max-width: 100% !important}.block {display: block !importa=
+nt}a.phonenumber {pointer-events: auto !important;cursor: auto !important}.=
+pr8 {padding-right: 8px !important}.pr10 {padding-right: 10px !important}.p=
+l8 {padding-left: 8px !important}.pl10 {padding-left: 10px !important}}</st=
+yle><!-- Specific iOS Date/Phonenumber Reset Styles --><style>a[x-apple-dat=
+a-detectors] {color: inherit !important;text-decoration: none !important;fo=
+nt-size: inherit !important;font-family: inherit !important;font-weight: in=
+herit !important;line-height: inherit !important;}</style><!-- Webkit/Blink=
+/Gecko check and check on input status and necessary when using interactive=
+ objects --><style>@media only screen and (-webkit-min-device-pixel-ratio:0=
+), (min--moz-device-pixel-ratio:0) {#ev-interactive-check:checked~.ev-fallb=
+ack {display: none}#ev-interactive-check:checked~div .ev-interactive {displ=
+ay: block !important;max-height: none !important}}</style><!-- Specific Gma=
+il Styles, including Date/Phonenumber/Links Reset --><style>u+.ev-body a {c=
+olor: inherit;text-decoration: inherit}@media only screen and (max-width: 6=
+39px) {u+.ev-body, div>u+.ev-body {width: 100vw !important;min-width: 100vw=
+ !important;margin: 0 !important;padding: 0 !important}div>u+.ev-body {widt=
+h: inherit !important;min-width: inherit !important;}}/* Necessary when usi=
+ng interactive objects */@media screen and (max-width:9999px) {u+.ev-body .=
+ev-fallback {display: block !important;max-height: none}u+.ev-body .ev-inte=
+ractive {display: none !important}}</style><!-- Specific Yahoo!Mail Targeti=
+ng --><style>.& .ev-wrapper, .& .yahoo-fix-height {display: grid}/* Necessa=
+ry when using interactive objects */.yahoo-fix {}.& .ev-fallback {display: =
+block !important;max-height: none}.& .ev-interactive {display: none !import=
+ant}</style><!-- Specific Samsung Mail App Targeting --><style>@media scree=
+n and (-webkit-min-device-pixel-ratio: 0) {#MessageViewBody, #MessageWebVie=
+wDiv {margin: 0 !important;zoom: 1 !important}/* Necessary when using inter=
+active objects */#MessageViewBody .ev-fallback {display: block !important}#=
+MessageViewBody .ev-interactive {display: none !important}#MessageViewBody =
+.ev-samsung {display: none !important}}</style><!-- Specific Outlook App Ta=
+rgeting --><style>body[data-outlook-cycle] {min-width: 100vw !important;mar=
+gin: 0 !important;padding: 0 !important;}body[data-outlook-cycle] .outlook-=
+overflow-scaling, body[data-outlook-cycle] .ev-wrapper {width: 100vw !impor=
+tant;min-width: 100vw !important;height: auto !important;display: block !im=
+portant;transform: scale(1) !important}/* Necessary when using interactive =
+objects */body[data-outlook-cycle] .ev-fallback {display: block !important}=
+body[data-outlook-cycle] .ev-interactive {display: none !important}</style>=
+<!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>9=
+6</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><!-- Outloo=
+k 2007 and above Specific Styles --><!--[if gte mso 12]><style>a,a:link,a:v=
+isited,a:hover {text-decoration: none}li {margin: 5px 0 5px 20px !important=
+;text-indent: -1em}.mso-gradient,.mso-gradient table {background-color: non=
+e !important;background-color: transparent !important}</style><![endif]--><=
+/head><body class=3D"ev-body"><div style=3D"display: none">Lees in deze e-m=
+ail waarom</div><div style=3D"display: none"> &#847; &#847; &#847; &#847; &=
+#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;=
+ &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; =
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &=
+#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;=
+ &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; =
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &=
+#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;=
+ &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; </di=
+v><div role=3D"article" aria-roledescription=3D"email" aria-label=3D"Let op=
+: we hebben je termijnbedrag verhoogd" lang=3D"nl" class=3D"ev-wrapper"><im=
+g src=3D"https://e.eneco.com/0/5/86/1/W1U3OlXqETinRFgqGPAouvdHY4QDjYeJaPiDC=
+2aiVK9GL59ykHZuX2gyZ8MiYTKiisHQWtk3DFGAgYuGQ_5wpmEQE-Tk5i0xhkU9LcVNitwlZ0C8=
+holoZR-h7Gb8wDqMI9KZ6ObUDCKPlCLK-H_YdH5fBki5EpAx" width=3D"1" height=3D"1" =
+border=3D"0" alt=3D"" style=3D"height:1px !important;width:1px !important;b=
+order: 0 !important;margin: 0 !important;padding: 0 !important" /><!--[if (=
+gte mso 9)|(IE)]><table role=3D"presentation" style=3D"width: 100%"><tr><td=
+ style=3D"height: 44px"><v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" f=
+ill=3D"true" stroke=3D"false" style=3D"mso-width-percent: 1000; position: a=
+bsolute; mso-position-horizontal: right"><v:fill type=3D"gradient" color=3D=
+"#EB754F" color2=3D"#E6384D" angle=3D"90" /><v:textbox style=3D"mso-fit-sha=
+pe-to-text:true" inset=3D"20,0,0,-20px"><table role=3D"presentation" style=
+=3D"width: 100%" align=3D"center"><tr><td height=3D"44" style=3D"height: 44=
+px" class=3D"mso-gradient"><![endif]--><table role=3D"presentation" style=
+=3D"width: 100%; background-color: #E6384D" class=3D"gradient"><tr><td styl=
+e=3D"height: 44px"><table role=3D"presentation" align=3D"center" style=3D"w=
+idth: 620px; margin: 0 auto" class=3D"w100pc"><tr><td class=3D"pr6" style=
+=3D"padding: 15px 10px"><!--[if (gte mso 9)|(IE)]><table role=3D"presentati=
+on" width=3D"640" style=3D"width: 640px"><tr><td><![endif]--><table role=3D=
+"presentation" style=3D"width: 100%"><tr><td><!--[if (gte mso 9)|(IE)]><tab=
+le role=3D"presentation"><tr><td width=3D"45" style=3D"width: 45px">&nbsp;<=
+/td><td width=3D"547" style=3D"width: 547px"><![endif]--><table role=3D"pre=
+sentation" style=3D"width: 100%"><tr><td style=3D"text-align: left; font: 1=
+4px/1.2 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 17px; colo=
+r: #FFF">Lees in deze e-mail waarom</td></tr></table><!--[if (gte mso 9)|(I=
+E)]></td><td width=3D"20" style=3D"width: 20px">&nbsp;</td></tr></table><![=
+endif]--></td><td><!--[if (gte mso 9)|(IE)]><table role=3D"presentation"><t=
+r><td width=3D"28" style=3D"width: 28px"><![endif]--><table role=3D"present=
+ation" align=3D"right"><tr><td style=3D"padding: 0 5px; font: 14px/1.2 'Ete=
+lkaLight', Verdana, sans-serif; mso-line-height-alt: 17px; color: #FFF"><a =
+href=3D"https://e.eneco.com/2/4/86/1/gqlpYjqb0Pyxtp6o6x_jf0gfg7uMJ5cQ-h4FhY=
+IPoKkb6mn8Hns0Ttq9Yc7WhBru5IwsM3BjhE3H4tnXQKgCIA" alt=3D"Header - Webversie=
+" style=3D"color: #FFF; text-decoration: underline">Webversie</a></td></tr>=
+</table><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr><=
+/table><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr></=
+table></td></tr></table><!--[if (gte mso 9)|(IE)]></td></tr></table></v:tex=
+tbox></v:rect></td></tr></table><![endif]--><table role=3D"presentation" al=
+ign=3D"center" style=3D"width: 666px; margin: 0 auto" class=3D"w100pc"><tr>=
+<td class=3D"pr10" style=3D"padding: 15px 38px 25px 10px"><table role=3D"pr=
+esentation" style=3D"width: 100%"><tr><td style=3D"width: 116px"><a href=3D=
+"https://e.eneco.com/1/5/86/1/7168akPm3P2ckDqj2qE465yqDvmC5sO220c0mQDaEQjw1=
+hp3cLyzibMCt454ZAg-IgDzteB1bJpXnni26shOho5VH7SgouhAGJDwxMxhApI5RNxGOYpd_jj8=
+Vd9-uG8fwHgNeNCYda_GcHdGaXcug68L_9igLXHGl7e01aJEudBeNPZQWtIPIVyypEP808PJV91=
+lS7cRSsyrtbInEJmC6PYYHUatXCi-NgFBMmQ" alt=3D"Header - Logo"><img src=3D"htt=
+ps://e.eneco.com/public/files/86/0/email/Eneco-Logo.png" alt=3D"Eneco" widt=
+h=3D"116" style=3D"width: 116px"></a></td><td><table role=3D"presentation" =
+style=3D"width: 100%"><tr><td style=3D"padding: 15px 0 0; text-align: right=
+; font: 14px/1 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 14p=
+x; color: #8C8B8D">Klantnummer: 40879993-1</td></tr></table></td></tr></tab=
+le></td></tr></table><table role=3D"presentation" align=3D"center" style=3D=
+"width: 594px; margin: 0 auto; font-size: 1px; line-height: 1px; mso-line-h=
+eight-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule: exactly" class=
+=3D"w100pc"><tr><td bgcolor=3D"#E9282C" style=3D"background: #FFF; border-t=
+op: solid 1px #E0E0E0; border-left: solid 1px #E0E0E0; border-right: solid =
+1px #E0E0E0"><!--[if (gte mso 9)|(IE)]>&nbsp;<![endif]--></td></tr></table>=
+<table role=3D"presentation" align=3D"center" style=3D"width: 594px; margin=
+: 0 auto" class=3D"w100pc"><tr><td style=3D"background: #FFF; border-left: =
+solid 1px #E0E0E0; border-right: solid 1px #E0E0E0"><table role=3D"presenta=
+tion" style=3D"width: 100%"><tr><td style=3D"padding: 8px 20px 25px"><table=
+ role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"padding: 0 0 =
+12px"><img src=3D"https://e.eneco.com/public/files/86/0/103543-HTML_Alert_J=
+aarnota/Banner_AoJ.png" alt=3D"We hebben je termijnbedrag aangepast" width=
+=3D"552" style=3D"width: 552px; min-width: 100%; max-width: 100%" class=3D"=
+w100pc height-auto"></td></tr><tr><td class=3D"content"><table role=3D"pres=
+entation" style=3D"width: 100%"><tr><td style=3D"padding: 0 0 8px; font: 16=
+px/1.2 'EtelkaText-Bold', Verdana, sans-serif; mso-line-height-alt: 20px; c=
+olor: #1A171B; font-weight: bold">Beste mevrouw Visser,</td></tr><tr><td><p=
+ style=3D"font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-heigh=
+t-alt: 24px; color: #1A171B">De energiemarkt is in beweging en dat zorgt vo=
+or stijgende energieprijzen. We begrijpen dat dit vragen bij je oproept. Da=
+arom kijken we regelmatig met je mee of je termijnbedrag nog bij je past. W=
+e zien dat het termijnbedrag voor Hoogstraat 89 A 6701BR WAGENINGEN te laag=
+ is. Dit komt door de gestegen energieprijzen of door een hoger energieverb=
+ruik.<br /><br />Je hebt nu een contract met variabele tarieven die tussent=
+ijds kunnen wijzigen. Daarom houden we rekening met de hogere energieprijze=
+n tot aan je jaarnota in juni 2023 en is je termijnbedrag verhoogd. Zo voor=
+komen we een flinke bijbetaling op je jaarnota.</p></td></tr></table></td><=
+/tr></table></td></tr></table></td></tr></table><table role=3D"presentation=
+" align=3D"center" style=3D"width: 594px; margin: 0 auto" class=3D"w100pc">=
+<tr><td style=3D"background: #FFF; border-left: solid 1px #E0E0E0; border-r=
+ight: solid 1px #E0E0E0"><table role=3D"presentation" style=3D"width: 100%"=
+><tr><td style=3D"padding: 12px 24px"><table role=3D"presentation" style=3D=
+"width: 100%; border-collapse: separate"><tr><td style=3D"border-radius: 8p=
+x; border: 1px solid #FFF; background: #FEF4E0"><table role=3D"presentation=
+" style=3D"width: 100%"><tr><td style=3D"padding: 24px" class=3D"content"><=
+table role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"padding:=
+ 0 0 8px; font: 16px/1.2 'EtelkaText-Bold', Verdana, sans-serif; mso-line-h=
+eight-alt: 20px; color: #1A171B; font-weight: bold">Je nieuwe termijnbedrag=
+</td></tr><tr><td style=3D"font: 16px/1.5 'EtelkaLight', Verdana, sans-seri=
+f; mso-line-height-alt: 24px; color: #1A171B">Je termijnbedrag is verhoogd =
+van <span style=3D"font: 16px/1.5 'EtelkaText-Bold', Verdana, sans-serif; m=
+so-line-height-alt: 24px; font-weight: bold">&euro;&nbsp;239</span> naar <s=
+pan style=3D"font: 16px/1.5 'EtelkaText-Bold', Verdana, sans-serif; mso-lin=
+e-height-alt: 24px; font-weight: bold">&euro;&nbsp;375</span>. Zo voorkom j=
+e een bijbetaling van <span style=3D"font: 16px/1.5 'EtelkaText-Bold', Verd=
+ana, sans-serif; mso-line-height-alt: 24px; font-weight: bold">&euro;&nbsp;=
+1224</span> op je jaarnota in juni 2023.<br /><br />Het kan zijn dat er al =
+een termijnnota voor je klaar staat. In dat geval schrijven we nog &eacute;=
+&eacute;n keer je oude termijnbedrag af. De wijziging gaat dan vanaf je vol=
+gende termijnnota in.</td></tr></table></td></tr></table></td></tr></table>=
+</td></tr></table></td></tr></table><table role=3D"presentation" align=3D"c=
+enter" style=3D"width: 594px; margin: 0 auto" class=3D"w100pc"><tr><td styl=
+e=3D"background: #FFF; border-left: solid 1px #E0E0E0; border-right: solid =
+1px #E0E0E0"><table role=3D"presentation" style=3D"width: 100%"><tr><td sty=
+le=3D"padding: 12px 24px"><table role=3D"presentation" style=3D"width: 100%=
+"><tr><td class=3D"content"><table role=3D"presentation" style=3D"width: 10=
+0%"><tr><td style=3D"padding: 0 0 8px; font: 16px/1.2 'EtelkaText-Bold', Ve=
+rdana, sans-serif; mso-line-height-alt: 20px; color: #1A171B; font-weight: =
+bold">Je nieuwe termijnbedrag houdt rekening met:</td></tr><tr><td><table r=
+ole=3D"presentation"><tr><td style=3D"padding: 3px 10px 3px 0"><img src=3D"=
+https://e.eneco.com/public/files/86/0/email/Checkmark.png" alt=3D"&#10003;"=
+ width=3D"17" style=3D"width: 17px"></td><td style=3D"padding: 3px 0; font:=
+ 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px; co=
+lor: #1A171B">De verlaging in btw van 21% naar 9% tot 31 december 2022</td>=
+</tr><tr><td style=3D"padding: 3px 10px 3px 0"><img src=3D"https://e.eneco.=
+com/public/files/86/0/email/Checkmark.png" alt=3D"&#10003;" width=3D"17" st=
+yle=3D"width: 17px"></td><td style=3D"padding: 3px 0; font: 16px/1.5 'Etelk=
+aLight', Verdana, sans-serif; mso-line-height-alt: 24px; color: #1A171B">De=
+ termijnbedragen die tot nu toe zijn betaald</td></tr><tr><td style=3D"padd=
+ing: 3px 10px 3px 0"><img src=3D"https://e.eneco.com/public/files/86/0/emai=
+l/Checkmark.png" alt=3D"&#10003;" width=3D"17" style=3D"width: 17px"></td><=
+td style=3D"padding: 3px 0; font: 16px/1.5 'EtelkaLight', Verdana, sans-ser=
+if; mso-line-height-alt: 24px; color: #1A171B">Je recente en toekomstige en=
+ergieverbruik tot aan je jaarnota</td></tr><tr><td style=3D"padding: 3px 10=
+px 3px 0"><img src=3D"https://e.eneco.com/public/files/86/0/email/Checkmark=
+.png" alt=3D"&#10003;" width=3D"17" style=3D"width: 17px"></td><td style=3D=
+"padding: 3px 0; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-lin=
+e-height-alt: 24px; color: #1A171B">Hogere energietarieven na afloop van je=
+ huidige variabele tarieven tot aan je jaarnota</td></tr></table></td></tr>=
+<tr><td style=3D"padding: 8px 0 0; font: 16px/1.5 'EtelkaLight', Verdana, s=
+ans-serif; mso-line-height-alt: 24px; color: #1A171B"><span style=3D"font: =
+16px/1.5 'EtelkaText-Bold', Verdana, sans-serif; mso-line-height-alt: 24px;=
+ font-weight: bold">Tip:</span> Verandert je tarief of energieverbruik? Bek=
+ijk dan de <a href=3D"https://e.eneco.com/1/5/86/1/I1LC1LgSF2ui-jFKZ50seM-j=
+xRQHuAyR49aGK1-HtYxdisOUXFVu1Tb0PnrI5rU4hQaSpNLZH7xqhwr8kYktqprI05uxoAXmfHv=
+i40BwK_r94tx1bSRlt9nazFfo8WNXAKm4P_eCTJ2Y-lHbhXuQfTW_qPyaVs3OT25DV9FiytU" a=
+lt=3D"Je nieuwe termijnbedrag houdt rekening met - TXT" style=3D"color: #1A=
+171B; text-decoration: underline">Tussenstand</a> om te zien of je termijnb=
+edrag nog passend is.</td></tr></table></td></tr></table></td></tr></table>=
+</td></tr></table><table role=3D"presentation" align=3D"center" style=3D"wi=
+dth: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"background: #=
+FFF; border-left: solid 1px #E0E0E0; border-right: solid 1px #E0E0E0"><tabl=
+e role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"padding: 12p=
+x 24px"><table role=3D"presentation" style=3D"width: 100%; border-collapse:=
+ separate"><tr><td style=3D"border-radius: 8px; border: 1px solid #FFF; bac=
+kground: #F8F8F8"><table role=3D"presentation" style=3D"width: 100%"><tr><t=
+d style=3D"padding: 24px" class=3D"content"><table role=3D"presentation" st=
+yle=3D"width: 100%"><td style=3D"width: 78px"><table role=3D"presentation" =
+style=3D"width: 100%"><tr><td style=3D"padding: 12px 12px 8px"><img src=3D"=
+https://e.eneco.com/public/files/86/0/103543-HTML_Alert_Jaarnota/Icon_Smart=
+phone-Update.png" alt=3D"Je termijnbedrag zelf aanpassen?" width=3D"54" sty=
+le=3D"width: 54px"></td></tr></table></td><td style=3D"width: 436px; min-he=
+ight: 436px"><table role=3D"presentation" style=3D"width: 100%"><tr><td cla=
+ss=3D"content" style=3D"padding: 12px"><table role=3D"presentation" style=
+=3D"width: 100%"><tr><td><h1 style=3D"margin: 0 0 8px; font: 16px/1.2 'Etel=
+kaText-Bold', Verdana, sans-serif; mso-line-height-alt: 26px; color: #1A171=
+B; font-weight: bold">Je termijnbedrag zelf aanpassen?</h1><p style=3D"marg=
+in: 0 0 8px; font: 16px/1.4 'EtelkaLight', Verdana, sans-serif; mso-line-he=
+ight-alt: 24px; color: #1A171B">Dat kan in de <a href=3D"https://e.eneco.co=
+m/1/5/86/1/pe3sTY8SGiHX_sy2Z6-jwjkbP5WiyA8PmPaR1xyCyQYkHmXjB1lf4VUXf3NH8Y36=
+sYM4pWHwDr0ctWjOyWh1SoiEp9rJGJ01DU2HvDIhtAURMhjhi3g_wNATDJp6UyyRMwEb2laPMlb=
+Wl99wKq32z9Vul-SuAeMy1gQIkMmzkw" alt=3D"Je termijnbedrag zelf aanpassen - T=
+XT1" style=3D"color: #1A171B; text-decoration: underline">Eneco&nbsp;app</a=
+> en in <a href=3D"https://e.eneco.com/1/5/86/1/Lb6efV7PeOqXiIid9pbt0aea7Kg=
+sODDV6E4plom3IpNnBC9xWIU3_XNfGzmfb5sbVuEvx-1OQgvBNAzzwboPL_xGGxzLUW4osgvNa6=
+rf3OhenxYeGARgJ8D94RC-7dMd1eR8-Zm41YNhWagkRMTPgXjoTO8dM0l2bUap0wctvkxwhon5B=
+CoQDBZcC56sRIiyOyNGEVnE8NMSBtoyEySYnFXLgQdR5N6qkXci6w" alt=3D"Je termijnbed=
+rag zelf aanpassen - TXT2" style=3D"color: #1A171B; text-decoration: underl=
+ine">Mijn&nbsp;Eneco</a>. Kom je er niet uit? Dan kan je je termijnbedrag o=
+ok wijzigen via de <a href=3D"https://e.eneco.com/1/5/86/1/W8S74T-CwyjNsem_=
+ON9oOEXuT_aryH2QEb6zB3rDyQ4FmKGyKOiHj5J_bJbG4wh-IK7fe9bcr0N2Jp94nnVLp-IKEnH=
+slF8e9poBCQ0a8L6F4DIJagTnoHhmu32ZvKVTWDjXWWs052cgXux2B-hzcFyBPDgVrJ9OV0lzOL=
+AoMGeNJSfzVWAcocJ7Z3AKhnAkOovGc31vKPdwkz4kZiIAA05CniZnTmAJ1RHBZg" alt=3D"Je=
+ termijnbedrag zelf aanpassen - TXT3" style=3D"color: #1A171B; text-decorat=
+ion: underline">Klantenservice</a>.</p></td></tr></table></td></tr></table>=
+</td></table><table role=3D"presentation" style=3D"width: 100%"><td style=
+=3D"width: 78px"><table role=3D"presentation" style=3D"width: 100%"><tr><td=
+ style=3D"padding: 12px 12px 8px"><img src=3D"https://e.eneco.com/public/fi=
+les/86/0/103543-HTML_Alert_Jaarnota/Icon_Calculator.png" alt=3D"Hulp bij be=
+talen" width=3D"54" style=3D"width: 54px"></td></tr></table></td><td style=
+=3D"width: 436px; min-height: 436px"><table role=3D"presentation" style=3D"=
+width: 100%"><tr><td class=3D"content" style=3D"padding: 12px 12px 0"><tabl=
+e role=3D"presentation" style=3D"width: 100%"><tr><td><h1 style=3D"margin: =
+0 0 8px; font: 16px/1.2 'EtelkaText-Bold', Verdana, sans-serif; mso-line-he=
+ight-alt: 26px; color: #1A171B; font-weight: bold">Hulp bij betalen</h1><p =
+style=3D"margin: 0 0 8px; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif=
+; mso-line-height-alt: 24px; color: #1A171B">Maak je je zorgen over je ener=
+gierekening? Ga naar <a href=3D"https://e.eneco.com/1/5/86/1/h-0K3BkndOY4ni=
+xZav-LLSsHlSV4Xlr4QGW_6grP-Cq4tf3vXxwQOxnpkO-k-14a13S1FBPc57GWULjIDTfccLmhM=
+aot_OY5kDJR_bQqLxTaQozQGamPMJUqBrTioHlmXO7YPk47hqNPOGJBMo-bCk4DRsLOTW2Tr0Nm=
+3Pdesw" alt=3D"Hulp bij betalen - TXT1" style=3D"color: #1A171B; text-decor=
+ation: underline">geldfit.nl/energie</a> en ontdek wat jij kan doen. Krijg =
+tips om energie te besparen, of lees waar jij terecht kan voor hulp bij gel=
+dzaken. Er is vaak meer mogelijk dan je denkt.</p></td></tr></table></td></=
+tr></table></td></table></td></tr></table></td></tr></table></td></tr></tab=
+le></td></tr></table><table role=3D"presentation" align=3D"center" style=3D=
+"width: 594px; margin: 0 auto" class=3D"w100pc"><tr><td style=3D"background=
+: #FFF; border-left: solid 1px #E0E0E0; border-right: solid 1px #E0E0E0"><t=
+able role=3D"presentation" style=3D"width: 100%"><tr><td style=3D"padding: =
+12px 24px"><table role=3D"presentation" style=3D"width: 100%; border-collap=
+se: separate"><tr><td style=3D"border-radius: 8px; border: 1px solid #FFF; =
+background: #E1F4F1"><table role=3D"presentation" style=3D"width: 100%"><tr=
+><td class=3D"content" style=3D"padding: 24px"><table role=3D"presentation"=
+ style=3D"width: 100%"><tr><td style=3D"padding: 0 0 8px; font: 16px/1.2 'E=
+telkaText-Bold', Verdana, sans-serif; mso-line-height-alt: 20px; color: #1A=
+171B; font-weight: bold">Heb je  een vraag?</td></tr><tr><td style=3D"font:=
+ 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px; co=
+lor: #1A171B">Stel &rsquo;m aan onze <a href=3D"https://e.eneco.com/1/5/86/=
+1/pNHoTKapAtQaIsNwCvYWyjJiHSE15JqsVhc6NzA4ZAwCTPnSXUlsgBfUTu91WNIbZz_ytY8Mj=
+ua3vbJjoipBvZhr_2gjmCdm3WoskplnbGcc8JgJw5olSV_fj0TBmfYFf5bLMJ2uxtlE6asJd21H=
+3RhKMnzaMZuA35APn5TzfI4_TatXUIjT5GTMJ7CKsDfjTafXA7f4r2AvQUaKQxJq6nxHWiNkFfZ=
+UL7pweg" alt=3D"Heb je een vraag? - TXT" style=3D"color: #1A171B; text-deco=
+ration: underline">Klantenservice</a>. We helpen je graag verder.</td></tr>=
+</table></td></tr></table></td></tr></table></td></tr></table></td></tr></t=
+able><table role=3D"presentation" align=3D"center" style=3D"width: 594px; m=
+argin: 0 auto" class=3D"w100pc"><tr><td style=3D"background: #FFF; border-l=
+eft: solid 1px #E0E0E0; border-right: solid 1px #E0E0E0"><table role=3D"pre=
+sentation" style=3D"width: 100%"><tr><td class=3D"pl24 pr24" style=3D"paddi=
+ng: 20px 30px"><table role=3D"presentation" style=3D"width: 100%"><tr><td c=
+lass=3D"content" style=3D"padding: 0 0 20px; text-align: center; font: 18px=
+/1.3 'EtelkaText-Bold', Verdana, sans-serif; mso-line-height-alt: 24px; col=
+or: #1A171B; font-weight: bold">Wat vind je van dit bericht?</td></tr><tr><=
+td><table role=3D"presentation" align=3D"center"><tr><td class=3D"pl8 pr8" =
+style=3D"padding: 0 11px"><a href=3D"https://e.eneco.com/1/5/86/1/fgSJUnhOD=
+MgQkIh3TGIfxzP68fRTmCJ1_l3s24C_fM-15QTRXXT_GJ7F6OubaNrITgg5wa0wCmiQ-p09H7wC=
+Us1n_n1iKsL614WZAX_4MJpLZi33VxfbjhPh-Thex7zOv2EL6t-AD2RevjtcSSlQca3dV9CdMYE=
+exZMrVXk3trhm4SmYUYbVcK6c212gbX3UCrw4dZGsqAH6QGy7cMWv9vCibi3nkR9nIjXamvukS-=
+eXAtLVQTAHZdKjWzWbkmSGqtLrIZ1aQ3jQFU4AmOc" alt=3D"Usabilla - Mood 1" style=
+=3D"color: #EB4356; text-decoration: none"><img src=3D"https://e.eneco.com/=
+public/files/86/0/email/Usabilla-1.png" alt=3D"1" width=3D"30" style=3D"wid=
+th: 30px"></a></td><td class=3D"pl8 pr8" style=3D"padding: 0 11px"><a href=
+=3D"https://e.eneco.com/1/5/86/1/JmfZuJQh26xkVt-8XDEHqUxS8kGW7DgFgTEHIudk24=
+pnnyvt3V7rAKssVKngOvl6fkTmi2HL9DcMgk9lk8VB9jwZlZroY4vXGns-k9hbY86fqb_2PIsQ6=
+DnZX_TF8ibQWkYY8k6HYegKIOvQdoqU0kExV727wiD_diyBJz8ELvz-m9zB_zMZlvy2G9Y0UyqE=
+qHR0p_gt5_-Fw9my0Bk0oOl1ersmW-ytd7f3RgMt43mBqlf-09gdMFMbSbZnPTevsiavhwvGFcY=
+7rELJvss" alt=3D"Usabilla - Mood 2" style=3D"color: #EB4356; text-decoratio=
+n: none"><img src=3D"https://e.eneco.com/public/files/86/0/email/Usabilla-2=
+.png" alt=3D"2" width=3D"30" style=3D"width: 30px"></a></td><td class=3D"pl=
+8 pr8" style=3D"padding: 0 11px"><a href=3D"https://e.eneco.com/1/5/86/1/Xd=
+-jDumsBJX3pTbwfX8ECXSYWWm_WAk1eTIS9xsPuaMH3_BFIsVvog6ca8VeZ-B6sj3bqS9k4s3gQ=
+rjnHzHgVit3L1l_81wJiDNXiSlMmfYhHu0Z5EJieS_iuG0IJyZFw-5UzesDdWUrciZTZZ5bNM03=
+cuPEirisOXD4GBmLXv4CM1I62Q55xjn156dgSLAbztI5FFuv4xdCSV8lYfPCWU_6qgK9E49h4Uo=
+yu-OQvOturr1wb7KzVF3QwFidMzx_uIA_cGCDRG6sUR5NeQ" alt=3D"Usabilla - Mood 3" =
+style=3D"color: #EB4356; text-decoration: none"><img src=3D"https://e.eneco=
+.com/public/files/86/0/email/Usabilla-3.png" alt=3D"3" width=3D"30" style=
+=3D"width: 30px"></a></td><td class=3D"pl8 pr8" style=3D"padding: 0 11px"><=
+a href=3D"https://e.eneco.com/1/5/86/1/wEN2FqvEPFor2LkEPQFYD15LSbzmcuPLaQ-L=
+7oOWCqSTCB9yvABTScwGWRvtgayL_6hY1mX_CP05ni7EF7QukYgM4Jbwm6L1PkoPE42lTADrZy6=
+Gy7YZFMRiJ7hEhR3xjixinDiM1qcet9RMxbkecqC4ex2Om4IYHOy0fTyJkyDB336eyTFKjOgu3Z=
+YuUloskYNSdQPZ_B5AqZedmggWw5_rnvIdVJlA7WdT01pFKk7g2EKLcJJt81tQMlqVfX9Anlam5=
+JvVKehIdMT0SmtD" alt=3D"Usabilla - Mood 4" style=3D"color: #EB4356; text-de=
+coration: none"><img src=3D"https://e.eneco.com/public/files/86/0/email/Usa=
+billa-4.png" alt=3D"4" width=3D"30" style=3D"width: 30px"></a></td><td clas=
+s=3D"pl8 pr8" style=3D"padding: 0 11px"><a href=3D"https://e.eneco.com/1/5/=
+86/1/PDF_XU6Ppdc8Gt2qyct1OsVkLW8W7GMBuwbtN9u2SF3r-Gba_TECTOjawlgYxv4pnvMG3B=
+pDAm_xRvqGjwWZFNxCuV_z6nMywEPsaXHaP-Q2UiB_6KPS22ykIDC82ikAmddLA1n8iiflPqmrv=
+Y_d2VO-D4PlPsgBErOXHY9S8YaCqO1LjKnz4p9qzobcuD5_38Ws9SyshNlvVa9FJgJo7XPp5loR=
+kG0IGxSuCBPHE4CIo8uqktAC6XjehUPfpeXg4byApegPEXOfipZc56wx" alt=3D"Usabilla -=
+ Mood 5" style=3D"color: #EB4356; text-decoration: none"><img src=3D"https:=
+//e.eneco.com/public/files/86/0/email/Usabilla-5.png" alt=3D"5" width=3D"30=
+" style=3D"width: 30px"> </a></td></tr></table></td></tr></table></td></tr>=
+</table></td></tr></table><table role=3D"presentation" align=3D"center" sty=
+le=3D"width: 594px; margin: 0 auto; font-size: 1px; line-height: 1px; mso-l=
+ine-height-alt: 0; mso-margin-top-alt: 1px; mso-line-height-rule: exactly" =
+class=3D"w100pc"><tr><td style=3D"padding: 0 0 20px; background: #FFF; bord=
+er-bottom: solid 1px #E0E0E0; border-left: solid 1px #E0E0E0; border-right:=
+ solid 1px #E0E0E0">&nbsp;</td></tr></table><table role=3D"presentation" st=
+yle=3D"width: 100%"><tr><td style=3D"padding: 0 10px"><table role=3D"presen=
+tation" align=3D"center" style=3D"width: 594px; margin: 0 auto" class=3D"w1=
+00pc"><tr><td><table role=3D"presentation" style=3D"width: 100%"><tr><td cl=
+ass=3D"pl24 pr24" style=3D"padding: 20px 30px"><table role=3D"presentation"=
+ style=3D"width: 100%"><tr><td style=3D"padding: 0 0 24px"><table role=3D"p=
+resentation" align=3D"center"><tr><td class=3D"pl10 pr10" style=3D"padding:=
+ 0 18px; text-align: center; font: 16px/1.5 'EtelkaLight', Verdana, sans-se=
+rif; mso-line-height-alt: 24px"><a href=3D"https://e.eneco.com/1/5/86/1/NVA=
+_roY10yeiwludUJXBQboopAwvAgyuorp7l0BuxUDeDRgPPxQjQiPFGHfTccpH7x_FN7ClI_wkM9=
+Voy4ZRt5IEumIPtVIW5AIuL7EKr4Oo-FeZX99yxjThW5Y62VO8JrM2geoaukMjz45BOobb_5Jrd=
+l4L3ByQb04hcantz_8" alt=3D"Footer - Eneco app" style=3D"color: #1A171B; tex=
+t-decoration: underline">Eneco app</a></td><td style=3D"padding: 0 18px; te=
+xt-align: center; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-li=
+ne-height-alt: 24px"><a href=3D"https://e.eneco.com/1/5/86/1/7yoXnVRF_TmTM7=
+ShMmqFduUp-MNr2Fw6bJyNQ25yNplvX6eSPsiMXNksMF5IRwDhyrlXoyI0arfHQd4L59ThTXNtp=
+HU8IgAFGu8Ie1Fij6PV5vh4BZUvz1hSTIXGgjOSi57nlEQJJImpsewS73KKC-C15smlTlTlTrM_=
+ASy0Di4" alt=3D"Footer - Mijn Eneco" style=3D"color: #1A171B; text-decorati=
+on: underline">Mijn Eneco</a></td><td style=3D"padding: 0 18px; text-align:=
+ center; font: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height=
+-alt: 24px"><a href=3D"https://e.eneco.com/1/5/86/1/TX16TjM3zyqAwYstFSNcfqr=
+usVG8i2Hn8RJlqzcgRnrIZz_rQiVGzxcRleKGPbmaJ0fiQ0jEUxM9QnqXl-NiQoSdG69bk4PN9b=
+AhKC9xkSOso9Q4w9umNtQL3jfAq4sOeWtl3XrRFfMTbmjb0vMCNb1xMNUhaO-cNw5EU0y1WnMR3=
+_2--aSlgn-8cSWxPyEzy4F0TVUiMORan4RdlSglPXgQsK2helIlpz5RMO8" alt=3D"Footer -=
+ Klantenservice" style=3D"color: #1A171B; text-decoration: underline">Klant=
+en&shy;service</a></td><td style=3D"padding: 0 18px; text-align: center; fo=
+nt: 16px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 24px"=
+><a href=3D"https://e.eneco.com/1/5/86/1/YON4UI4YsA1Q6FVFMlxJsp5zqfgCQueHHl=
+V0nRqxFnEaqpfEA_otdrsqa93tFRkQmpm4ltsnSyVQTd-lXE463OHcgInCFOhb9oVuCsGaiv3fn=
+cG_-xLdKez0iwMH09PzqmYmJTGix7YSCIDNaB6_Jsuw8FqO0evLQKG79wN1gEHbbzcSiOwVHGuE=
+BjiH096gVB7oGGBW1WHLWQeK9brqjRGccIMH-KMZ-6ehyJ_h" alt=3D"Footer - Stroom et=
+iket" style=3D"color: #1A171B; text-decoration: underline">Stroom&shy;etike=
+t</a></td></tr></table></td></tr><tr><td style=3D"padding: 0 0 24px"><table=
+ role=3D"presentation" align=3D"center"><tr><td style=3D"text-align: center=
+; font: 12px/1.5 'EtelkaLight', Verdana, sans-serif; mso-line-height-alt: 1=
+8px; color: #8C8B8D">Deze e-mail is verzonden in opdracht van Eneco Consume=
+nten B.V., Postbus 1014, 3000 BA Rotterdam, KvK nr. 24324527. Dit is een au=
+tomatische e-mail, een antwoord op deze e-mail wordt niet gelezen of beantw=
+oord.</td></tr></table></td></tr></table></td></tr></table></td></tr></tabl=
+e></td></tr></table></div><img src=3D"https://e.eneco.com/0/5/86/1/xvf1t2S8=
+vDc0AxINI4d0zVbXmxAtC34Q1rD9Rp725SVVSYOUM9Gdjia4FHsJnzLlG6dKEKQ2V3X6RSOsBal=
+yXplyWephdIdnGEJREQWCLJp9zJWIlquKS-Mu-OljZnCNiyp5HcvQ2rDwQSVlnR76IuNHqyTRuN=
+Ql" width=3D"1" height=3D"1" border=3D"0" alt=3D"" style=3D"height:1px !imp=
+ortant;width:1px !important;border: 0 !important;margin: 0 !important;paddi=
+ng: 0 !important" /></body></html>
+----6321fb1f17375--
+
+

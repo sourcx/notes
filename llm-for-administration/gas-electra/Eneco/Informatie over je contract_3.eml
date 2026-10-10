@@ -1,0 +1,2114 @@
+Delivered-To: te.my.vis@gmail.com
+Received: by 2002:a05:6402:d61:0:0:0:0 with SMTP id ec33csp570730edb;
+        Fri, 8 Jul 2022 13:07:17 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1sqrXASlRL8LmfdC8rFfvuLquBx41nq8/xyAQaLB14j0a4uPA921b2C6BIr/ZaUXJJMwT0u
+X-Received: by 2002:a05:6402:3909:b0:435:7a69:2cfd with SMTP id fe9-20020a056402390900b004357a692cfdmr6967853edb.166.1657310837015;
+        Fri, 08 Jul 2022 13:07:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1657310837; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0j8n5NuIWTsgt4uqwesyCZxg0hnR+i4YVdEvsXWFJ13Tz82J06WO2au+xFMyEzuw+p
+         CmrJQGQ0E9MDZ8sgGE8I3ZFsFNFxzH2602d9KNSd/tGlNDyuKYDW4QJPKn8yFG97+aR3
+         5buGzKU9o17JmNzT4VWV7fGZH0Bq7M1My40YbEw4TKi2/jEgO/5JwgCuaBUDqo3H6Rwp
+         gu6rqMiAgdppO8HEENGO7SQjEHb2sSw7Gbhxp3XWlu5d1jhHIpHkwYQxaouq9nsmdVBH
+         9a5pJv32kyp0/25ZGNNCcOM2qUT5Us9tmvyD3JEROvZtjLoFZEIpDgebRmve7tTpBAFK
+         BcLg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:content-transfer-encoding:subject:to:from
+         :mime-version:dkim-signature:dkim-signature;
+        bh=RV1sWC4CqjpS2gByRktL2XbKPKLhUZ2AoJ4xojPLImA=;
+        b=EiHhXPPX70SP6pn3mWQwRQmKZ7KG/Xfy/rknK3EMbWdBV7MzDoFv5440w9ohKnEtGa
+         5WobYWGmgclZM09x/YtjR922lQBS0dxAbp3/XLTlUah/kem7sGrEHGPRcyvmvZq8plTS
+         ulx5xhKVbX7dK5zwDqF954+uEv/ismsyEGfh/SrVIHAX0pH639uAmJM1332B68wsBAuf
+         tM/9i17ggD/ajnOO7j8uKHLot2AxJGsXjsIYb9dn/VYzadGLRFckdP9BGRpp+QrIL5KE
+         QeZ8eso/ApvnLkLGIy9T+A0fVsE/KVkX2WuthqMoQL8/Iz+ZoiOXWCViMEzhAz80fl+y
+         YDhw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@flowmailer.net header.s=s1 header.b=Y2fTX0hx;
+       dkim=pass header.i=@eneco.com header.s=fm2 header.b=GUPJ1+SG;
+       spf=pass (google.com: domain of fm-6977-2022070820071661b1e7845f277ed95c-eum5us@return.eneco.com designates 185.136.64.130 as permitted sender) smtp.mailfrom=fm-6977-2022070820071661b1e7845f277ed95c-eUm5us@return.eneco.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=eneco.com
+Return-Path: <fm-6977-2022070820071661b1e7845f277ed95c-eUm5us@return.eneco.com>
+Received: from mta-64-130.flowmailer.net (mta-64-130.flowmailer.net. [185.136.64.130])
+        by mx.google.com with ESMTPS id dz19-20020a0564021d5300b0043a92a70296si10268632edb.603.2022.07.08.13.07.16
+        for <te.my.vis@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 08 Jul 2022 13:07:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of fm-6977-2022070820071661b1e7845f277ed95c-eum5us@return.eneco.com designates 185.136.64.130 as permitted sender) client-ip=185.136.64.130;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@flowmailer.net header.s=s1 header.b=Y2fTX0hx;
+       dkim=pass header.i=@eneco.com header.s=fm2 header.b=GUPJ1+SG;
+       spf=pass (google.com: domain of fm-6977-2022070820071661b1e7845f277ed95c-eum5us@return.eneco.com designates 185.136.64.130 as permitted sender) smtp.mailfrom=fm-6977-2022070820071661b1e7845f277ed95c-eUm5us@return.eneco.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=eneco.com
+Received: by mta-64-130.flowmailer.net with ESMTPSA id 2022070820071661b1e7845f277ed95c
+        for <te.my.vis@gmail.com>;
+        Fri, 08 Jul 2022 22:07:16 +0200
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; s=s1;
+ d=flowmailer.net;
+ h=Date:From:Subject:To:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ bh=RV1sWC4CqjpS2gByRktL2XbKPKLhUZ2AoJ4xojPLImA=;
+ b=Y2fTX0hxghgDzPD6Om6RaHyh7qQ5LWFA4PRixjLvoz3EUkEW12SZZHyLK3XuaiOnYtJ5dh
+ /yBiCZC2Zoc5gi8Vo6RIYDYN/eg3lFyD94KhZObYxF7NFs7myv73LTYEOumV8uH4JytDp+WZ
+ aRJT0ITcbcD3ER544tKzP63xImjCo=;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; s=fm2;
+ d=eneco.com; i=Eneco_noreply@eneco.com;
+ h=Date:From:Subject:To:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ bh=RV1sWC4CqjpS2gByRktL2XbKPKLhUZ2AoJ4xojPLImA=;
+ b=GUPJ1+SGnGJa//ADZfWhkcLKm/LBJv1ezALwU1gYEDq68LAJT0+/sk+vopb5FklD/XzmC2
+ O+K+HJUmnt4m/7BmyfZYMJ8+tvTxXsuv0NRkiMjX/7lLkkBBaSylDMjApd1zXk1Ct1bFogow
+ uCK9aye3dWRwJEnEBvO7Ycdp6doKAD6wxWGfsda3CqDKurk3r+lfROBnIzHTXso0HgMEHASH
+ EBvGp1Muy7Y9CbHuzP313cbFHaR81pjkzcM3e38UCZNSfFmsxyZ4UOU8JEs7TOE6Bx/RSkth
+ iVvUTF1VDfthWV0a704rKyv2qNbh2aSHCBOa9hbE0ZpRl4P8nyB3eu8Q==;
+MIME-Version: 1.0
+From: Eneco <Eneco_noreply@eneco.com>
+To: TM Visser <te.my.vis@gmail.com>
+X-EmailFlowNaam: MVS-FAC641-TARCOM-Eneco
+Subject: Informatie over je contract
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: 
+ <fm-6977-2022070820071661b1e7845f277ed95c-eUm5us@return.eneco.com>
+Date: Fri, 8 Jul 2022 20:07:16 +0000
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1=2E0 Transitional//EN" "http://ww=
+w=2Ew3=2Eorg/TR/xhtml1/DTD/xhtml1-transitional=2Edtd"><html xmlns:comxslt=
+=3D"https://www=2Eeneco=2Ecom/COM-Xslt"><head></head>
+ <body class=3D"body">
+  =EF=BB=BF   =20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+>=20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+>
+  <!--[if !mso]><!-->
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <!--<![endif]-->
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1=2E0">=20
+  <meta name=3D"format-detection" content=3D"telephone=3Dno">=20
+  <link rel=3D"shortcut icon" href=3D"https://email=2Eeneco=2Enl/Eneco/fav=
+icon=2Eico" type=3D"image/x-icon">=20
+  <title>Eneco</title>=20
+  <style>
+          * {
+          box-sizing: border-box
+          }
+          body,  =2Ebody {
+          width: 100%;
+          height: 100%;
+          background-color: #ffffff
+          }
+          body,  div,  td,  th,  ul,  ol,  li,  h1,  h2,  h3,  h4,  h5,  h=
+6,  p,  span,  strong {
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+          -webkit-text-size-adjust: none;
+          -ms-text-size-adjust: none
+          }
+          body,  td,  p,  a,  li,  span {
+          font-family: Verdana, Geneva, sans-serif;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 1=2E4;
+          color: #000000
+          }
+          strong {
+          font-weight: bold
+          }
+          table {
+          border: 0;
+          border-spacing: 0;
+          border-collapse: collapse
+          }
+          img {
+          -ms-interpolation-mode: bicubic;
+          vertical-align: middle;
+          height: auto;
+          line-height: 100%;
+          border: 0
+          }
+          #outlook a {
+          padding: 0
+          }
+          ul,  ol,  li {
+          margin: 5px 0 5px 5px
+          }
+          ul,  ol {
+          padding: 0 0 0 15px
+          }
+          a,  a:link,  a:visited,  a:hover {
+          color: #EB4356;
+          text-decoration: underline;
+          text-decoration-skip-ink: auto
+          }
+          a=2Eeneco-phonenumber {
+          pointer-events: none;
+          cursor: default
+          }
+          a=2Eeneco-mailto {
+          text-decoration: none!important
+          }
+          h1,  h2 {
+          font-family: Verdana, Geneva, sans-serif;
+          font-weight: bold;
+          font-style: normal;
+          font-size: 36px;
+          line-height: 1;
+          color: #000000
+          }
+          h2 {
+          font-weight: normal;
+          font-size: 22px
+          }
+          a,  a:link,  a:visited,  a:hover {
+          color: #EB4356;
+          text-decoration: underline;
+          text-decoration-skip-ink: auto
+          }
+          a=2Eeneco-phonenumber {
+          pointer-events: none;
+          cursor: default
+          }
+          a=2Elink span=2Eunderline {
+          display: inline-block;
+          line-height: 1=2E5;
+          border-bottom: 1px solid #EB4356
+          }
+          a=2Elink span=2Eunderline:hover {
+          border-bottom: 0!important;
+          }
+          =2Eeneco-btn-primary a {
+          color: #ffffff!important
+          }
+          =2Eeneco-btn-primary a:hover,  =2Eeneco-btn-secondary a:hover {
+          background: #300C38!important;
+          color: #ffffff!important;
+          }
+          =2Eeneco-btn-primary-alt table=2Ebtn td:hover,  =2Eeneco-btn-sec=
+ondary-alt table=2Ebtn td:hover {
+          background: #300C38!important;
+          border: #300C38!important;
+          }
+          =2Eeneco-btn-primary-alt table=2Ebtn td:hover a,  =2Eeneco-btn-s=
+econdary-alt table=2Ebtn td:hover a {
+          color: #ffffff!important;
+          }
+          =2Eeneco-wrapper {
+          table-layout: fixed
+          }
+          =2Eeneco-container {
+          width: 660px;
+          max-width: 660px;
+          margin: 0 auto
+          }
+          =2Etable {
+          display: table
+          }
+          =2Etr {
+          display: table-row;
+          }
+          =2Etd,  =2Etfoot,  =2Ethead {
+          display: table-cell
+          }
+        </style>=20
+  <style>
+          @media only screen and (-webkit-min-device-pixel-ratio:0) {
+          =2Epreheader div,
+          =2Epreheader td,
+          =2Epreheader a,
+          =2Epreheader span {
+          color: #ffffff !important;
+          }
+          =2Ewhite {
+          background-color: #ffffff !important;
+          }
+          =2Egradient {
+          background: -moz-linear-gradient(left, #E6384D 0%, #EB754F 100%)=
+ !important;
+          background: -webkit-linear-gradient(left, #E6384D 0%, #EB754F 10=
+0%) !important;
+          background: -ms-linear-gradient(left, #E6384D 0%, #EB754F 100%) =
+!important;
+          background: linear-gradient(to right, #E6384D 0%, #EB754F 100%) =
+!important
+          }
+          =2Egradient th,
+          =2Egradient h2,
+          =2Egradient p {
+          color: #ffffff !important;
+          }
+          =2Ebtn td {
+          border: 0 !important
+          }
+          =2Ebtn a,
+          =2Ebtn =2Egradient a,
+          =2Ebtn =2Ewhite a {
+          color: #000000 !important;
+          padding: 14px 20px !important
+          }
+          =2Ebtn =2Egradient a {
+          color: #ffffff !important
+          }
+          =2Eeneco-btn-primary a,
+          =2Eeneco-btn-secondary a,
+          =2Eeneco-btn-primary-alt table=2Ebtn td,
+          =2Eeneco-btn-secondary-alt table=2Ebtn td {
+          -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0=2E18) !important=
+;
+          -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0=2E18) !important;
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0=2E18) !important;
+          }
+          a=2Elink span=2Eunderline {
+          display: inline-block;
+          border-bottom: 0 !important;
+          background-image: linear-gradient(transparent calc(100% - 1px), =
+#eb4356 1px);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          -webkit-transition: background-size =2E2s;
+          transition: background-size =2E2s;
+          line-height: 1=2E5;
+          }
+          a=2Elink span=2Eunderline:hover {
+          background-size: 0 100% !important;
+          }
+		  =2Eeneco-footertext{
+		  font-family: Verdana, Geneva, sans-serif;
+		  font-weight: normal;=20
+		  font-size: 12px !important;
+		  line-height: 1=2E5;
+		  color: #cccccc;
+		  }
+		  =2Eeneco-text{
+		  font-family: Verdana, Geneva, sans-serif;
+		  font-weight: normal;
+		  font-size: 15px;
+		  line-height: 1=2E5;
+		  color: #000000;
+		  }
+          }
+        </style>
+  <!--[if !mso]><!-->
+  <style>
+          @media only screen and (-webkit-min-device-pixel-ratio:0) {
+          @font-face {
+          font-family: 'EtelkaLight';
+          src: url('https://email=2Eeneco=2Enl/Eneco/Fonts/etelka-light=2E=
+woff') format('woff'), url('https://email=2Eeneco=2Enl/Eneco/Fonts/etelka-l=
+ight=2Ewoff2') format('woff2');
+          font-style: normal;
+          font-weight: normal
+          }
+          @font-face {
+          font-family: 'EtelkaMedium';
+          src: url('https://email=2Eeneco=2Enl/Eneco/Fonts/etelkamediumpro=
+-webfont=2Ewoff') format('woff'), url('https://email=2Eeneco=2Enl/Eneco/Fon=
+ts/etelkamediumpro-webfont=2Ewoff2') format('woff2');
+          font-style: normal;
+          font-weight: bold
+          }
+          @font-face {
+          font-family: 'EtelkaBold';
+          src: url('https://email=2Eeneco=2Enl/Eneco/Fonts/etelkatextprobo=
+ld-webfont=2Ewoff') format('woff'), url('https://email=2Eeneco=2Enl/Eneco/F=
+onts/etelkatextprobold-webfont=2Ewoff2') format('woff2');
+          font-style: normal;
+          font-weight: bold
+          }
+
+          p,
+          a,
+          span,
+          div,
+          td {
+          font-family: 'EtelkaLight', Verdana, Geneva, sans-serif !importa=
+nt;
+          font-size: 16px !important;
+          font-weight: normal !important
+          }
+          =2Epreheader p,
+          =2Epreheader a,
+          =2Epreheader span,
+          =2Epreheader div,
+          =2Epreheader strong,
+          h1=2Esnippet,
+          =2Edata-table td,
+          =2Edata-table div,
+          =2Edata-table p,
+          =2Edata-table a {
+          font-size: 14px !important
+          }
+          =2Efooter p {
+          font-size: 12px !important
+          }
+          =2Efooter a {
+          font-size: 14px !important
+          }
+          strong,
+          h1,
+          h1=2Esnippet,
+          h2=2Eheading2-medium,
+          h2=2Eheading2-small,
+          h3 {
+          font-family: 'EtelkaMedium', Verdana, Geneva, sans-serif !import=
+ant
+          }
+          h1,
+          h2=2Eheading2-small,
+          h3 {
+          font-size: 20px !important
+          }
+          h2=2Eheading2-medium {
+          font-size: 28px !important
+          }
+          h2=2Eheading2-large {
+          font-family: 'EtelkaBold', Verdana, Geneva, sans-serif !importan=
+t;
+          font-size: 40px !important;
+          font-weight: bold !important
+          }
+          }
+        </style>
+  <!--<![endif]-->
+  <style>
+          @media screen and (min-width:660px) {
+          =2Eeneco-container {
+          width: 660px !important;
+          min-width: 660px !important
+          }
+          }
+        </style>=20
+  <style>
+          @media only screen and (max-width: 659px) {
+          =2Ew25pc {
+          min-width: 25% !important;
+          width: 25% !important;
+          max-width: 25% !important
+          }
+          =2Ew33pc {
+          min-width: 33=2E3333% !important;
+          width: 33=2E3333% !important;
+          max-width: 33=2E3333% !important
+          }
+          =2Ew50pc {
+          min-width: 50% !important;
+          width: 50% !important;
+          max-width: 50% !important
+          }
+          =2Ew100pc,
+          =2Eeneco-container {
+          min-width: 100% !important;
+          width: 100% !important;
+          max-width: 100% !important
+          }
+          =2Ew120px {
+          width: 120px !important
+          }
+          =2Emw20px {
+          min-width: 20px !important
+          }
+          u+=2Ebody =2Eeneco-wrapper {
+          width: 100% !important;
+          width: 100vw !important
+          }
+          =2Ewidth-auto {
+          width: auto !important
+          }
+          =2Eheight-auto {
+          height: auto !important
+          }
+          =2Ehide-on-mobile {
+          display: none !important
+          }
+          =2Eshow-on-mobile {
+          display: block !important;
+          width: auto !important;
+          max-height: inherit !important;
+          overflow: visible !important;
+          float: none !important
+          }
+          a=2Eeneco-phonenumber {
+          pointer-events: auto !important;
+          cursor: auto !important
+          }
+          =2Einline {
+          display: inline !important
+          }
+          =2Eblock {
+          display: block !important
+          }
+          =2Einline-block {
+          display: inline-block !important
+          }
+
+          /* Alignment */
+          =2Etal {
+          text-align: left !important
+          }
+          =2Etac {
+          text-align: center !important
+          }
+          =2Etar {
+          text-align: right !important
+          }
+          =2Evat {
+          vertical-align: top !important
+          }
+          =2Evam {
+          vertical-align: middle !important
+          }
+          =2Evab {
+          vertical-align: bottom !important
+          }
+          =2Efl {
+          float: left !important
+          }
+          =2Efc {
+          margin: 0 auto !important
+          }
+          =2Efr {
+          float: right !important
+          }
+          =2Etl-initial {
+          table-layout: initial !important
+          }
+
+          /* Margin */
+          =2Emb30 {
+          margin-bottom: 30px !important
+          }
+          =2Emb14 {
+          margin-bottom: 14px !important
+          }
+
+          /* Padding */
+          =2Ep0 {
+          padding: 0 !important
+          }
+          =2Epr0 {
+          padding-right: 0 !important
+          }
+          =2Epl0 {
+          padding-left: 0 !important
+          }
+          =2Epb5 {
+          padding-bottom: 5px !important
+          }
+          =2Ept14 {
+          padding-top: 14px !important
+          }
+          =2Epr10 {
+          padding-right: 10px !important
+          }
+          =2Epl10 {
+          padding-left: 10px !important
+          }
+          =2Ept20 {
+          padding-top: 20px !important
+          }
+          =2Epr20 {
+          padding-right: 20px !important
+          }
+          =2Epb20 {
+          padding-bottom: 20px !important
+          }
+          =2Epl20 {
+          padding-left: 20px !important
+          }
+          =2Ept30 {
+          padding-top: 30px !important
+          }
+          =2Ept35 {
+          padding-top: 35px !important
+          }
+          =2Epb35 {
+          padding-bottom: 35px !important
+          }
+          =2Ept40 {
+          padding-top: 40px !important
+          }
+          =2Epb40 {
+          padding-bottom: 40px !important
+          }
+          =2Ept76 {
+          padding-top: 76px !important
+          }
+
+          /* Font sizes */
+          =2Efs22,
+          h2=2Efs22 {
+          font-size: 22px !important
+          }
+          =2Efs36,
+          h2=2Efs36 {
+          font-size: 36px !important
+          }
+
+          /* Backgrounds */
+          =2Eno-bg-image-green {
+          background-image: none !important;
+          background: #A7DCAA !important;
+          background: -moz-linear-gradient(top, #a2daa5 0%, #dfefd7 100%) =
+!important;
+          background: -webkit-linear-gradient(top, #a2daa5 0%, #dfefd7 100=
+%) !important;
+          background: linear-gradient(to bottom, #a2daa5 0%, #dfefd7 100%)=
+ !important
+          }
+          =2Eno-bg-image-blue {
+          background-image: none !important;
+          background: #E1F4F1 !important;
+          background: -moz-linear-gradient(top, #72bdce 0%, #b1dddf 100%) =
+!important;
+          background: -webkit-linear-gradient(top, #72bdce 0%, #b1dddf 100=
+%) !important;
+          background: linear-gradient(to bottom, #72bdce 0%, #b1dddf 100%)=
+ !important
+          }
+          =2Ebg-block {
+          background-size: 100% 60% !important
+          }
+          }
+          @media only screen and (max-width: 480px) {
+          =2Ebg-block {
+          background-size: 90% 60% !important
+          }
+          }
+          @media only screen and (max-width: 380px) {
+          =2Ebg-block {
+          background-size: 75% 60% !important
+          }
+          }
+        </style>=20
+  <style>
+          u+=2Ebody a {
+          color: inherit;
+          text-decoration: inherit
+          }
+          u+=2Ebody =2Epreheader div,
+          u+=2Ebody =2Epreheader td,
+          u+=2Ebody =2Epreheader a,
+          u+=2Ebody =2Epreheader span {
+          color: #ffffff !important;
+          }
+          u+=2Ebody =2Egradient {
+          background: -moz-linear-gradient(left, #E6384D 0%, #EB754F 100%)=
+ !important;
+          background: -webkit-linear-gradient(left, #E6384D 0%, #EB754F 10=
+0%) !important;
+          background: -ms-linear-gradient(left, #E6384D 0%, #EB754F 100%) =
+!important;
+          background: linear-gradient(to right, #E6384D 0%, #EB754F 100%) =
+!important;
+          }
+          u+=2Ebody =2Egradient th,
+          u+=2Ebody =2Egradient h2,
+          u+=2Ebody =2Egradient p {
+          color: #ffffff !important;
+          }
+          u+=2Ebody =2Ebtn td {
+          border: 0 !important
+          }
+          u+=2Ebody =2Ebtn a,
+          u+=2Ebody =2Ebtn =2Egradient a,
+          u+=2Ebody =2Ebtn =2Ewhite a {
+          color: #000000 !important;
+          padding: 14px 20px !important
+          }
+          u+=2Ebody =2Ebtn =2Epurple a,
+          u+=2Ebody =2Ebtn =2Egradient a {
+          color: #ffffff !important
+          }
+          u+=2Ebody =2Ebtn =2Epurple:hover {
+          background: #f8f8f8!important;
+          border: #f8f8f8!important;
+          }
+          u+=2Ebody =2Ebtn =2Epurple:hover a {
+          color: #000000!important
+          }
+          u+=2Ebody a=2Elink span=2Eunderline:hover {
+          border-bottom: 1px solid transparent!important
+          }
+        </style>=20
+  <style>
+          @media screen yahoo {
+          =2Epreheader {
+          height: 46px!important
+          }
+          a=2Elink span=2Eunderline:hover {
+          border-bottom: 1px solid transparent!important
+          }
+          =2Eeneco-btn-primary-alt table=2Ebtn td:hover,
+          =2Eeneco-btn-secondary-alt table=2Ebtn td:hover {
+          border: 1px solid #300C38!important
+          }
+          =2Eeneco-btn-secondary-alt table=2Ebtn td=2Epurple:hover {
+          background: #f8f8f8!important;
+          border: #f8f8f8!important;
+          }
+          =2Eeneco-btn-secondary-alt table=2Ebtn td=2Epurple:hover a {
+          color: #000000!important
+          }
+          }
+        </style>=20
+  <style></style>=20
+  <style>
+          body[data-outlook-cycle] =2Ewhite {
+          background-color: #efefef !important
+          }
+          body[data-outlook-cycle] =2Epreheader div,
+          body[data-outlook-cycle] =2Epreheader td,
+          body[data-outlook-cycle] =2Epreheader a,
+          body[data-outlook-cycle] =2Epreheader span,
+          body[data-outlook-cycle] =2Ebtn =2Egradient a,
+          body[data-outlook-cycle] =2Egradient th,
+          body[data-outlook-cycle] =2Egradient h2,
+          body[data-outlook-cycle] =2Egradient p {
+          color: #000000 !important
+          }
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Epreheader div,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Epreheader td,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Epreheader a,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Epreheader span,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Ebtn =2Egradient a=
+,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Egradient th,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Egradient h2,
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] =2Egradient p,
+          body[data-outlook-cycle] =2Epurple p {
+          color: #ffffff !important
+          }
+          body[data-outlook-cycle] a=2Elink span=2Eunderline {
+          text-decoration: underline !important
+          }
+          body[data-outlook-cycle*=3D"INSERT_STYLES"] a=2Elink span=2Eunde=
+rline {
+          text-decoration: none !important
+          }
+        </style>=20
+  <style>
+          a[x-apple-data-detectors] {
+          color: inherit !important;
+          text-decoration: none !important
+          }
+        </style>=20
+  <style>
+          div[style*=3D"margin: 16px 0;"] {
+          margin: 0 !important;
+          max-width: 94% !important
+          }
+        </style>
+  <!--[if (gte mso 9)|(IE)]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<style>
+/* Outlook 2000 and above Specific CSS */
+table {
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt
+}
+td {
+    text-align: left;
+    vertical-align: top
+}
+h2 {
+	line-height: 40px !important
+}
+h3 {
+	line-height: 24px !important
+}
+p {
+	line-height: 21px !important
+}
+a=2Elink {
+	text-decoration: underline !important
+}
+=2Emso-gradient,
+=2Emso-gradient table,
+=2Emso-gradient div {
+	background-color: none !important;
+	background-color: transparent !important
+}
+=2Emso-gradient th,
+=2Emso-gradient h2,
+=2Emso-gradient p,
+=2Epreheader =2Emso-gradient a,
+=2Epreheader =2Emso-gradient span,
+=2Epreheader =2Emso-gradient div {
+	color: #ffffff !important
+}
+</style>
+<![endif]-->
+  <!--[if gte mso 12]>
+<style>
+/* Outlook 2007 and above Specific CSS */
+li {
+	margin: 5px 0 5px 20px !important;
+	text-indent: -1em
+}
+</style>
+<![endif]-->=20
+  <!--[if (gte mso 9)|(IE)]>
+<table role=3D"banner" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"width: 100%; background-color: #ffffff" class=3D"eneco-wrapper">
+	<tr>
+	<td>
+	<![endif]-->
+  <div role=3D"banner" style=3D"width: 100%; background-color: #ffffff" cl=
+ass=3D"eneco-wrapper">
+   <!--[if (gte mso 9)|(IE)]>
+        <table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"width: 100%" class=3D"preheader">
+				<tr>
+				<td height=3D"44" style=3D"height: 44px">
+						<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stro=
+ke=3D"false" style=3D"mso-width-percent: 1000; position: absolute; mso-posi=
+tion-horizontal: right">
+            <v:fill type=3D"gradient" color=3D"#eb754f" color2=3D"#e6384d"=
+ angle=3D"90" />
+            <v:textbox style=3D"mso-fit-shape-to-text:true" inset=3D"20,0,=
+0,-20px">           =20
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td height=3D"44" style=3D"height: 44px" class=3D"mso-gradient">
+				<![endif]-->
+   <div style=3D"width: 100%; background: #f8f8f8" class=3D"preheader grad=
+ient">
+    <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px;" class=3D"eneco-container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<![endif]-->
+    <div style=3D"margin: 0 auto; height: 44px; text-align: center; vertic=
+al-align: top; max-width: 660px" class=3D"eneco-container table">
+     <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" align=3D"center" style=3D"width: 640px">
+				<tr>
+				<td style=3D"height: 44px; text-align: left; vertical-align: middle; f=
+ont-family: Verdana, Geneva, sans-serif; font-weight: normal; font-size: 14=
+px; line-height: 1=2E2; color: #000000;">
+				<![endif]-->
+     <div style=3D"padding: 0 0 0 10px; height: 44px; text-align: left; ve=
+rtical-align: middle; font-family: Verdana, Geneva, sans-serif; font-weight=
+: normal; font-size: 14px; line-height: 1=2E2; color: #000000;" class=3D"hi=
+de-on-mobile td">
+      Wijziging in je tarief
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+				</td>
+				<td style=3D"height: 44px; text-align: right; vertical-align: middle; =
+font-family: Verdana, Geneva, sans-serif; font-weight: normal; font-size: 1=
+4px; line-height: 1=2E2; color: #000000;">
+				<![endif]-->
+     <div style=3D"padding: 0 10px 0 0; height: 44px; text-align: right; v=
+ertical-align: middle; font-family: Verdana, Geneva, sans-serif; font-weigh=
+t: normal; font-size: 14px; line-height: 1=2E2; color: #000000;" class=3D"p=
+r20 pl20 td">
+      <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:pxx7eRJ3=
+4VYUYNBpI9Tdtg:7ZzjVS34_VUXEjI5UHArHWzKDGMbUWMbCbSP1yYMWhcgb3w1uG6GU8muLRdc=
+oDexg8YM6slYbXgXdWf-sQjYOjWz88NpzoEPFxjybFgZuZOVA16DWbtbrxq9W3mzsKt7lb3QNxp=
+_HvPt9g7SIKfvQIDTiQVD02uqHYBZbuAAkB34kcUCjEXFPqQP3H2otl9k0qlM1ndcoNXu8KaNk_=
+sGtVvcLfQPdIdaijT5lsCRpCgathlRL8x2s5Bcy6oPedqpYGjMbUqHyQdJGoMWjS1i7PaOh73mh=
+C_Sndo-fpgLNdED6bG_7mUmrAkc0wu_RFGt5ru1g30GjtR_ViTXOwaxFSMcoFp4jd6ThnMLN5UX=
+nWqwdPXeKKcHk-iruH8Ua1jHcyttpYjLMW08DqO7ejLlswIEkXJIyNcdojtPCJjVKCIppd0auRz=
+1Tx9n_00pmvH2ci5ncmRrsHDhgEbAz-1Cy34Syl4NdI5A9l3mjhJPEpgSKOA03j_FjU9wS5nd_L=
+q1mBpwjzgktkZb2W7R6qL_ew:mQehkmNAQIeHzEUYK8A4e7gC_78-eGSZDw14509AUZQ" style=
+=3D"color: #000000; text-decoration: underline">Bekijk webversie</a>
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		</v:textbox>
+		</v:rect>
+		<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" stroke=3D"f" fill=3D"t=
+" fillcolor=3D"#ffffff" style=3D"width: 15pt; position: absolute; left: -20=
+px"></v:rect>
+		</td>
+		</tr>
+		</table>
+		<![endif]-->
+   <a name=3D"STACK_H_02_Header_PKOA"></a>
+   <!--[if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #ffffff">
+		<tr>
+		<td>
+		<![endif]-->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"header">
+    <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<![endif]-->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"eneco-container table">
+     <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" align=3D"center" style=3D"width: 660px">
+				<tr>
+				<td style=3D"padding: 12px 0 14px 0; text-align: left; vertical-align:=
+ top">
+				<![endif]-->
+     <div style=3D"padding: 12px 0 14px 0; text-align: left; vertical-alig=
+n: top" class=3D"hide-on-mobile td">
+      <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:CXLis2M7=
+xCOYeowDFzluvQ:In429k009Tff9Bi38zL3S2qulCyTXY0fX3xVp9kEUNefBvahWeuzAYnkYkz5=
+sF7dDSFMEve3e04dIs6LyzJsVjGAreEP1ygWTC9yrbabS2uyBj9qhiigyFaStgyou7zlaka6-NP=
+SoPbLGhO_DwH0w3B3ZHE5fvX8B0SloP9E5h6yJjBhjOyU8MriIWGKYMip9sFYIlY7jyVGzORzA6=
+PZOw:-Hu4Rc6gsa20jPcgcV9RwYitey4ZAXUhrhluRFyQe0A"><img src=3D"https://email=
+=2Eeneco=2Enl/Eneco/V3_logo_Eneco_@2x=2Epng" alt=3D"Eneco" width=3D"194" he=
+ight=3D"96" style=3D"border: 0; text-align: center; vertical-align: middle;=
+ font-family: Verdana, Geneva, sans-serif; font-weight: bold; font-size: 48=
+px; line-height: 96px; color: #d20f42" class=3D"logo"></a>
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+				</td>
+				<td style=3D"padding: 12px 10px 14px 0; text-align: right; vertical-al=
+ign: bottom">
+				<![endif]-->
+     <div style=3D"padding: 12px 10px 14px 0; text-align: right; vertical-=
+align: bottom" class=3D"pt14 pr20 pb20 pl20 td">
+      <!--[if (gte mso 9)|(IE)]>
+					<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" style=3D"width: 100%">
+					<tr>
+					<td style=3D"padding: 0 0 10px 0; text-align: right; vertical-align: =
+bottom; font-family: Verdana, Geneva, sans-serif; font-weight: 900; font-si=
+ze: 20px; line-height: 1=2E2; color: #000000"
+					<![endif]-->
+      <div style=3D"padding: 0 0 10px 0; text-align: right; vertical-align=
+: bottom" class=3D"pb5 tal">=20
+       <h1 style=3D"margin: 0; font-family: Verdana, Geneva, sans-serif; f=
+ont-size: 20px; line-height: 1=2E2; color: #000000"><strong>Nieuws over je =
+contract</strong></h1>=20
+      </div>
+      <!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					<tr>
+					<td style=3D"padding: 0 0 10px 0; text-align: right; vertical-align: =
+bottom; font-family: Verdana, Geneva, sans-serif; font-weight: normal; font=
+-size: 14px; line-height: 1=2E2; color: #000000"
+					<![endif]-->
+      <div style=3D"padding: 0 0 10px 0; text-align: right; vertical-align=
+: bottom; font-family: Verdana, Geneva, sans-serif; font-weight: normal; fo=
+nt-size: 14px; line-height: 1=2E2; color: #000000" class=3D"tal">
+       Klantnummer: 40879993-1
+      </div>
+      <!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<![endif]-->
+  </div>
+  <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<![endif]-->
+  <!--[if (gte mso 9)|(IE)]>
+	<table role=3D"main" style=3D"width: 100%; background-color: #ffffff" cla=
+ss=3D"eneco-wrapper">
+	<tr>
+	<td>
+	<![endif]-->
+  <div role=3D"main" style=3D"width: 100%; background-color: #ffffff" clas=
+s=3D"eneco-wrapper">
+   <a name=3D"STACK_P_03_Pushbox_TARCOM"></a>
+   <!--[if (gte mso 9)|(IE)]>
+					<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" style=3D"width: 100%; background-color: #ffffff">
+						<tr>
+							<td>
+								<![endif]-->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--[if (gte mso 9)|(IE)]>
+								<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-containe=
+r">
+									<tr>
+										<td style=3D"text-align: center; vertical-align: top">
+											<![endif]-->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"eneco-container table">
+     <!--[if (gte mso 9)|(IE)]>
+											<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"width: 100%">
+												<tr>
+													<td style=3D"padding: 10px 10px 24px 10px; text-align: center=
+; vertical-align: top">
+														<![endif]-->
+     <div style=3D"padding: 10px 10px 24px 10px; text-align: center; verti=
+cal-align: top" class=3D"pt14 pr0 pb20 pl0">
+      <!--[if (gte mso 9)|(IE)]>
+														<table role=3D"presentation" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"width: 100%">
+															<tr>
+																<td style=3D"text-align: left; vertical-align: top">
+																	<![endif]-->
+      <!--[if !mso]>
+																	<!-->
+      <div style=3D"display: none; width: 0; max-height: 0; overflow: hidd=
+en" class=3D"show-on-mobile tal">=20
+       <h2 style=3D"margin: 0 0 30px 0; font-family: Verdana, Geneva, sans=
+-serif; font-size: 32px; font-weight: bold; line-height: 1; color: #000000"=
+ class=3D"heading-black heading2-large pr20 pl20 fs36"> </h2>
+       <img src=3D"https://email=2Eeneco=2Enl/Eneco/V3_Beige_Mannen_met_ta=
+blet_Eneco=2Epng" alt=3D"" width=3D"640" style=3D"border: 0; vertical-align=
+: middle; min-width: 100%; width: 640px; max-width: 100%">
+      </div>
+      <!--<![endif]-->
+      <div style=3D"height: 256px; text-align: left; vertical-align: top; =
+background: url('https://email=2Eeneco=2Enl/Eneco/V3_Beige_Mannen_met_table=
+t_Eneco=2Epng') no-repeat center center/100% 100% transparent;" class=3D"hi=
+de-on-mobile">=20
+       <div style=3D"padding: 70px 0 0 20px;">
+        <!--[if mso]><table role=3D"presentation" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"width: 640px">
+                  <tr>
+                    <td style=3D"height: 256px; text-align: left; vertical=
+-align: top;">
+                      <v:image style=3D"width: 480pt; height: 237pt;" src=
+=3D"https://email=2Eeneco=2Enl/Eneco/V3_Beige_Mannen_met_tablet_Eneco=2Epng=
+" xmlns:v=3D"urn:schemas-microsoft-com:vml" />
+                      <v:rect href=3D"https://email=2Eeneco=2Enl/link?id=
+=3DfzZga8Vl-bU:vQRUl9mLW9O6yEP3PPtaYA:83dST0ZAzIvjmEjcc_lRj5ly_34nh6z9ssvon=
+3Xj2VBOUmxodiPKJNevPO9vP7Qxy1Ap6oxLpNgP3g5Pf_ET5A:dhYKN6_z8VT-3gNMtcUvQkfdU=
+938uzLfKEP1_3puwJ0" fill=3D"f" stroke=3D"f" style=3D"position: relative; wi=
+dth: 480pt; height: 237pt;" xmlns:v=3D"urn:schemas-microsoft-com:vml">
+                        <v:textbox inset=3D"0,0,0,0">
+                          <table role=3D"presentation" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" width=3D"100%">
+                            <tr>
+                              <td style=3D"width: 20px; height: 70px"></td=
+>
+                              <td style=3D"width: 360px"></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td><![endif]-->
+        <div style=3D"width: 360px; text-align: left; vertical-align: midd=
+le;">=20
+         <h2 style=3D"margin: 0; font-family: Verdana, Geneva, sans-serif;=
+ font-size: 36px; font-weight: bold; line-height: 1; color: #09354b" class=
+=3D"heading-purple heading2-large fs32"> </h2>=20
+        </div>
+        <!--[if mso]></td>
+                            </tr>
+                          </table>
+                        </v:textbox>
+                      </v:rect>
+                    </td>
+                  </tr>
+                </table><![endif]-->
+       </div>=20
+      </div>
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<![endif]-->
+   <a name=3D"STACK_S_04_TARCOM_Intro_VrijOpzegbaar_1maand"></a>
+   <!--[if (gte mso 9)|(IE)]>
+					<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" style=3D"width: 100%; background-color: #ffffff">
+						<tr>
+							<td>
+								<![endif]-->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--[if (gte mso 9)|(IE)]>
+								<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-containe=
+r">
+									<tr>
+										<td style=3D"text-align: center; vertical-align: top">
+											<![endif]-->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"eneco-container table">
+     <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 40px 20px 0 20px; text-align: left; vertical-ali=
+gn: top">
+				<!endif]-->
+     <div style=3D"padding: 10px 10px 24px 10px; text-align: center; verti=
+cal-align: top" class=3D"pt14 pr0 pb20 pl0">=20
+      <div style=3D"padding: 20px 20px 0 20px; text-align: left; vertical-=
+align: top;">=20
+       <h2 style=3D"margin: 0 0 20px 0; font-family: Verdana, Geneva, sans=
+-serif; font-size: 18px; line-height: 1=2E2; color: #000000" class=3D"headi=
+ng-black heading2-small"><strong>Beste mevrouw Visser,</strong></h2>
+       <br>
+       <span class=3D"eneco-text">De leveringstarieven van je energiecontr=
+act wijzigen per 20-07-2022=2E Natuurlijk blijven wij&nbsp;groene stroom le=
+veren&nbsp;en&nbsp;gas=2E </span>
+       <br>
+       <br>
+       <span class=3D"eneco-text">We proberen de energie zo scherp mogelij=
+k in te kopen en daarom bieden we je over een maand nieuwe tarieven aan=2E =
+Voor de hoogte van die tarieven blijven we afhankelijk van de marktontwikke=
+lingen die op dit moment uitzonderlijk zijn=2E </span>
+       <br>
+       <br>
+       <span class=3D"eneco-text">We kunnen ons voorstellen dat je meer wi=
+lt weten over de gestegen tarieven en wat dit precies betekent voor je maan=
+delijkse termijnbedrag=2E De belangrijkste informatie en meestgestelde vrag=
+en over deze communicatie zijn terug te vinden op </span>
+       <a href=3D"https://www=2Eeneco=2Enl/maandtarieven" target=3D"_blank=
+" style=3D"color: rgb(0, 175, 219); font-size: 14px; text-decoration: none;=
+">www=2Eeneco=2Enl/maandtarieven</a>
+       <span class=3D"eneco-text">=2E </span>
+       <br>
+       <br>
+       <strong>Tijdelijke btw-verlaging </strong>
+       <br>
+       <span class=3D"eneco-text">Om de gevolgen van de stijgende energiep=
+rijzen te verzachten, verlaagt de overheid de btw op energie tijdelijk van =
+21% naar 9%=2E Het verlaagde tarief zal van 1 juli 2022 tot en met 31 decem=
+ber 2022 gelden=2E Dit berekenen we door op je jaarnota en in het daarin op=
+genomen nieuwe termijnbedrag=2E Wil je meer weten? Kijk op </span>
+       <a href=3D"https://www=2Eeneco=2Enl/btw-verlaging" target=3D"_blank=
+" style=3D"color: rgb(0, 175, 219); font-size: 14px; text-decoration: none;=
+">www=2Eeneco=2Enl/btw-verlaging</a>
+       <span class=3D"eneco-text">=2E&nbsp;&nbsp;</span>
+       <br>
+       <br>
+       <strong>Kosteloos opzeggen </strong>
+       <br>
+       <span class=3D"eneco-text">Je kunt op elk moment je contract kostel=
+oos opzeggen=2E Houd hierbij rekening met een opzegtermijn van 9 dagen=2E H=
+eb je onlangs al een nieuw contract afgesloten? Beschouw deze e-mail dan al=
+s niet verzonden=2E</span>
+       <br>
+      </div>
+      <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<!endif]-->
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<!endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]-->
+   <a name=3D"STACK_C_14_Tabel_NieuweTarieven_Stroom2"></a>
+   <!--[if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #ffffff">
+		<tr>
+		<td>
+		<![endif]-->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<![endif]-->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"container table">
+     <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 10px 10px 24px 10px; text-align: center; vertica=
+l-align: top">
+				<![endif]-->
+     <div style=3D"padding: 10px 10px 10px 10px; text-align: center; verti=
+cal-align: top" class=3D"pt14 pr0 pb20 pl0">
+      <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 0 20px 0 20px; text-align: left; vertical-align:=
+ bottom">
+				<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+      <table style=3D"width: 100%; font-family: Verdana, Geneva, sans-seri=
+f; font-size: 15px; line-height: 1=2E5; color: #000000" class=3D"data-table=
+">=20
+       <tbody>
+        <tr>=20
+         <th colspan=3D"2" class=3D"mso-gradient">
+          <!--[if (gte mso 9)|(IE)]>
+										<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" =
+stroke=3D"false" style=3D"width: 480pt">
+            							<v:fill type=3D"gradient" color=3D"#eb754f" color2=3D"#=
+e6384d" angle=3D"90" />
+            							<v:textbox style=3D"mso-fit-shape-to-text:true" inset=
+=3D"0,0,0,-20px">
+										<![endif]-->
+          <table role=3D"presentation" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"width: 100%; background-color: #f8f8f8; font-family:=
+ Verdana, Geneva, sans-serif; font-size: 15px; line-height: 1=2E5; color: #=
+000000" class=3D"gradient">=20
+           <tbody>
+            <tr>=20
+             <th style=3D"padding: 12px 20px 12px 20px; text-align: left; =
+vertical-align: middle"><strong style=3D"font-weight: bold">Je nieuwe stroo=
+mtarief per 20-07-2022</strong></th>=20
+             <th style=3D"padding: 12px 20px 12px 20px; text-align: right;=
+ vertical-align: middle"><strong style=3D"font-weight: bold" class=3D"hide-=
+on-mobile"></strong><strong></strong></th>=20
+            </tr>=20
+           </tbody>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+										</v:textbox>
+										</v:rect>
+										<![endif]--></th>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">Eneco Hollandsewind &amp; Zon Variabel Vrij per kWh normaal</span></t=
+d>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco=
+-text">=E2=82=AC 0,37655</span></td>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">Eneco Hollandsewind &amp; Zon Variabel Vrij per kWh dal</span></td>=
+=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco=
+-text">=E2=82=AC 0,32669</span></td>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">(Voorheen: Eneco Hollandsewind &amp; Zon Variabel Vrij)</span></td>=
+=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"></td>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">Vaste leveringskosten stroom per maand</span></td>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco=
+-text">=E2=82=AC 5,40</span></td>=20
+        </tr>=20
+       </tbody>
+      </table>=20
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<![endif]-->
+   <a name=3D"STACK_C_14_Tabel_NieuweTarieven_Gas"></a>
+   <!--[if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #ffffff">
+		<tr>
+		<td>
+		<![endif]-->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<![endif]-->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"container table">
+     <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 10px 10px 24px 10px; text-align: center; vertica=
+l-align: top">
+				<![endif]-->
+     <div style=3D"padding: 10px 10px 10px 10px; text-align: center; verti=
+cal-align: top" class=3D"pt14 pr0 pb20 pl0">
+      <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 0 20px 0 20px; text-align: left; vertical-align:=
+ bottom">
+				<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+      <table style=3D"width: 100%; font-family: Verdana, Geneva, sans-seri=
+f; font-size: 15px; line-height: 1=2E5; color: #000000" class=3D"data-table=
+">=20
+       <tbody>
+        <tr>=20
+         <th colspan=3D"2" class=3D"mso-gradient">
+          <!--[if (gte mso 9)|(IE)]>
+										<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" =
+stroke=3D"false" style=3D"width: 480pt">
+            							<v:fill type=3D"gradient" color=3D"#eb754f" color2=3D"#=
+e6384d" angle=3D"90" />
+            							<v:textbox style=3D"mso-fit-shape-to-text:true" inset=
+=3D"0,0,0,-20px">
+										<![endif]-->
+          <table role=3D"presentation" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"width: 100%; background-color: #f8f8f8; font-family:=
+ Verdana, Geneva, sans-serif; font-size: 15px; line-height: 1=2E5; color: #=
+000000" class=3D"gradient">=20
+           <tbody>
+            <tr>=20
+             <th style=3D"padding: 12px 20px 12px 20px; text-align: left; =
+vertical-align: middle"><strong style=3D"font-weight: bold">Je nieuwe gasta=
+rief per 20-07-2022</strong></th>=20
+             <th style=3D"padding: 12px 20px 12px 20px; text-align: right;=
+ vertical-align: middle"><strong style=3D"font-weight: bold" class=3D"hide-=
+on-mobile"></strong><strong></strong></th>=20
+            </tr>=20
+           </tbody>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+										</v:textbox>
+										</v:rect>
+										<![endif]--></th>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">Eneco CO2-Gecompenseerd Gas Variabel Vrij per m3</span></td>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco=
+-text">=E2=82=AC 1,67301</span></td>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">(Voorheen: Eneco CO2-Gecompenseerd Gas Variabel Vrij)</span></td>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"></td>=20
+        </tr>=20
+        <tr>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: left; vert=
+ical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco-=
+text">Vaste leveringskosten gas per maand</span></td>=20
+         <td style=3D"padding: 12px 20px 12px 20px; text-align: right; ver=
+tical-align: middle; border-bottom: 1px solid #ededed"><span class=3D"eneco=
+-text">=E2=82=AC 6,52</span></td>=20
+        </tr>=20
+       </tbody>
+      </table>=20
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<![endif]-->
+   <a name=3D"STACK_S_05_Footer_Tabel_EG"></a>
+   <!--
+      [if (gte mso 9)|(IE)]>
+					<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" style=3D"width: 100%; background-color: #ffffff">
+						<tr>
+							<td>
+								<![endif]
+    -->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--
+        [if (gte mso 9)|(IE)]>
+								<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-containe=
+r">
+									<tr>
+										<td style=3D"text-align: center; vertical-align: top">
+											<![endif]
+      -->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"eneco-container table">
+     <!--
+          [if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 40px 20px 0 20px; text-align: left; vertical-ali=
+gn: top">
+				<!endif]
+        -->
+     <div style=3D"padding: 10px 10px 24px 10px; text-align: center; verti=
+cal-align: top" class=3D"pt14 pr0 pb20 pl0">=20
+      <div style=3D"padding: 20px 20px 0 20px; text-align: left; vertical-=
+align: top;">
+       <span class=3D"eneco-text" style=3D"color: #cccccc">Deze leveringst=
+arieven zijn inclusief een btw-tarief van 9%, en overheidsheffingen, bij ee=
+n jaarlijks verbruik tot 10=2E000 kWh en 5=2E000 m=C2=B3=2E Bij gas ook inc=
+lusief regiotoeslag gas=2E Van 1 juli 2022 t/m 31 december 2022 geldt er ti=
+jdelijk een btw-tarief van 9%=2E Dit berekenen we automatisch door=2E Op de=
+ jaarnota noemen we het leveringstarief apart van de overheidsheffingen=2E =
+De energiebelasting over 2022 is voor stroom =E2=82=AC 0,04010 per kWh en v=
+oor gas =E2=82=AC 0,39591 per m=C2=B3=2E De Opslag Duurzame Energie is voor=
+ stroom =E2=82=AC 0,03325 per kWh en voor gas =E2=82=AC 0,09429 per m=C2=B3=
+=2E Deze tarieven zijn inclusief 9% btw van 1 juli 2022 t/m 31 december 202=
+2=2E De overheidsheffingen voor 2022 zijn automatisch verrekend in je tarie=
+ven=2E Dit kun je ook terugzien in </span>
+       <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:bBkXUuc=
+AgxEmY4KNpBfVaQ:qykTR_g3mTbhqqimhxgvClDLzeb0HkGQTMI9b1WVGaxi0dbOvpqM-cp6cAc=
+72pMpAYsVUVYUBR_v60-zpUSOIhN2A4TrB16aI63vsOoS2VjlMsdnTmB9S-AeoyNlRMIQ:cZ4b0=
+j0ssZShhOoXrFk28Oa6k48Rh6Wg1TxDIVE0TCc" target=3D"_blank" style=3D"color: #=
+EB4356; font-size: 14px; text-decoration: none;">Mijn Eneco</a>
+       <span class=3D"eneco-text" style=3D"color: #cccccc">&nbsp;en je kun=
+t daarin ook je termijnbedrag aanpassen=2E Genoemde tarieven zijn onder voo=
+rbehoud van eventuele (wijzigingen in) overheidsbesluiten of onvoorziene wi=
+jzigingen in de marktomstandigheden=2E Daarnaast betaal je aan ons netbehee=
+rkosten voor je aansluiting en voor het transport=2E Wij dragen die kosten =
+af aan je netbeheerder=2E De netbeheerkosten worden op de jaarnota per dag =
+verrekend=2E Dit komt omdat de jaarnota meerdere kalenderjaren kan betreffe=
+n en netbeheerkosten in de regel jaarlijks wijzigen=2E Wil je meer weten ov=
+er de opbouw van tarieven? Kijk dan op </span>
+       <a href=3D"https://www=2Eeneco=2Enl/energietarieven" target=3D"_bla=
+nk" style=3D"color: #EB4356; font-size: 14px; text-decoration: none;">eneco=
+=2Enl/energietarieven</a>
+       <span class=3D"eneco-text" style=3D"color: #cccccc">=2E </span>
+       <br>
+      </div>
+      <!--
+            [if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<!endif]
+          -->
+     </div>
+     <!--
+          [if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<!endif]
+        -->
+    </div>
+    <!--
+        [if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]
+      -->
+   </div>
+   <!--
+      [if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]
+    -->
+   <!--
+    [if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #ffffff">
+		<tr>
+		<td>
+		<![endif]
+  -->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--
+      [if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<![endif]
+    -->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"container table">
+     <!--
+        [if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 10px 10px 24px 10px; text-align: center; vertica=
+l-align: top">
+				<![endif]
+      -->
+     <div style=3D"padding: 10px 10px 24px 10px; text-align: center; verti=
+cal-align: top" class=3D"pt14 pr0 pb20 pl0">
+      <!--
+          [if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"text-align: left; vertical-align: top">
+				<![endif]
+        -->
+      <div style=3D"display: none; width: 0; height: 0; max-height: 0; ove=
+rflow: hidden; text-align: left; vertical-align: top;" class=3D"show-on-mob=
+ile height-auto pr20 pl20">=20
+       <h3 style=3D"margin: 0 0 24px 0; font-family: Verdana, Geneva, sans=
+-serif; font-size: 20px; font-weight: bold; line-height: 1=2E1; color: #552=
+748" class=3D"heading-purple heading2-medium"></h3>=20
+      </div>=20
+      <div style=3D"height: 288px; text-align: left; vertical-align: botto=
+m; background: url('background_pink_block_right@1x=2Epng') no-repeat right =
+top/100% 100% transparent" class=3D"bg-block height-auto">
+       <!--
+            [if !mso]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 640px">
+				<tr>
+				<td style=3D"height: 288px; text-align: left; vertical-align: bottom;"=
+>
+				<v:image xmlns:v=3D"urn:schemas-microsoft-com:vml" style=3D"width: 480=
+pt; height: 216pt;" src=3D"background_pink_block_right@1x=2Epng" />
+				<v:rect href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:Kaa87=
+JQRp6xJ2-pGLXVejQ:2auWJ0kd3sfnWU0EdtJZwyhMZg_cPSTbF0tIjH29LHtapeBdwYU-n2Ll9=
+zul6a7ljX5Ngshw_yd4K5ZRQjQkcg:Hm_L_UxplYcGDU43KYb0Nqq28K7w4pnKunQLDwu06Rk" =
+xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"f" stroke=3D"f" style=3D"=
+position: relative; width: 480pt; height: 216pt;">
+				<v:textbox inset=3D"0,0,0,0">
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0">
+					<tr>
+						<td style=3D"width: 197px; height: 35px"> </td>
+						<td style=3D"width: 35px"> </td>
+						<td style=3D"width: 373px"> </td>
+						<td style=3D"width: 35px"> </td>
+					</tr>
+					<tr>
+						<td style=3D"width: 197px">
+						<![endif]
+          -->
+       <div style=3D"padding: 65px 35px 0 0" class=3D"td block">
+        <a href=3D""><img src=3D"https://email=2Eeneco=2Enl/Eneco/Telefoon=
+=2Epng" alt=3D"" width=3D"100px" style=3D"border: 0; vertical-align: middle=
+; width: 100px"></a>
+       </div>
+       <!--
+            [if !mso]>
+						</td>
+						<td style=3D"width: 35px"> </td>
+						<td style=3D"width: 373px; text-align: left; vertical-align: top;">
+						<![endif]
+          -->
+       <div style=3D"padding: 35px 15px 0 0; text-align: left; vertical-al=
+ign: top;" class=3D"td block pt40 pr20 pl20">=20
+        <h2 style=3D"margin: 0 0 20px 0; font-family: Verdana, Geneva, san=
+s-serif; font-size: 18px; font-weight: bold; line-height: 1=2E2; color: #55=
+2748" class=3D"heading-purple heading2-small hide-on-mobile"></h2>=20
+        <p style=3D"margin: 0 0 24px 0; font-family: Verdana, Geneva, sans=
+-serif; font-weight: normal; font-size: 15px; line-height: 1=2E5; color: #0=
+00000"> </p>
+        <h2 style=3D"margin: 0 0 20px 0; font-family: Verdana, Geneva, san=
+s-serif; font-size: 18px; line-height: 1=2E2; color: #000000" class=3D"head=
+ing-black heading2-small"><strong>Heb je een vraag?</strong></h2>
+        <span class=3D"eneco-text">We helpen je graag verder=2E Stel je vr=
+aag eenvoudig aan onze </span>
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:heUO35=
+2xaSo95z2N1wKYIw:fzTfsa0KmTLx1tzyNiQvUS3XXgwOyTu8s-4UhkkwjZrUmyzA7U6qGkt3Ss=
+nMGv5uluSV0mYtTT5KDqNDiYpQrxCQMbn61agWmGcFkDOoqZckFthqMnQ2_ScvUaNUUt_awL4Qw=
+Tur4EzqQSGVIWH1vzkKWLSr_zH43y4Sc53iI3o:lDgcElAnHwqW_jas_2pXLHhJkcxkefmgU7rD=
+SO4G5Qk" target=3D"_blank" style=3D"color: rgb(0, 175, 219); font-size: 14p=
+x; text-decoration: none;">Klantenservice</a>
+        <span class=3D"eneco-text">=2E Ook kun je voor alle informatie ove=
+r je producten, tarieven en verbruik altijd terecht in de </span>
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:ETAePg=
+CoBQramtfoN1Ed8A:MxSrDJlntfkyRl6xDClepoZYIIyopDKKwIDLiUYSTdRkB8edhh8tm9EbUW=
+OAR4vxfAMyBGroEANNucWXTOEgEYDMWul9dcuTG27sNwBNBOYO2fr-EEMZaGSjpxaHmD_9p59tU=
+LMUIfD9Cu3WZKq5ESvyXDZubeJO5ipd_HXijNw:G5g8cBR5XcXGLB2PPbeRjxSfbL3P6xQ9a-oJ=
+MNdAdL8" target=3D"_blank" style=3D"color: rgb(0, 175, 219); font-size: 14p=
+x; text-decoration: none;">Eneco app</a>
+        <span class=3D"eneco-text">&nbsp;of in </span>
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:zztFxH=
+B2EFtLNAIIoDN6Dw:BgZTtKw74ZGZTnph9XwLghQSCu8yW36iXFs2RjPEXNTv6WL7c4UHRz4SfR=
+QSJmTJ6B4MEGaDI_TSWlnS5ZOLQZqTOYPB2Ff_aeEmomhdnkp59z8F1xPP9bj6aumBYQS2:E-WA=
+905bExg7aUgjyQsPbIOVScDhM2TSAABcXcWdpAs" target=3D"_blank" style=3D"color: =
+rgb(0, 175, 219); font-size: 14px; text-decoration: none;">Mijn Eneco</a>
+        <span class=3D"eneco-text">=2E</span>
+        <br>
+        <br>
+        <p></p>
+        <!--
+              [if (gte mso 9)|(IE)]>
+						<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0">
+						<tr>
+						<td style=3D"padding: 0 0 24px 0; text-align: left; vertical-align: =
+top">
+						<![endif]
+            -->
+        <!--
+              [if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]
+            -->
+       </div>
+       <!--
+            [if !mso]>
+						</td>
+						<td style=3D"width: 35px"> </td>
+					</tr>
+				</table>
+				</v:textbox>
+				</v:rect>
+				</td>
+				</tr>
+				</table>
+				<![endif]
+          -->
+      </div>
+      <!--
+          [if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]
+        -->
+     </div>
+     <!--
+        [if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]
+      -->
+    </div>
+    <!--
+      [if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]
+    -->
+   </div>
+   <!--
+    [if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<![endif]
+  -->
+   <a name=3D"STACK_U_01_Usabilla_wat_vind_je_V3"></a>
+   <!--[if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #ffffff">
+		<tr>
+		<td>
+		<!endif]-->
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"content"=
+>
+    <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<!endif]-->
+    <div style=3D"margin: 0 auto; text-align: center; vertical-align: top;=
+ width: 100%; max-width: 660px" class=3D"eneco-container table">
+     <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 45px 20px 45px 20px; text-align: center; vertica=
+l-align: middle">
+				<!endif]-->
+     <div style=3D"padding: 45px 20px 45px 20px; text-align: center; verti=
+cal-align: middle" class=3D"pt35 pb35">=20
+      <h2 style=3D"margin: 0 0 24px 0; font-family: Verdana, Geneva, sans-=
+serif; font-size: 24px; font-weight: bold; line-height: 1=2E2; color: #0000=
+00" class=3D"heading-black heading2-medium mb14">Wat vind je van deze e-mai=
+l?</h2>
+      <!--[if (gte mso 9)|(IE)]>
+							<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center">
+							<tr>
+							<td style=3D"text-align: center; vertical-align: middle">
+							<!endif]-->
+      <div style=3D"margin: 0 auto; max-width: 305px" class=3D"table">
+       <!--[if (gte mso 9)|(IE)]>
+							<td style=3D"padding: 0 15px 0 0; text-align: center; vertical-alig=
+n: middle">
+							<!endif]-->
+       <div style=3D"padding: 0 15px 0 0" class=3D"td pr10">
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:LiXMcL=
+nKk6INI_5Ey_V0xw:OKasHNdE4bZKMqaIaXgJ8XrUAW7nW_IA8uTxPKJslq2H9EqKoudBMvuWZo=
+QQuA3sOIMSL9ye8vQXKMzoPBq5rzL1l8Pu-BUKyx2aDxDFeBAjg1oHHlzoh6bP_do1VGgZa2NtO=
+GfUPh0qBMRr3UZjFjY90OnkK3Kf948w3QkLkcYGLF_BRUAkQ4ALUvyaDunp5ASjSRKLLcBWeZEI=
+4tdJbA:GsQ36k8LOTgeEdsxGg-VuI8nboBTv1o7IbNP4VcemyY"><img src=3D"https://ema=
+il=2Eeneco=2Enl/Eneco/V3_usabilla_hate_Eneco_@2x=2Epng" srcset=3D"hate@2x=
+=2Epng 2x, hate@3x=2Epng 3x" alt=3D"Hate" width=3D"37" style=3D"border: 0; =
+vertical-align: middle;"></a>
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+							</td><td style=3D"padding: 0 15px 0 15px; text-align: center; verti=
+cal-align: middle">
+							<!endif]-->
+       <div style=3D"padding: 0 15px 0 15px" class=3D"td pr10 pl10">
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:G8ayFH=
+pNaSmG_hnRc4Vn5g:EuDDeKZF6tz5_l_dJTx4BOLO3snbvYQ86GZdZwflzmBHQivg_EBgjM7SW2=
+BQ2SUXFsAYVikm99JDo9EdA8r98hNiRuLdjgnrpx_AW-x6IMCuwtAE9NTqpgFO5T7bwv3CuNFmM=
+JIfc2wxzsQ-nHqRkGAYMZPy0b8XW5MicZuasgAgztXeGi3xMWLWvxWVL-Gc1PXWVzG7fUseXwxf=
+krIQTg:w8vwPivssXddGI6mwdwaoH8sSTg-xNKypQjsZPsrwYA"><img src=3D"https://ema=
+il=2Eeneco=2Enl/Eneco/V3_usabilla_dislike_Eneco_@2x=2Epng" srcset=3D"dislik=
+e@2x=2Epng 2x, dislike@3x=2Epng 3x" alt=3D"Dislike" width=3D"37" style=3D"b=
+order: 0; vertical-align: middle;"></a>
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+							</td><td style=3D"padding: 0 15px 0 15px; text-align: center; verti=
+cal-align: middle">
+							<!endif]-->
+       <div style=3D"padding: 0 15px 0 15px" class=3D"td pr10 pl10">
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:MW0841=
+D4--JCnQ24iqaHbQ:uoVDi9OE-SZWZMI02de7MCDGSo472Si1VjgTO8SX7Hn1XJZ2fOqwU0ycz0=
+bLhCWtdk9Qst3wX8b13x-LOTgikta0RTA7i77-EsbDyl3DvYAyN7T-iEGNAXfI3xEGDra3puz16=
+PorgrKWYZ8-1b7TaOWaQZQvfUHFeqDglaZMrdN5z2CpuvB2GQLqW9ZmnCTITr3QumgVVK_HjsW_=
+JrjkRQ:eOhHs2VwNdGkY7XLZjPjmNM6pbmBfCK8dj6dz5KbClo"><img src=3D"https://ema=
+il=2Eeneco=2Enl/Eneco/V3_usabilla_neutral_Eneco_@2x=2Epng" srcset=3D"neutra=
+l@2x=2Epng 2x, neutral@3x=2Epng 3x" alt=3D"Neutral" width=3D"37" style=3D"b=
+order: 0; vertical-align: middle;"></a>
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+							</td><td style=3D"padding: 0 15px 0 15px; text-align: center; verti=
+cal-align: middle">
+							<!endif]-->
+       <div style=3D"padding: 0 15px 0 15px" class=3D"td pr10 pl10">
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:QSD4H0=
+NKn3RA-rEWZ6nzkw:icrDcXGr7h8IdwcjqTltwGsdhENzeM7AiwUhycrVoc6lcTGXpMrWZIDyt_=
+q-SGXGfSCgJ3_Px_5uRf36z3Rd9FEgakClceoGwxAa4753HSnbO6ZWIwGgPTB8SvqRhGvI3gF8V=
+lF0sZxmTQxa_-qeCJMzw8kOOCRQojE_FJj49V5_HZ9OlunBcZCbPE5oz60wLKVL0HlH9wBh2y5P=
+yDhe7w:PvTAvhJRDhowRTOzjyHXeBQ5uTx4LD6O3ihpSfUWDmc"><img src=3D"https://ema=
+il=2Eeneco=2Enl/Eneco/V3_usabilla_like_Eneco_@2x=2Epng" srcset=3D"like@2x=
+=2Epng 2x, like@3x=2Epng 3x" alt=3D"Like" width=3D"37" style=3D"border: 0; =
+vertical-align: middle;"></a>
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+							</td><td style=3D"padding: 0 15px 0 15px; text-align: center; verti=
+cal-align: middle">
+							<!endif]-->
+       <div style=3D"padding: 0 0 0 15px" class=3D"td pl10">
+        <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:nIVNSC=
+u5F-cGeZBBDfhfPQ:OLc_wEtMssDyKPl-hWUgk5azCZXSEl3Y4-RDqziNa4dX8xTAcBtjBWLOg9=
+6gPOxRy6eptpoiOe78kZkTaiUQHX7QQ4dfxUSszOlHfpgulC-e-wC7JjqyUvT9zAu0JYOcBKxYB=
+lyZbiaccVEbDo8VmF9df6uLwR68jDi0wJ4zjK5U7AYleoMScsaGjcVgHLs6_NlL6HzoNKkC43Q9=
+QzxfgQ:dIZHl4n0R1tGgt3hio6CNI6bZlngJQBYHk8Y-osSTJ4"><img src=3D"https://ema=
+il=2Eeneco=2Enl/Eneco/V3_usabilla_love_Eneco_@2x=2Epng" srcset=3D"love@2x=
+=2Epng 2x, love@3x=2Epng 3x" alt=3D"Love" width=3D"37" style=3D"border: 0; =
+vertical-align: middle;"></a>
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<!endif]-->
+      </div>
+      <!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<!endif]-->
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<!endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<!endif]-->
+   </div>
+   <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]-->
+   <a name=3D"STACK_F_02_PAYOFF_Footer_Standaard_FAC641"></a>
+   <div style=3D"width: 100%; background-color: #ffffff" class=3D"eneco-wr=
+apper">
+    <!--[if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #F8F8F8">
+		<tr>
+		<td>
+		<!endif]-->
+    <div style=3D"width: 100%; background-color: #F8F8F8" class=3D"footer"=
+>
+     <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<!endif]-->
+     <div style=3D"margin: 0 auto; text-align: center; vertical-align: top=
+; width: 100%; max-width: 660px" class=3D"eneco-container table">
+      <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 40px 10px 30px 10px; text-align: center; vertica=
+l-align: middle">
+				<!endif]-->
+      <div dir=3D"rtl" style=3D"padding: 40px 10px 30px 10px; direction: r=
+tl; text-align: left; vertical-align: middle" class=3D"pt35 pr0 pb35 pl0">
+       <!--[if (gte mso 9)|(IE)]>
+				<table dir=3D"rtl" role=3D"presentation" width=3D"100%">
+		  		<tr>
+			  	<td dir=3D"ltr" style=3D"padding: 0 20px 0 20px; text-align: right; =
+vertical-align: middle">
+				<!endif]-->
+       <div dir=3D"ltr" style=3D"direction: ltr; text-align: right; vertic=
+al-align: middle" class=3D"td block tac">=20
+        <div style=3D"padding: 0 20px 0 20px; text-align: right; vertical-=
+align: middle" class=3D"table fc">
+         <!--[if (gte mso 9)|(IE)]>
+						<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"right">
+			  			<tr>
+				  		<td style=3D"padding: 0 5px 0 5px; text-align: center; vertical-al=
+ign: middle">
+						<!endif]-->
+         <div style=3D"padding: 0 5px 0 5px; text-align: center; vertical-=
+align: middle" class=3D"td pr10 pl10">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:62cI=
+w9ZJP5QgthAJwKfCAQ:C3RV9uJnwwDDbZxazeTUiQngm6h0s06ShCiCx8MnmIpqSVMbcravN7Vm=
+BdmHFEGM4K1BMVvrsAH8V-V687orAhCIDYj_sgf84Qm2xx7YDHPX9GTlqgjDtgf5ObZCzxAHNOD=
+M8r5ps6hMwRt2mUYBaJbu-TWK8Ybo6uQ9fz7o8GsRO8_eYbLT_XLjhNYYUQPaRlsYbRu-tRpDP8=
+-si2uHUWXQHAURe-NWSoBJ0a9ZXNc:4h5HyUsrSP00PCt1DtOsk5D4vU0uRYsALeAYfo0QmTk">=
+<img src=3D"https://email=2Eeneco=2Enl/Eneco/V3_facebook_Eneco_@2x=2Epng" s=
+rcset=3D"facebook@2x=2Epng 2x, facebook@3x=2Epng 3x" alt=3D"facebook" width=
+=3D"27" style=3D"border: 0; vertical-align: middle;"></a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]></td>
+				  		<td style=3D"padding: 0 5px 0 5px; text-align: center; vertical-al=
+ign: middle">
+						<!endif]-->
+         <div style=3D"padding: 0 5px 0 5px; text-align: center; vertical-=
+align: middle" class=3D"td pr10 pl10">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:I9B0=
+HaSY8cQ1FTMi1e11MQ:X3MuOUXAWYYT51HzgiH_S5tRzr7hAEaKJ8HlfulRNp0IWEJxRV5SzxZ6=
+wOzOp2fxKkOLFzrDp_dyuLDfT_on7JeBqwWIYcQPYq13S4tydF6EbG72mNIZ8dlFX15r4MbCLm2=
+6CD839OU11lOSoP3bAQ:c3H4g6hU7td6Fvfav-RSufQyd-JBgwD2acOJE6cSX44"><img src=
+=3D"https://email=2Eeneco=2Enl/Eneco/V3_linkedin_Eneco_@2x=2Epng" srcset=3D=
+"linkedin@2x=2Epng 2x, linkedin@3x=2Epng 3x" alt=3D"linkedin" width=3D"27" =
+style=3D"border: 0; vertical-align: middle;"></a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]></td>
+				  		<td style=3D"padding: 0 5px 0 5px; text-align: center; vertical-al=
+ign: middle">
+						<!endif]-->
+         <div style=3D"padding: 0 5px 0 5px; text-align: center; vertical-=
+align: middle" class=3D"td pr10 pl10">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:zLew=
+aKtV03frsZ0nT6O5Nw:LWseSanhy-JcEquEeKZjYxP_XFA93qgHsbrWxdKDiEKDUOixslY1xLF-=
+cy3uQoNBphdYrzF-hzTKWUduUIwJw0JpAROOYvavuOfFBq_Gixdx3DdALmgI_vZ9yKVGklDtY_b=
+-FyczPlz0kP42PB1Zr2roA9Ohe4wk3s2DoW2TjhWy7-m2tk-irmiYpJPbdFLDrnPwpAleUZB50C=
+VLgAn-0Q:U_F7oqNXOdQuuEdjR_v1HazTkHZdoExjbtgovJg_mXg"><img src=3D"https://e=
+mail=2Eeneco=2Enl/Eneco/V3_twitter_Eneco_@2x=2Epng" srcset=3D"twitter@2x=2E=
+png 2x, twitter@3x=2Epng 3x" alt=3D"twitter" width=3D"27" style=3D"border: =
+0; vertical-align: middle;"></a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]>
+						</td>
+			  			</tr>
+		  				</table>
+						<!endif]-->
+        </div>=20
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+			  	</td>
+			  	<td dir=3D"ltr" style=3D"text-align: left; vertical-align: middle">
+				<!endif]-->
+       <div dir=3D"ltr" style=3D"width: 100%; direction: ltr; text-align: =
+left; vertical-align: middle" class=3D"td block pt40">=20
+        <div style=3D"font-family: Verdana, Geneva, sans-serif; font-weigh=
+t: normal; font-size: 14px; line-height: 1=2E5; color: #000000" class=3D"ta=
+ble">
+         <!--[if (gte mso 9)|(IE)]>
+							<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"100%" dir=3D"ltr">
+			  			<tr>
+				  		<td dir=3D"ltr" style=3D"padding: 0 20px 0 20px; text-align: left;=
+ vertical-align: middle">
+							<!endif]-->
+         <div style=3D"padding: 0 20px 0 20px; text-align: left; vertical-=
+align: middle" class=3D"td block pb20">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:t3sa=
+7kSYN2dd9rB2oLPxfQ:KwwuSf_8vuK1JfPPq6eCBir-1a_-yMFClpAe_9_xlsjNgBXK8nJME9Pk=
+ytRuZ2WeiNPtc3OylUDomyeFgC6HmIlz7WnlMSxVFS2h3rNbBr4JbChlY90H2-w46VIJ4txnXiH=
+ZXJU-H9ZoUwjg0Iz0NETTDdoa0HVpk1AhVooazR6Oawuk7QrX1y9zFmVx0QdWQHg4mGrPNylSas=
+d_XkA9nA:EyNQH-6l7hLeAGx8tzSskWSf1s3dkWsrJBsDaynd_xE" style=3D"color: #0000=
+00; text-decoration: underline">=E2=80=BA Community</a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]>
+							</td>
+							<td dir=3D"ltr" style=3D"padding: 0 20px 0 20px; text-align: left; =
+vertical-align: middle">
+							<!endif]-->
+         <div style=3D"padding: 0 20px 0 20px; text-align: left; vertical-=
+align: middle" class=3D"td block pb20">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:POPF=
+TLnrOyYI71ex7lFKaA:BVPofsyqZxBgaxjo-qY2z-sfk_2qm2p2AARTaNMUDoAp4xBAx6nFAO0V=
+yOtbBGo_YKx5wuEgt5TLfeBgW6uLSHVPeJosdX5RE0h_4BjdTXI0P-6GEtuW2zV3RXKnnG9bg5Y=
+HwVs6fAmxDdwC2Y6NvQ:kIEMFWRQXcgzMihVGKEiVgIuFxgwbtQJMf7tsU5xZbU" style=3D"c=
+olor: #000000; text-decoration: underline">=E2=80=BA Mijn Eneco</a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]>
+							</td>
+							<td dir=3D"ltr" style=3D"padding: 0 20px 0 20px; text-align: left; =
+vertical-align: middle">
+							<!endif]-->
+         <div style=3D"padding: 0 20px 0 20px; text-align: left; vertical-=
+align: middle" class=3D"td block pb20">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:-P0a=
+EYQstPELtSaAp85oMA:0AoAHLdTqaUPZLP4TvjYiwFXgZ8iYHu6NDj8k_eDhhF6ZK3dCJ8tMsWW=
+6a2M5HCaOdY53Cy7h0RwEiycMAG4bYGqlWqaEPLslvzVOOk5SZdssAUyFhNpijUFY1Qw6JYFkpy=
+ZEgA19QdScHdAF3R_Qw:J5PWt3rX_OFPITesszwEbahDaj0j0eJ2bOn7kV3_Jrs" style=3D"c=
+olor: #000000; text-decoration: underline">=E2=80=BA Service</a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]>
+							</td>
+							<td dir=3D"ltr" style=3D"padding: 0 20px 0 20px; text-align: left; =
+vertical-align: middle">
+							<!endif]-->
+         <div style=3D"padding: 0 20px 0 20px; text-align: left; vertical-=
+align: middle" class=3D"td block">
+          <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:OCmE=
+8-yLzSipeymCUX57Lw:PAeWr1TTB1PFnDZt2x0uYQsaEaizx46C2EPop5WkpNE3GzswRBL2IoTX=
+deDabBl7AyKy5BYg6L12Pcbs29YaumxmI2yWEj4FtiFJ6sCNie2nhxDhw6EZ6lZz-d0_4Dz0RGS=
+KcJr0fs93DpFoCJM93A:TUu2RCIQJtYiHcjQ0EtvxLgFZ4FMvbiArQEw6rP8MEM" style=3D"c=
+olor: #000000; text-decoration: underline">=E2=80=BA Stroometiket</a>
+         </div>
+         <!--[if (gte mso 9)|(IE)]>
+			  			</td>
+		  				</tr>
+	  					</table>
+							<!endif]-->
+        </div>=20
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+			  	</td>
+		  		</tr>
+	  			</table>
+				<!endif]-->
+      </div>
+      <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<!endif]-->
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<!endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+		<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"width: 100%; background-color: #ffffff">
+		<tr>
+		<td>
+		<!endif]-->
+    <div style=3D"width: 100%; background-color: #ffffff" class=3D"footer"=
+>
+     <!--[if (gte mso 9)|(IE)]>
+			<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"width: 660px" class=3D"eneco-container">
+			<tr>
+			<td style=3D"text-align: center; vertical-align: top">
+			<!endif]-->
+     <div style=3D"margin: 0 auto; text-align: center; vertical-align: top=
+; width: 100%; max-width: 660px" class=3D"eneco-container table">
+      <!--[if (gte mso 9)|(IE)]>
+				<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%">
+				<tr>
+				<td style=3D"padding: 20px 10px 20px 10px; text-align: center; vertica=
+l-align: middle">
+				<!endif]-->
+      <div style=3D"padding: 20px 10px 20px 10px; text-align: left; vertic=
+al-align: top" class=3D"pt35 pb35">
+       <!--[if (gte mso 9)|(IE)]>
+							<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center" dir=3D"rtl" style=3D"direction: rtl">
+							<tr>
+							<td dir=3D"rtl" style=3D"direction: rtl; text-align: center; vertic=
+al-align: middle">
+							<!endif]-->
+       <div dir=3D"rtl" class=3D"table">
+        <!--[if (gte mso 9)|(IE)]>
+							<td dir=3D"ltr" style=3D"direction: ltr; text-align: right; vertica=
+l-align: bottom">
+							<!endif]-->
+        <div dir=3D"ltr" style=3D"direction: ltr; text-align: right; verti=
+cal-align: bottom" class=3D"td block tac">
+         <a href=3D"https://email=2Eeneco=2Enl/link?id=3DfzZga8Vl-bU:aCwuh=
+EzT4qE0mX2eOhhGBw:VVlUR7buOSgnbGfr7mSKi42QcUHwohkKg8kNIsOrnsTqwo46_u1gIys3E=
+NEYGFLdabWqQ4PES7sIn6_CrGcEXLc-ZHrmspMHyL1shXjlQy5ddC4D6TJu0jWU0ghEei0-D4wG=
+24bafUab0O6AirFaSekTtAh8vc6wvS5IXyTR-_05BtSn3igFidSV0ufaPtiriJQHgHdmMDEfLZO=
+Wbe9Srw:-vHGRHv1dYzYmt6oF6HxFCG1k50TXt-V3iQ9JlxF0i8"><img src=3D"https://em=
+ail=2Eeneco=2Enl/Eneco/V3_logo_Eneco_@2x=2Epng" srcset=3D"logo@2x 2x, logo@=
+3x 3x" alt=3D"Eneco" width=3D"130" height=3D"64" style=3D"border: 0; text-a=
+lign: center; vertical-align: middle; font-family: Verdana, Geneva, sans-se=
+rif; font-weight: bold; font-size: 36px; line-height: 46px; color: #d20f42"=
+ class=3D"logo"></a>
+        </div>
+        <!--[if (gte mso 9)|(IE)]>
+							</td><td dir=3D"ltr" style=3D"direction: ltr; padding: 0 20px 0 0; =
+text-align: left; vertical-align: bottom">
+							<!endif]-->
+        <div dir=3D"ltr" style=3D"direction: ltr; padding: 0 20px 0 0; tex=
+t-align: left; vertical-align: bottom" class=3D"td block pt20 pr10 pb20 pl1=
+0 eneco-footertext">=20
+         <p style=3D"margin: 0 0 5px 0; font-family: Verdana, Geneva, sans=
+-serif; font-weight: normal; font-size: 12px; line-height: 1=2E5; color: #c=
+ccccc"><span class=3D"eneco-footertext">Deze e-mail is verzonden in opdrach=
+t van Eneco Services B=2EV=2E, Postbus&nbsp;1014, 3000&nbsp;BA&nbsp;&nbsp;R=
+otterdam, KvK&nbsp;34102303=2E</span><br><br><span class=3D"eneco-footertex=
+t">Ons kenmerk: E_P_VrijOpzegbaar_EG 08-07-2022 20:02:27 </span><br></p>=20
+        </div>
+        <!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<!endif]-->
+       </div>
+       <!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<!endif]-->
+      </div>
+      <!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<!endif]-->
+     </div>
+     <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<!endif]-->
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+		<!endif]-->
+   </div>=20
+  </div>
+  <!--[if (gte mso 9)|(IE)]>
+	</td>
+	</tr>
+	</table>
+	<![endif]--> =20
+=20
+<img id=3D"ot" src=3D"https://email=2Eeneco=2Enl/open=2Egif?id=3DfzZga8Vl-=
+bU:FAcxwb9jNhoYzx5N96FvlA:-lMkBFhXd4Jkn4pYCbs1ifoKAbNeyUeVUGgKTuTqcBQg4ygD4=
+xCKFKaWVsN465TJfsvWIbDTwcBNlY-XMxgKQw:xXL4BLULwaAgxz_HLfi7x141kvJ7OEOjVIpN_=
+QZPSCQ" width=3D"1" height=3D"1" border=3D"0" alt=3D""></body></html>

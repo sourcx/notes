@@ -1,0 +1,67 @@
+TOP STIJGERS (26 vs 25, jan-sep)
+      21697  25:   11024  26:   32721  stichting hypotheken incasso
+       7463  25:       0  26:    7463  kinderopvangcentrum de speelboerderij b.v.
+       1900  25:       0  26:    1900  sajovi bv
+       1819  25:       0  26:    1819  muziekhuis souman b.v.
+       1798  25:     783  26:    2580  albert heijn
+       1480  25:    8544  26:   10024  tessa s rekening
+       1000  25:       0  26:    1000  bck*muziekhuis souman
+        595  25:       0  26:     595  rianne mennink
+        576  25:       0  26:     576  ikea bv
+        572  25:     719  26:    1290  bck*xtra car service
+        502  25:      82  26:     583  kruidvat 7978
+        492  25:       0  26:     492  sveya dieker
+        432  25:    3620  26:    4052  zilveren kruis zorgverzekeringen  nv
+        359  25:    3119  26:    3478  jumbo doorwerth moz
+        357  25:     484  26:     841  belastingdienst
+        348  25:       0  26:     348  gem renkum belastingen
+        348  25:       0  26:     348  rondomton
+        328  25:       0  26:     328  ccv*bekkers delicatess
+        321  25:       0  26:     321  hornbach duiven
+        286  25:       0  26:     286  gastroplan c b.v. via knab
+        265  25:       0  26:     265  vinted via mangopay sa
+        238  25:       0  26:     238  h+m online
+        220  25:       0  26:     220  joseph via tikkie
+        208  25:     844  26:    1052  promovendum
+        203  25:      56  26:     259  ccv*tuincentrum de oud
+TOP DALERS
+     -16504  25:   16504  26:       0  asn bank
+      -4000  25:    4000  26:       0  sa visser
+      -3770  25:    4040  26:     270  geldmaat mozartlaan 62
+      -2043  25:    2043  26:       0  vermeulen woninginrichting
+      -1450  25:    1450  26:       0  de ommuurde tuin
+      -1215  25:    1215  26:       0  r m mennink
+      -1000  25:    1000  26:       0  r. hesselink
+       -729  25:    3887  26:    3158  easyenergy.com
+       -722  25:     722  26:       0  hr mpj anema via ing betaalverzoek
+       -615  25:     615  26:       0  the living company b.v.
+       -587  25:     835  26:     248  bck*colorstore wagenin
+       -504  25:     504  26:       0  pme legend webshop
+       -488  25:     562  26:      73  serv. bouwmarkt we
+       -443  25:     443  26:       0  azerty.nl via multisafepay
+       -420  25:     420  26:       0  albert heijn 1103
+       -400  25:     400  26:       0  ccv*schoorsteenveegbed
+       -400  25:     400  26:       0  ananda naturmode
+       -393  25:    1263  26:     870  gemeente renkum
+       -375  25:     375  26:       0  bestseller as
+       -364  25:     364  26:       0  praxis ede
+       -341  25:    1104  26:     763  duo hoofdrekening
+       -337  25:     337  26:       0  liander
+       -334  25:     334  26:       0  gastroplan c b.v. via knab n.v.
+       -324  25:     324  26:       0  hornbach.nl via rabo smart pay
+       -315  25:     396  26:      81  sanatel b.v.
+NIEUWE tegenpartijen in 2026 met >=150 euro
+       7463  eerst 2026-05  kinderopvangcentrum de speelboerderij b.v.
+       1819  eerst 2026-04  muziekhuis souman b.v.
+       1000  eerst 2026-04  bck*muziekhuis souman
+        595  eerst 2026-08  rianne mennink
+        492  eerst 2026-03  sveya dieker
+        348  eerst 2026-07  rondomton
+        348  eerst 2026-08  gem renkum belastingen
+        286  eerst 2026-01  gastroplan c b.v. via knab
+        265  eerst 2026-05  vinted via mangopay sa
+        220  eerst 2026-03  joseph via tikkie
+        200  eerst 2026-03  r+vb installatietechnieken b.v.
+        197  eerst 2026-07  dakgootwinkel.nl via multisafepay
+        189  eerst 2026-01  abena bv via stripe technology europe ltd
+        163  eerst 2026-04  bloesem borstvoeding
